@@ -11,7 +11,7 @@ var CONFIGURED_HTML_URL_PREFIX = "/taelgar1650";
 var RELATIVE_PATHS = 0;
 var documentation_mode = 1;
 var tab_mode = !no_tab_mode;
-var gzip_hash = '275861911290422031815207992314672185497'                       // used to check whether the localStorage data is stale
+var gzip_hash = '16339161084987783626312106954317465001'                       // used to check whether the localStorage data is stale
 
 
 // Onloads
