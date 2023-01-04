@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="a chronicle of sembaran history">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="/favicon.ico" />
+
+                <!-- Set title -->
+                <title>Taelgar 1650</title>
+
+                <!-- Includes -->
+                
+<script src="/taelgar1650/obs.html/static/obsidian_core.js"></script>
+<script src="/taelgar1650/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="/taelgar1650/obs.html/static/master.css" />
+<script src="/taelgar1650/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="/taelgar1650/obs.html/static/flexsearch.bundle.js"></script>
+<script src="/taelgar1650/obs.html/static/pako.js"></script>
+<script src="/taelgar1650/obs.html/static/search.js"></script>
+<script src="/taelgar1650/obs.html/static/dirtree.js"></script>
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'a chronicle of sembaran history';
+                        const HTML_URL_PREFIX = '/taelgar1650';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+                        <div id="header_flex" class="flex_row">
+                                <a href="/taelgar1650/index.html" id="homelink" title="Clear screen and go to homepage">Taelgar 1650</a>
+                                <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                                        ≡
+                                </div>
+                                <div id="navbar" class="navbar requires_js">
+                                        
+                                        <div class="icon-tray">
+                                                <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                                        <div onclick="openSearch()" class="theme-button requires_js">
+                <img src = "/taelgar1650/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+                function openSearch(){
+                        // toggle search popup and continue with extra code if it is enabled this time
+                        if (toggle_id('search-master-div')){
+                                // clear input and put focus on it so that we can start typing immediately
+                                let ss = document.getElementById('search_string');
+                                ss.value = '';
+                                ss.focus()
+                                ss.select()
+                        }
+                }
+        </script>
+                                                        <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="/taelgar1650/obs.html/graph/index.html?node=a chronicle of sembaran history" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "/taelgar1650/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                                        <div >
+            <a id="dirtree_link" class="system-link" href="/taelgar1650/obs.html/dir_index.html" title="View directory tree">
+                    <img src = "/taelgar1650/obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                                                <div>
+    <a href="/taelgar1650/obs.html/tags/index.html" title="Open tag view">
+            <img src = "/taelgar1650/obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                                                
+                                        </div>
+                                        <div style="display: flex; flex-direction:column">
+                                                <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                                                <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+                </div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+                                <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+                                <div id="left_pane_content" class="left_pane_content">
+                                        <button id="folder-1" class="dir-button" onclick="toggle_dir(this.id)">Gazetteer</button>
+<div id="folder-container-1" class="dir-container requires_js " path="/taelgar1650/Gazetteer">
+	<button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">Chardonian Empire</button>
+	<div id="folder-container-2" class="dir-container requires_js " path="/taelgar1650/Gazetteer/Chardonian Empire">
+		<button id="folder-3" class="dir-button" onclick="toggle_dir(this.id)">Chardon</button>
+		<div id="folder-container-3" class="dir-container requires_js " path="/taelgar1650/Gazetteer/Chardonian Empire/Chardon">
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1650/Gazetteer/Chardonian Empire/Chardon/Chardon.html"  >Chardon</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Chardonian Empire/Chardon/Great Library.html"  >Great Library</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Chardonian Empire/Chardon/The Chapterhouse.html"  >The Chapterhouse</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Chardonian Empire/Chardon/The Salty Squid.html"  >The Salty Squid</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Chardonian Empire/Chardon/The Thirsty Scholar.html"  >The Thirsty Scholar</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Chardonian Empire/Chardon/University of Chardon.html"  >University of Chardon</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1650/Gazetteer/Chardonian Empire/Arendum.html"  >Arendum</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Chardonian Empire/Erlona.html"  >Erlona</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Chardonian Empire/Laughing Wolf Inn.html"  >Laughing Wolf Inn</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Chardonian Empire/Metium.html"  >Metium</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Chardonian Empire/Old Chardon Canal.html"  >Old Chardon Canal</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button" onclick="toggle_dir(this.id)">Dunmar</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="/taelgar1650/Gazetteer/Dunmar">
+		<button id="folder-5" class="dir-button" onclick="toggle_dir(this.id)">Darba</button>
+		<div id="folder-container-5" class="dir-container requires_js " path="/taelgar1650/Gazetteer/Dunmar/Darba">
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Darba/Darba.html"  >Darba</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Darba/The Green Leaf.html"  >The Green Leaf</a></li>
+			</ul>
+		</div>
+		<button id="folder-6" class="dir-button" onclick="toggle_dir(this.id)">Eastern Dunmar</button>
+		<div id="folder-container-6" class="dir-container requires_js " path="/taelgar1650/Gazetteer/Dunmar/Eastern Dunmar">
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Eastern Dunmar/Bas Udda.html"  >Bas Udda</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Eastern Dunmar/Gomat.html"  >Gomat</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Eastern Dunmar/Ikram’s.html"  >Ikram’s</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Eastern Dunmar/Karawa.html"  >Karawa</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Eastern Dunmar/Pava and Avaras' House.html"  >Pava and Avaras' House</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Eastern Dunmar/Red Mesa.html"  >Red Mesa</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Eastern Dunmar/Shakun’s Wellspring.html"  >Shakun’s Wellspring</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Eastern Dunmar/Temple of Shakun.html"  >Temple of Shakun</a></li>
+			</ul>
+		</div>
+		<button id="folder-7" class="dir-button" onclick="toggle_dir(this.id)">Tokra</button>
+		<div id="folder-container-7" class="dir-container requires_js " path="/taelgar1650/Gazetteer/Dunmar/Tokra">
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Tokra/Archives.html"  >Archives</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Tokra/Darshana’s caravanserai.html"  >Darshana’s caravanserai</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Tokra/Kirian’s.html"  >Kirian’s</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Tokra/Lakan Monastery.html"  >Lakan Monastery</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Tokra/The Iron Swan.html"  >The Iron Swan</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Tokra/The Red Lily Inn.html"  >The Red Lily Inn</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Tokra/Tokra.html"  >Tokra</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Akela Inn.html"  >Akela Inn</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Askandi.html"  >Askandi</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Nayahar.html"  >Nayahar</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Dunmar/Songara.html"  >Songara</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button" onclick="toggle_dir(this.id)">Eastern Green Sea</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="/taelgar1650/Gazetteer/Eastern Green Sea">
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1650/Gazetteer/Eastern Green Sea/Dolphin’s Rest Inn.html"  >Dolphin’s Rest Inn</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Eastern Green Sea/Medju.html"  >Medju</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Eastern Green Sea/Praznitsky.html"  >Praznitsky</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Eastern Green Sea/Quanyi.html"  >Quanyi</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Eastern Green Sea/Vermillion Isles.html"  >Vermillion Isles</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Eastern Green Sea/Wahacha.html"  >Wahacha</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button" onclick="toggle_dir(this.id)">Geographic Features</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="/taelgar1650/Gazetteer/Geographic Features">
+		<button id="folder-10" class="dir-button" onclick="toggle_dir(this.id)">Forests</button>
+		<div id="folder-container-10" class="dir-container requires_js " path="/taelgar1650/Gazetteer/Geographic Features/Forests">
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Forests/Ainumarya.html"  >Ainumarya</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Forests/Crimson Forest.html"  >Crimson Forest</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Forests/Elderwood.html"  >Elderwood</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Forests/Forest of Dreams.html"  >Forest of Dreams</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Forests/Forest of Nightmares.html"  >Forest of Nightmares</a></li>
+			</ul>
+		</div>
+		<button id="folder-11" class="dir-button" onclick="toggle_dir(this.id)">Rivers</button>
+		<div id="folder-container-11" class="dir-container requires_js " path="/taelgar1650/Gazetteer/Geographic Features/Rivers">
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Rivers/Chasa.html"  >Chasa</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Rivers/Hara.html"  >Hara</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Rivers/K'eye.html"  >K'eye</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Rivers/Kayan.html"  >Kayan</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Rivers/Kharja.html"  >Kharja</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Rivers/Shrev.html"  >Shrev</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Rivers/Yemo'te.html"  >Yemo'te</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Rivers/Yeraad.html"  >Yeraad</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Copper Hills.html"  >Copper Hills</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Garamjala Desert.html"  >Garamjala Desert</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Mostreve Hills.html"  >Mostreve Hills</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Myraeni Gap.html"  >Myraeni Gap</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Nevos Sea.html"  >Nevos Sea</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Sea of Storms.html"  >Sea of Storms</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Geographic Features/Yuvanti Mountains.html"  >Yuvanti Mountains</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button" onclick="toggle_dir(this.id)">Nardith</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="/taelgar1650/Gazetteer/Nardith">
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1650/Gazetteer/Nardith/Nardith.html"  >Nardith</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Nardith/Tharn Todor.html"  >Tharn Todor</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button" onclick="toggle_dir(this.id)">Ruins and Lairs</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="/taelgar1650/Gazetteer/Ruins and Lairs">
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1650/Gazetteer/Ruins and Lairs/Agata's lair.html"  >Agata's lair</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Ruins and Lairs/Arryn’s Tower.html"  >Arryn’s Tower</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Ruins and Lairs/Drankor.html"  >Drankor</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Ruins and Lairs/Dwarven outpost.html"  >Dwarven outpost</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Ruins and Lairs/Eudomes' Tower.html"  >Eudomes' Tower</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Ruins and Lairs/Hall of Stories.html"  >Hall of Stories</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Ruins and Lairs/Kharsan.html"  >Kharsan</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Ruins and Lairs/Kin-Aska.html"  >Kin-Aska</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Ruins and Lairs/Monastery of Bhishma.html"  >Monastery of Bhishma</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Ruins and Lairs/Raven’s Hold.html"  >Raven’s Hold</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Ruins and Lairs/Stoneborn Statue Dungeon.html"  >Stoneborn Statue Dungeon</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Ruins and Lairs/Vandar.html"  >Vandar</a></li>
+			<li><a class="" href="/taelgar1650/Gazetteer/Ruins and Lairs/ancient elven ruins.html"  >ancient elven ruins</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button" onclick="toggle_dir(this.id)">Western Green Sea</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="/taelgar1650/Gazetteer/Western Green Sea">
+		<button id="folder-15" class="dir-button" onclick="toggle_dir(this.id)">Greater Sembara</button>
+		<div id="folder-container-15" class="dir-container requires_js " path="/taelgar1650/Gazetteer/Western Green Sea/Greater Sembara">
+			<button id="folder-16" class="dir-button" onclick="toggle_dir(this.id)">Sembara</button>
+			<div id="folder-container-16" class="dir-container requires_js " path="/taelgar1650/Gazetteer/Western Green Sea/Greater Sembara/Sembara">
+				<ul class="dir-list">
+					<li><a class="" href="/taelgar1650/Gazetteer/Western Green Sea/Greater Sembara/Sembara/Duchy of Arnbury.html"  >Duchy of Arnbury</a></li>
+					<li><a class="" href="/taelgar1650/Gazetteer/Western Green Sea/Greater Sembara/Sembara/Duchy of Cheimen.html"  >Duchy of Cheimen</a></li>
+					<li><a class="" href="/taelgar1650/Gazetteer/Western Green Sea/Greater Sembara/Sembara/Duchy of Seham.html"  >Duchy of Seham</a></li>
+					<li><a class="" href="/taelgar1650/Gazetteer/Western Green Sea/Greater Sembara/Sembara/Duchy of Sembara.html"  >Duchy of Sembara</a></li>
+					<li><a class="" href="/taelgar1650/Gazetteer/Western Green Sea/Greater Sembara/Sembara/Duchy of Telham.html"  >Duchy of Telham</a></li>
+					<li><a class="" href="/taelgar1650/Gazetteer/Western Green Sea/Greater Sembara/Sembara/Duchy of Wisford.html"  >Duchy of Wisford</a></li>
+					<li><a class="" href="/taelgar1650/Gazetteer/Western Green Sea/Greater Sembara/Sembara/Sembara.html"  >Sembara</a></li>
+				</ul>
+			</div>
+			<button id="folder-17" class="dir-button" onclick="toggle_dir(this.id)">Tyrwingha</button>
+			<div id="folder-container-17" class="dir-container requires_js " path="/taelgar1650/Gazetteer/Western Green Sea/Greater Sembara/Tyrwingha">
+				<ul class="dir-list">
+					<li><a class="" href="/taelgar1650/Gazetteer/Western Green Sea/Greater Sembara/Tyrwingha/Abenfyrd.html"  >Abenfyrd</a></li>
+					<li><a class="" href="/taelgar1650/Gazetteer/Western Green Sea/Greater Sembara/Tyrwingha/Oracle of the Riven.html"  >Oracle of the Riven</a></li>
+					<li><a class="" href="/taelgar1650/Gazetteer/Western Green Sea/Greater Sembara/Tyrwingha/Tyrwingha.html"  >Tyrwingha</a></li>
+				</ul>
+			</div>
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1650/Gazetteer/Western Green Sea/Greater Sembara/Ardlas.html"  >Ardlas</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Western Green Sea/Greater Sembara/Breva.html"  >Breva</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Western Green Sea/Greater Sembara/Dominion of Atavus.html"  >Dominion of Atavus</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Western Green Sea/Greater Sembara/Free City of Tollen.html"  >Free City of Tollen</a></li>
+				<li><a class="" href="/taelgar1650/Gazetteer/Western Green Sea/Greater Sembara/Lavnoch.html"  >Lavnoch</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><a class="" href="/taelgar1650/Gazetteer/Azta Lekua.html"  >Azta Lekua</a></li>
+		<li><a class="" href="/taelgar1650/Gazetteer/Bedez.html"  >Bedez</a></li>
+		<li><a class="" href="/taelgar1650/Gazetteer/Illoria.html"  >Illoria</a></li>
+		<li><a class="" href="/taelgar1650/Gazetteer/Khatridun.html"  >Khatridun</a></li>
+		<li><a class="" href="/taelgar1650/Gazetteer/Nashtkar.html"  >Nashtkar</a></li>
+		<li><a class="" href="/taelgar1650/Gazetteer/Orekatu.html"  >Orekatu</a></li>
+		<li><a class="" href="/taelgar1650/Gazetteer/Plaguelands.html"  >Plaguelands</a></li>
+		<li><a class="" href="/taelgar1650/Gazetteer/Zarkandur.html"  >Zarkandur</a></li>
+	</ul>
+</div>
+<button id="folder-18" class="dir-button" onclick="toggle_dir(this.id)">Gods</button>
+<div id="folder-container-18" class="dir-container requires_js " path="/taelgar1650/Gods">
+	<button id="folder-19" class="dir-button" onclick="toggle_dir(this.id)">Demigods</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="/taelgar1650/Gods/Demigods">
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1650/Gods/Demigods/Fox and Hunter.html"  >Fox and Hunter</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button" onclick="toggle_dir(this.id)">Dunmari</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="/taelgar1650/Gods/Dunmari">
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1650/Gods/Dunmari/Aagir.html"  >Aagir</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Dunmari/Bhishma.html"  >Bhishma</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Dunmari/Chidya.html"  >Chidya</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Dunmari/Jeevali.html"  >Jeevali</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Dunmari/Laka.html"  >Laka</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Dunmari/Shakun.html"  >Shakun</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Dunmari/Sonkar.html"  >Sonkar</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button" onclick="toggle_dir(this.id)">Embodied Gods</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="/taelgar1650/Gods/Embodied Gods">
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1650/Gods/Embodied Gods/Bahrazel.html"  >Bahrazel</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Embodied Gods/Mad One.html"  >Mad One</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Embodied Gods/Thark.html"  >Thark</a></li>
+		</ul>
+	</div>
+	<button id="folder-22" class="dir-button" onclick="toggle_dir(this.id)">High Gods</button>
+	<div id="folder-container-22" class="dir-container requires_js " path="/taelgar1650/Gods/High Gods">
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1650/Gods/High Gods/Ako.html"  >Ako</a></li>
+			<li><a class="" href="/taelgar1650/Gods/High Gods/Anida.html"  >Anida</a></li>
+			<li><a class="" href="/taelgar1650/Gods/High Gods/Arha.html"  >Arha</a></li>
+			<li><a class="" href="/taelgar1650/Gods/High Gods/Jinnik.html"  >Jinnik</a></li>
+			<li><a class="" href="/taelgar1650/Gods/High Gods/Malik.html"  >Malik</a></li>
+			<li><a class="" href="/taelgar1650/Gods/High Gods/Sampa.html"  >Sampa</a></li>
+			<li><a class="" href="/taelgar1650/Gods/High Gods/Shurat.html"  >Shurat</a></li>
+		</ul>
+	</div>
+	<button id="folder-23" class="dir-button" onclick="toggle_dir(this.id)">Kestavo</button>
+	<div id="folder-container-23" class="dir-container requires_js " path="/taelgar1650/Gods/Kestavo">
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1650/Gods/Kestavo/Besla.html"  >Besla</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Kestavo/Kamak.html"  >Kamak</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Kestavo/Romil.html"  >Romil</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Kestavo/Vacla.html"  >Vacla</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Kestavo/Ziva.html"  >Ziva</a></li>
+		</ul>
+	</div>
+	<button id="folder-24" class="dir-button" onclick="toggle_dir(this.id)">Mos Numena</button>
+	<div id="folder-container-24" class="dir-container requires_js " path="/taelgar1650/Gods/Mos Numena">
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1650/Gods/Mos Numena/Sibyl.html"  >Sibyl</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Mos Numena/The Wanderer.html"  >The Wanderer</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Mos Numena/The Wyrdling.html"  >The Wyrdling</a></li>
+		</ul>
+	</div>
+	<button id="folder-25" class="dir-button" onclick="toggle_dir(this.id)">Tanshi</button>
+	<div id="folder-container-25" class="dir-container requires_js " path="/taelgar1650/Gods/Tanshi">
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1650/Gods/Tanshi/A'gaza.html"  >A'gaza</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Tanshi/Aasimti.html"  >Aasimti</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Tanshi/Bita.html"  >Bita</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Tanshi/Istari.html"  >Istari</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Tanshi/K'onisati.html"  >K'onisati</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Tanshi/Midri.html"  >Midri</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Tanshi/Nisir.html"  >Nisir</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Tanshi/Taraka.html"  >Taraka</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Tanshi/Washi.html"  >Washi</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Tanshi/Yalik'i.html"  >Yalik'i</a></li>
+			<li><a class="" href="/taelgar1650/Gods/Tanshi/Yezali.html"  >Yezali</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+	</ul>
+</div>
+<button id="folder-26" class="dir-button" onclick="toggle_dir(this.id)">History</button>
+<div id="folder-container-26" class="dir-container requires_js active" path="/taelgar1650/History">
+	<button id="folder-27" class="dir-button" onclick="toggle_dir(this.id)">Historical Events</button>
+	<div id="folder-container-27" class="dir-container requires_js " path="/taelgar1650/History/Historical Events">
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1650/History/Historical Events/Battle of Kin-Aska.html"  >Battle of Kin-Aska</a></li>
+			<li><a class="" href="/taelgar1650/History/Historical Events/Battle of Metium.html"  >Battle of Metium</a></li>
+			<li><a class="" href="/taelgar1650/History/Historical Events/Battle of Shadowfire.html"  >Battle of Shadowfire</a></li>
+			<li><a class="" href="/taelgar1650/History/Historical Events/Blood Years.html"  >Blood Years</a></li>
+			<li><a class="" href="/taelgar1650/History/Historical Events/Defeat of the Plague Trees.html"  >Defeat of the Plague Trees</a></li>
+			<li><a class="" href="/taelgar1650/History/Historical Events/Great War.html"  >Great War</a></li>
+			<li><a class="" href="/taelgar1650/History/Historical Events/Second Hobgoblin War.html"  >Second Hobgoblin War</a></li>
+			<li><a class="" href="/taelgar1650/History/Historical Events/Summer of Red Storms.html"  >Summer of Red Storms</a></li>
+			<li><a class="" href="/taelgar1650/History/Historical Events/The Battle of Shrevandurg.html"  >The Battle of Shrevandurg</a></li>
+			<li><a class="" href="/taelgar1650/History/Historical Events/The Downfall.html"  >The Downfall</a></li>
+			<li><a class="" href="/taelgar1650/History/Historical Events/The Exile of Fraternity of the Empty Moon.html"  >The Exile of Fraternity of the Empty Moon</a></li>
+			<li><a class="" href="/taelgar1650/History/Historical Events/The Founding of Dunmar.html"  >The Founding of Dunmar</a></li>
+			<li><a class="" href="/taelgar1650/History/Historical Events/The Riving.html"  >The Riving</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><a class="" href="/taelgar1650/History/A Chronicle of Sembaran History.html"  >A Chronicle of Sembaran History</a></li>
+	</ul>
+</div>
+<button id="folder-28" class="dir-button" onclick="toggle_dir(this.id)">Holidays and Festivals</button>
+<div id="folder-container-28" class="dir-container requires_js " path="/taelgar1650/Holidays and Festivals">
+	<ul class="dir-list">
+		<li><a class="" href="/taelgar1650/Holidays and Festivals/Aagirvala.html"  >Aagirvala</a></li>
+		<li><a class="" href="/taelgar1650/Holidays and Festivals/Day of Renewal.html"  >Day of Renewal</a></li>
+		<li><a class="" href="/taelgar1650/Holidays and Festivals/Feast of Bhishma.html"  >Feast of Bhishma</a></li>
+		<li><a class="" href="/taelgar1650/Holidays and Festivals/Festival of Rebirth.html"  >Festival of Rebirth</a></li>
+		<li><a class="" href="/taelgar1650/Holidays and Festivals/Festival of the Miracle of the Mist.html"  >Festival of the Miracle of the Mist</a></li>
+		<li><a class="" href="/taelgar1650/Holidays and Festivals/Jaankar.html"  >Jaankar</a></li>
+	</ul>
+</div>
+<button id="folder-29" class="dir-button" onclick="toggle_dir(this.id)">Items</button>
+<div id="folder-container-29" class="dir-container requires_js " path="/taelgar1650/Items">
+	<button id="folder-30" class="dir-button" onclick="toggle_dir(this.id)">Artifacts of Power</button>
+	<div id="folder-container-30" class="dir-container requires_js " path="/taelgar1650/Items/Artifacts of Power">
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1650/Items/Artifacts of Power/Circlet of Foreknowledge.html"  >Circlet of Foreknowledge</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+	</ul>
+</div>
+<button id="folder-31" class="dir-button" onclick="toggle_dir(this.id)">Multiverse</button>
+<div id="folder-container-31" class="dir-container requires_js " path="/taelgar1650/Multiverse">
+	<ul class="dir-list">
+		<li><a class="" href="/taelgar1650/Multiverse/Abyss.html"  >Abyss</a></li>
+		<li><a class="" href="/taelgar1650/Multiverse/Amberglow.html"  >Amberglow</a></li>
+		<li><a class="" href="/taelgar1650/Multiverse/Arborea.html"  >Arborea</a></li>
+		<li><a class="" href="/taelgar1650/Multiverse/Dreamworld.html"  >Dreamworld</a></li>
+		<li><a class="" href="/taelgar1650/Multiverse/Feywild.html"  >Feywild</a></li>
+		<li><a class="" href="/taelgar1650/Multiverse/Feywild-mas.html"  >Feywild-mas</a></li>
+		<li><a class="" href="/taelgar1650/Multiverse/Fortune's Rest.html"  >Fortune's Rest</a></li>
+		<li><a class="" href="/taelgar1650/Multiverse/Land of the Dead.html"  >Land of the Dead</a></li>
+		<li><a class="" href="/taelgar1650/Multiverse/Mirror Realm.html"  >Mirror Realm</a></li>
+		<li><a class="" href="/taelgar1650/Multiverse/Nightmare Realm.html"  >Nightmare Realm</a></li>
+		<li><a class="" href="/taelgar1650/Multiverse/Pandemonium.html"  >Pandemonium</a></li>
+		<li><a class="" href="/taelgar1650/Multiverse/Plane of Fire.html"  >Plane of Fire</a></li>
+		<li><a class="" href="/taelgar1650/Multiverse/Plane of Magic.html"  >Plane of Magic</a></li>
+		<li><a class="" href="/taelgar1650/Multiverse/Plane of Souls.html"  >Plane of Souls</a></li>
+		<li><a class="" href="/taelgar1650/Multiverse/Shadowfell.html"  >Shadowfell</a></li>
+		<li><a class="" href="/taelgar1650/Multiverse/Shakun's Realm.html"  >Shakun's Realm</a></li>
+		<li><a class="" href="/taelgar1650/Multiverse/Shimmersong.html"  >Shimmersong</a></li>
+		<li><a class="" href="/taelgar1650/Multiverse/The Heart of the Mountain.html"  >The Heart of the Mountain</a></li>
+	</ul>
+</div>
+<button id="folder-32" class="dir-button" onclick="toggle_dir(this.id)">NPCs</button>
+<div id="folder-container-32" class="dir-container requires_js " path="/taelgar1650/NPCs">
+	<button id="folder-33" class="dir-button" onclick="toggle_dir(this.id)">Dwarves</button>
+	<div id="folder-container-33" class="dir-container requires_js " path="/taelgar1650/NPCs/Dwarves">
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1650/NPCs/Dwarves/Brot.html"  >Brot</a></li>
+			<li><a class="" href="/taelgar1650/NPCs/Dwarves/Diesla.html"  >Diesla</a></li>
+			<li><a class="" href="/taelgar1650/NPCs/Dwarves/Vistra Fireforge.html"  >Vistra Fireforge</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+	</ul>
+</div>
+<button id="folder-34" class="dir-button" onclick="toggle_dir(this.id)">Organizations</button>
+<div id="folder-container-34" class="dir-container requires_js " path="/taelgar1650/Organizations">
+	<ul class="dir-list">
+		<li><a class="" href="/taelgar1650/Organizations/The Rangers.html"  >The Rangers</a></li>
+	</ul>
+</div>
+<button id="folder-35" class="dir-button" onclick="toggle_dir(this.id)">PCs</button>
+<div id="folder-container-35" class="dir-container requires_js " path="/taelgar1650/PCs">
+	<ul class="dir-list">
+		<li><a class="" href="/taelgar1650/PCs/Izgil the Dwarf.html"  >Izgil the Dwarf</a></li>
+		<li><a class="" href="/taelgar1650/PCs/Robin of Abenfyrd.html"  >Robin of Abenfyrd</a></li>
+	</ul>
+</div>
+<button id="folder-36" class="dir-button" onclick="toggle_dir(this.id)">People</button>
+<div id="folder-container-36" class="dir-container requires_js " path="/taelgar1650/People">
+	<button id="folder-37" class="dir-button" onclick="toggle_dir(this.id)">Extraplanar Powers</button>
+	<div id="folder-container-37" class="dir-container requires_js " path="/taelgar1650/People/Extraplanar Powers">
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1650/People/Extraplanar Powers/Archfey Ethlenn.html"  >Archfey Ethlenn</a></li>
+			<li><a class="" href="/taelgar1650/People/Extraplanar Powers/Cha'mutte.html"  >Cha'mutte</a></li>
+			<li><a class="" href="/taelgar1650/People/Extraplanar Powers/Cloudspinner.html"  >Cloudspinner</a></li>
+			<li><a class="" href="/taelgar1650/People/Extraplanar Powers/Lightdancer.html"  >Lightdancer</a></li>
+			<li><a class="" href="/taelgar1650/People/Extraplanar Powers/Prince of Luck.html"  >Prince of Luck</a></li>
+		</ul>
+	</div>
+	<button id="folder-38" class="dir-button" onclick="toggle_dir(this.id)">Historical Figures</button>
+	<div id="folder-container-38" class="dir-container requires_js " path="/taelgar1650/People/Historical Figures">
+		<button id="folder-39" class="dir-button" onclick="toggle_dir(this.id)">Sembaran Royalty</button>
+		<div id="folder-container-39" class="dir-container requires_js " path="/taelgar1650/People/Historical Figures/Sembaran Royalty">
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1650/People/Historical Figures/Sembaran Royalty/Cece I.html"  >Cece I</a></li>
+				<li><a class="" href="/taelgar1650/People/Historical Figures/Sembaran Royalty/Derik I.html"  >Derik I</a></li>
+				<li><a class="" href="/taelgar1650/People/Historical Figures/Sembaran Royalty/Derik III.html"  >Derik III</a></li>
+				<li><a class="" href="/taelgar1650/People/Historical Figures/Sembaran Royalty/House of Sewick.html"  >House of Sewick</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><a class="" href="/taelgar1650/People/Asuddha.html"  >Asuddha</a></li>
+		<li><a class="" href="/taelgar1650/People/Balati.html"  >Balati</a></li>
+		<li><a class="" href="/taelgar1650/People/Beryl.html"  >Beryl</a></li>
+		<li><a class="" href="/taelgar1650/People/Commander Ila.html"  >Commander Ila</a></li>
+		<li><a class="" href="/taelgar1650/People/Daruk.html"  >Daruk</a></li>
+		<li><a class="" href="/taelgar1650/People/Dasa.html"  >Dasa</a></li>
+		<li><a class="" href="/taelgar1650/People/Derik III.html"  >Derik III</a></li>
+		<li><a class="" href="/taelgar1650/People/Dimitaur.html"  >Dimitaur</a></li>
+		<li><a class="" href="/taelgar1650/People/Emperor Avatus.html"  >Emperor Avatus</a></li>
+		<li><a class="" href="/taelgar1650/People/Emperor Helena.html"  >Emperor Helena</a></li>
+		<li><a class="" href="/taelgar1650/People/Emperor Vestian.html"  >Emperor Vestian</a></li>
+		<li><a class="" href="/taelgar1650/People/Eudomes.html"  >Eudomes</a></li>
+		<li><a class="" href="/taelgar1650/People/Jita.html"  >Jita</a></li>
+		<li><a class="" href="/taelgar1650/People/Kotana.html"  >Kotana</a></li>
+		<li><a class="" href="/taelgar1650/People/Kyr.html"  >Kyr</a></li>
+		<li><a class="" href="/taelgar1650/People/Rai.html"  >Rai</a></li>
+		<li><a class="" href="/taelgar1650/People/Samraat Nayan Yarad.html"  >Samraat Nayan Yarad</a></li>
+		<li><a class="" href="/taelgar1650/People/Zegron.html"  >Zegron</a></li>
+	</ul>
+</div>
+<button id="folder-40" class="dir-button" onclick="toggle_dir(this.id)">Religions</button>
+<div id="folder-container-40" class="dir-container requires_js " path="/taelgar1650/Religions">
+	<ul class="dir-list">
+		<li><a class="" href="/taelgar1650/Religions/Kestavo.html"  >Kestavo</a></li>
+		<li><a class="" href="/taelgar1650/Religions/Mos Numena.html"  >Mos Numena</a></li>
+	</ul>
+</div>
+<button id="folder-41" class="dir-button" onclick="toggle_dir(this.id)">Species</button>
+<div id="folder-container-41" class="dir-container requires_js " path="/taelgar1650/Species">
+	<ul class="dir-list">
+		<li><a class="" href="/taelgar1650/Species/Dwarves.html"  >Dwarves</a></li>
+		<li><a class="" href="/taelgar1650/Species/Elf.html"  >Elf</a></li>
+		<li><a class="" href="/taelgar1650/Species/Hobgoblins.html"  >Hobgoblins</a></li>
+		<li><a class="" href="/taelgar1650/Species/Orcs.html"  >Orcs</a></li>
+	</ul>
+</div>
+<button id="folder-42" class="dir-button" onclick="toggle_dir(this.id)">_templates</button>
+<div id="folder-container-42" class="dir-container requires_js " path="/taelgar1650/_templates">
+	<ul class="dir-list">
+		<li><a class="" href="/taelgar1650/_templates/NPC.html"  >NPC</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><a class="" href="/taelgar1650/index.html"  >index</a></li>
+</ul>
+
+                                </div>
+                        </div>
+                        <div class="container">
+                                <div class="toc">
+<ul>
+<li><a href="#a-drankorian-background" class="anchor-link">A Drankorian Background</a></li>
+<li><a href="#the-six-duchies" class="anchor-link">The Six Duchies</a></li>
+<li><a href="#the-unification-of-sembara-under-the-house-of-sewick" class="anchor-link">The Unification of Sembara Under the House of Sewick</a><ul>
+<li><a href="#emergence-of-the-house-of-sewick" class="anchor-link">Emergence of the House of Sewick</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="a-drankorian-background">A Drankorian Background</h3>
+<p>Much of Sembaran history arises from the fractured duchies that arose from the fall of the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Drankorian Empire</a>, and the boundaries of the ancient Drankorian provinces still impact the political geography of the land today.    </p>
+<p>A thousand years ago, the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Drankorian Empire</a> expanded beyond the <a href="/taelgar1650/Gazetteer/Geographic%20Features/Mostreve%20Hills.html">Mostreve Hills</a>, and the scattered people of the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Semb</a>, <a href="/taelgar1650/not_created.html" class="nonexistent-link">Enst</a> and <a href="/taelgar1650/not_created.html" class="nonexistent-link">Wistel</a> river valleys were rapidly assimilated. The <a href="/taelgar1650/not_created.html" class="nonexistent-link">Drankorians</a> brought modern roads, improved agricultural techniques, and a new religion to the land. Farming and pastoralism was a way of life here, with little technology and little trade. No great wars were fought, the scholars say, and over the generations the old ways were forgotten. Within two lifetimes, a border had been established along the <a href="/taelgar1650/not_created.html" class="nonexistent-link">River Volta</a>, and few between the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Teft</a> and the <a href="/taelgar1650/Gazetteer/Geographic%20Features/Mostreve%20Hills.html">Mostreve Hills</a> remembered the days before the coming of the Drankorians.   </p>
+<p>In the northern highlands however, and especially amongst the many lakes at the headwaters of the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Volta</a>, the Drankorian armies bogged down in the cold, snowy winters, and it is said the very skies and earth rose up to defend the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Highlanders</a>. Conquest was slow and often abandoned, and in the mountain valleys the <a href="/taelgar1650/Religions/Mos%20Numena.html">Eight Divines</a> were not widely acknowledged, and the old gods -- the <em><a href="/taelgar1650/Religions/Kestavo.html">Kestavo</a></em> -- were still worshipped.   </p>
+<p>In the south, <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Tyrwingha/Tyrwingha.html">Tyrwingha</a>, nestled on the southern shores of the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Green Sea</a>, was also never conquered by <a href="/taelgar1650/not_created.html" class="nonexistent-link">Drankor</a>. This land had been protected by the <a href="/taelgar1650/People/Extraplanar%20Powers/Archfey%20Ethlenn.html">Archfey Ethlenn</a>, the Queen of the Evening Mist, for many generations, and the conquerors had not her blessing. It is said that the greatest wizards of Drankor refused to aid the conquest, recognizing Ethlenn’s great power, and the legions of Drankor, feared throughout the world, threw down their arms. Whether this tales are true or not, it is known that the Empire did not conqueror <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Tyrwingha/Tyrwingha.html">Tyrwingha</a>. Yet the Archfey greatly desired to learn the secrets of <a href="/taelgar1650/not_created.html" class="nonexistent-link">Hkar</a> from Drankorian mages, and so a compromise was made. The Archfey would acknowledge the Drankorians as rulers of the land, and welcome their gods, the <a href="/taelgar1650/Religions/Mos%20Numena.html">Eight Divines</a> to the land, in exchange for tribute in the form of secret knowledge. Any Tyrwinghans who did not want to live under Drankorian rule would be allowed to depart for the <a href="/taelgar1650/Multiverse/Feywild.html">Feywild</a>, to live in the court of the Archfey. Even now, tradition holds that all subjects of the Tyrwinghan crown may choose to invoke their right to leave, trading their oaths of loyalty for a life in the court of the Archfey. Although Ethlenn herself has not been seen or heard for generations, a few desparate or fey-touched choose this gamble even now.    </p>
+<h3 id="the-six-duchies">The Six Duchies</h3>
+<p>Then came the Great Plague, and the collapse of order that followed. Little is known of the history of these times, but geneologists claim the line of the Dukes of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Duchy%20of%20Sembara.html">Sembara</a> began in DR 1142, By the 1250s DR, the six duchies (<a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Duchy%20of%20Sembara.html">Sembara</a>, <a href="/taelgar1650/not_created.html" class="nonexistent-link">Cheimen</a>, <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Duchy%20of%20Wisford.html">Wisford</a>, <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Duchy%20of%20Seham.html">Seham</a>, <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Duchy%20of%20Telham.html">Telham</a>, and <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Duchy%20of%20Arnbury.html">Arnbury</a> were firmly established, and the Duke of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Sembara.html">Sembara</a> was acknowledged as the chief amongst them. Thee other dukes, save Telham, acknowledged the feudal overlordship of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Sembara.html">Sembara</a>.   </p>
+<p>Over the next generation, a series of small summer conquests slowly added territory to the growing Realm of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Sembara.html">Sembara</a>, as minor lords pledge fealty to the monarch. Some did so because an army of 1000 Sembaran knights showed up at their castle, and they felt they had no choice; others did so to gain protection from their rivals and ensure stability for their people. The dukes of the five duchies and their knights and vassals become rich from these summer conquests as well as the fertile lands and the slow revival of trade in the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Green Sea</a>.    </p>
+<p>By the 1300s DR, the Sembaran monarchy commaded fealty, either directly, from newly minted barons, or indirectly, from lords sworn to the barons and dukes sworn to the crown, most of the lowlands between the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Teft</a> and the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Enst</a>. For the next hundred years or so, the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Green Sea</a> is peaceful and prosperous. <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Sembara.html">Sembara</a> grows rich on the strength of its agricultural wealth, and its borders solidify: the <a href="/taelgar1650/not_created.html" class="nonexistent-link">River Teft</a> to the north, the <a href="/taelgar1650/not_created.html" class="nonexistent-link">River Enst</a> to the south, with the western border stretching roughly in a line from the source of the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Enst</a> through the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Aine Hills</a> to <a href="/taelgar1650/not_created.html" class="nonexistent-link">Braebein</a>, the highlands north of <a href="/taelgar1650/not_created.html" class="nonexistent-link">Arnsbury</a>.   </p>
+<h3 id="the-unification-of-sembara-under-the-house-of-sewick">The Unification of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Sembara.html">Sembara</a> Under the <a href="/taelgar1650/People/Historical%20Figures/Sembaran%20Royalty/House%20of%20Sewick.html">House of Sewick</a></h3>
+<p>By the 1400s, a number of regional powers had started to emerge on the borders of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Sembara.html">Sembara</a>. In the northwest, from the highland provinces of Drankor, two realms had emerged: <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Lavnoch.html">Lavnoch</a> and <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Ardlas.html">Ardlas</a>. Perched on either side of <a href="/taelgar1650/not_created.html" class="nonexistent-link">Lake Derwent</a>, they grew rich with the profit of trade over the mountains, but were often in conflict over control of the lake and access to the Dwarven trade.   </p>
+<p>North of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Lavnoch.html">Lavnoch</a>, the brief <a href="/taelgar1650/not_created.html" class="nonexistent-link">Unified Crown of Zovcka</a> had collapsed, and two northern kingdoms emerged: <a href="/taelgar1650/not_created.html" class="nonexistent-link">Zovcka</a>, in the north, and <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Breva.html">Breva</a>, squeezed between <a href="/taelgar1650/not_created.html" class="nonexistent-link">Braebein</a> and the growing power of the Duke of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Duchy%20of%20Arnbury.html">Arnbury</a>, the <a href="/taelgar1650/not_created.html" class="nonexistent-link">~CentralMountains~</a>, and <a href="/taelgar1650/not_created.html" class="nonexistent-link">Zovcka</a>.    </p>
+<p>To the northeast, the <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Duchy%20of%20Telham.html">Duchy of Telham</a>, between the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Teft</a> and the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Volta</a>, commanded the loyalty of many of the small lords along the coast and the rivers, and was closely tied by culture and intermarriage to <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Sembara.html">Sembara</a>.   </p>
+<p>South of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Sembara.html">Sembara</a> were two major powers: the Kingdom of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Tyrwingha/Tyrwingha.html">Tyrwingha</a>, which emerged from the fall of <a href="/taelgar1650/not_created.html" class="nonexistent-link">Drankor</a> largely intact and still under the guardianship of the <a href="/taelgar1650/People/Extraplanar%20Powers/Archfey%20Ethlenn.html">Archfey Ethlenn</a>, and the <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Dominion%20of%20Atavus.html">Dominion of Atavus</a>, a rising military autocracy exerting overlordship of a number of small kingdoms in the <a href="/taelgar1650/Gazetteer/Geographic%20Features/Mostreve%20Hills.html">Mostreve Hills</a>, growing in power by taxing trade and recruiting mercenaries, largely <a href="/taelgar1650/Species/Hobgoblins.html">Hobgoblins</a>.   </p>
+<h4 id="emergence-of-the-house-of-sewick">Emergence of the <a href="/taelgar1650/People/Historical%20Figures/Sembaran%20Royalty/House%20of%20Sewick.html">House of Sewick</a></h4>
+<p>While <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Sembara.html">Sembara</a> thrived during the long peace, underneath, the seeds of conflict grew. A series of weak rulers had ceded many of the royal prerogatives to the dukes and a feeling of security encouraged the dukes to pour resources into fine trade goods and luxuries, rather than castles and armies. Crushing tariffs on Dwarven goods enriched the border lords, but alienated many others, including <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Ardlas.html">Ardlas</a> and <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Lavnoch.html">Lavnoch</a>, who had traditionally enjoyed strong trade relations with <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Sembara.html">Sembara</a>. And prophets throughout <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Tyrwingha/Tyrwingha.html">Tyrwingha</a> were preaching of the End Times, and whole villages were found to have disappeared. Whether fled to the safety of the <a href="/taelgar1650/Multiverse/Feywild.html">Feywild</a>, or consumed by darkness, few could answer.   </p>
+<p>In DR 1425, <a href="/taelgar1650/not_created.html" class="nonexistent-link">Atavus</a> saw an opportunity. With a mercenary army consisting largely of <a href="/taelgar1650/Species/Hobgoblins.html">Hobgoblins</a> and vicious <a href="/taelgar1650/not_created.html" class="nonexistent-link">Werewolves</a>, he launched an invasion across the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Enst</a>. A series of disasters befell the Sembarans -- the Duke of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Duchy%20of%20Cheimen.html">Cheimin</a> refused to march his troops south of the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Wistel</a>, three hundred knights from <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Duchy%20of%20Seham.html">Seham</a> were lost in a summer storm at sea, and the muster of <a href="/taelgar1650/not_created.html" class="nonexistent-link">Arnsbury</a> sent only half the men due to crown, claiming insufficient horses. And the expected help from <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Tyrwingha/Tyrwingha.html">Tyrwingha</a> fails to materialize -- the Queen herself commanded her knights to stay within the Tyrwinghan borders. And so the Sembaran army, defeated on the field, retreated with half its force to winter north of the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Wistel</a>, and <a href="/taelgar1650/not_created.html" class="nonexistent-link">Atavus</a> paused to consolidate his gains, and prepared to strike north and east.   </p>
+<p>Into this moment rode <a href="/taelgar1650/People/Historical%20Figures/Sembaran%20Royalty/Derik%20I.html">Derik I</a>, a distant relative of the current king, but far from the kingship himself. He had married the second daughter of the Duchess of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Duchy%20of%20Telham.html">Telham</a>, on the Northlands coast, and had made a name for himself as a military commander in a series of skirmishes against pirates, in alliance with Tollen mercenaries and halflings.   </p>
+<p>In the months following the advance of <a href="/taelgar1650/not_created.html" class="nonexistent-link">Atavus</a> to the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Wistel</a>, a lizardfolk elder had approached Derik, and told him of an omen: he was prophesied to raise a mighty <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Sembara.html">Sembara</a> to form a pillar of strength in the dark times to come, and if he did not overthrow <a href="/taelgar1650/not_created.html" class="nonexistent-link">Atavus</a>, the smallest cloud in the coming storm, the darkest shadows of today would seem like the brightest diamonds of tomorrow. But it was also foretold, this elder said, that only the Queen of the Evening Mist could herald his coming.     </p>
+<p>With the blessing of his mother-in-law, Derik sent a small tithe of the knights of the <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Duchy%20of%20Telham.html">Duchy of Telham</a> south to aid their ally, the King, and then he sailed with the bulk of the duchy’s forces to <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Tyrwingha/Tyrwingha.html">Tyrwingha</a>. There, the old queen had been wracked by dreams of the horrible fate that would befall <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Tyrwingha/Tyrwingha.html">Tyrwingha</a> if she entered the war, and so had kept her forces away, despite her misgivings for not aiding an ally.   </p>
+<p>When Derik arrived in <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Tyrwingha/Tyrwingha.html">Tyrwingha</a>, he immediately disembarked and spoke with the queen. It is said that as he set foot on Tyrwinghan shores, the morning fog parted, and turned golden where he stepped, leaving a trail of sparklingly mist behind him. Crowds began to follow, and when he reached the castle, the people of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Tyrwingha/Tyrwingha.html">Tyrwingha</a> were watching as he bowed his head humbly to ask to speak with the queen, and <a href="/taelgar1650/People/Extraplanar%20Powers/Archfey%20Ethlenn.html">Archfey Ethlenn</a> herself appeared before him, and proclaimed that he would be the savior of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Tyrwingha/Tyrwingha.html">Tyrwingha</a>, and kissed him on the forehead, passing him her blessing.      </p>
+<p>As news spread like wildfire of a knight from the north who had been blessed by Ethlenn herself, Derik was quickly proclaimed <a href="/taelgar1650/People/Historical%20Figures/Sembaran%20Royalty/Derik%20I.html">Derik I</a>, King of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Tyrwingha/Tyrwingha.html">Tyrwingha</a> by the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Oracles of the Riven</a>. Derik gathered an army of lizardfolk, the knights of Telham and <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Tyrwingha/Tyrwingha.html">Tyrwingha</a>, the fey-touched warlocks of the Ethlenn, and Tollen and <a href="/taelgar1650/not_created.html" class="nonexistent-link">Vostok</a> mercenaries, which he marched west in the early spring of 1426. Derik drove the forces of <a href="/taelgar1650/not_created.html" class="nonexistent-link">Atavus</a> before him, and his army is flanked on the banks of the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Wistel</a> and decisively defeated by Derik at the Battle of Wisford.    </p>
+<p>By the end of the summer of 1428, the war was over. Derik’s alliance, following the initial success of the Battle of Wisford in 1426, which broke <a href="/taelgar1650/not_created.html" class="nonexistent-link">Atavus</a>' lines on the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Wistel</a>, and the Battle of Fellburn in 1427, which forced <a href="/taelgar1650/not_created.html" class="nonexistent-link">Atavus</a> across the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Enst</a>, won a decisive and complete victory at the Battle of Dalfield, in the northern Mosteve Hills, in the spring of 1428.      </p>
+<p>Cloaked in glory and honor from his decisive military leadership and fey-enhanced charisma, Derik forged modern <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Sembara.html">Sembara</a> at the Treaty of Wisford, signed in the late fall of <a href="/taelgar1650/not_created.html" class="nonexistent-link">1428 DR</a>, which established the Royal Council, codified the independence of lizardfolk in the realm forevermore, and cemented the <a href="/taelgar1650/People/Historical%20Figures/Sembaran%20Royalty/House%20of%20Sewick.html">House of Sewick</a> as the rulers of the Joined Crowns of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Sembara.html">Sembara</a>, <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Tyrwingha/Tyrwingha.html">Tyrwingha</a>, and <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Duchy%20of%20Telham.html">Telham</a>.     </p>
+<p>In the spring and summer of 1429, Derik, now styling himself <a href="/taelgar1650/People/Historical%20Figures/Sembaran%20Royalty/Derik%20I.html">Derik I</a> of <a href="/taelgar1650/People/Historical%20Figures/Sembaran%20Royalty/House%20of%20Sewick.html">Sewick</a>, King of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Sembara.html">Sembara</a>, Duke of Telham, High Prince of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Tyrwingha/Tyrwingha.html">Tyrwingha</a>, Honored Consort of the Queen of the Evening Mist, and Defender of the Four Rivers, marches his army throughout the <a href="/taelgar1650/Gazetteer/Geographic%20Features/Mostreve%20Hills.html">Mostreve Hills</a>, driving out the last of the <a href="/taelgar1650/Species/Hobgoblins.html">Hobgoblins</a> and accepting the fealty of the local lords.    </p>
+<p>In the fall of 1429, the Treaty of <a href="/taelgar1650/not_created.html" class="nonexistent-link">Valarin</a> (a small town in the “gap” in the southern highlands) establishes relations between <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Sembara.html">Sembara</a> and the <a href="/taelgar1650/not_created.html" class="nonexistent-link">Istabor Alliance</a>, a loose confederation of city states and freeholds to the south that is emerging out of the fall of the <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Dominion%20of%20Atavus.html">Dominion of Atavus</a>, setting the extent of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Sembara.html">Sembara</a>’s control at the southern edge of the <a href="/taelgar1650/Gazetteer/Geographic%20Features/Mostreve%20Hills.html">Mostreve Hills</a>. This treaty also establishes <a href="/taelgar1650/Organizations/The%20Rangers.html">The Rangers</a>, an organization dedicated to preventing the forces of darkness from growing.   </p>
+<p>The rest of <a href="/taelgar1650/People/Historical%20Figures/Sembaran%20Royalty/Derik%20I.html">Derik I</a>’s long reign is a time of renewed prosperity in <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Sembara.html">Sembara</a>, as trade to the south flourishes, the war-torn Borderlands and Southern Marches revive considerably on the strength of goods flowing across their lands, and occasional raiders from the mountains are met with the full might of <a href="/taelgar1650/Gazetteer/Western%20Green%20Sea/Greater%20Sembara/Sembara/Sembara.html">Sembara</a>’s army with <a href="/taelgar1650/People/Historical%20Figures/Sembaran%20Royalty/Derik%20I.html">Derik I</a> at the head.</p>
+<div class="note-footer">
+<div class="backlinks" style="display:none"></div>
+
+<div class="tags">
+
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A163475984851973323757343305039515382186{level}" class="graph_div"></div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B163475984851973323757343305039515382186{level}" level="{level}" note_temp_id="163475984851973323757343305039515382186" onclick="window.ObsHtmlGraph.run(this, '163475984851973323757343305039515382186', 'a chronicle of sembaran history');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C163475984851973323757343305039515382186{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('/taelgar1650/obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+                                <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+                                <div id="right_pane_content" class="right_pane_content">
+                                        
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        localStorage.setItem('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = localStorage.getItem('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="/taelgar1650/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>
