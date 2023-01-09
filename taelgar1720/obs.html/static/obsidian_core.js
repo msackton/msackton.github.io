@@ -5,12 +5,12 @@ var no_tab_mode = 1;
 var mermaid_enabled = 1;
 var toc_pane_div = "right_pane_content";
 var dir_index_pane_div = "";
-var html_url_prefix = "/taelgar1650";
-var CONFIGURED_HTML_URL_PREFIX = "/taelgar1650";
+var html_url_prefix = "/taelgar1720";
+var CONFIGURED_HTML_URL_PREFIX = "/taelgar1720";
 var RELATIVE_PATHS = 0;
 var documentation_mode = 1;
 var tab_mode = !no_tab_mode;
-var gzip_hash = '142575669874412991035212059132701615215'                       // used to check whether the localStorage data is stale
+var gzip_hash = '131258332335984720260601120418738485532'                       // used to check whether the localStorage data is stale
 
 // global cache
 var fn_cache_ls_available = null;
@@ -477,7 +477,7 @@ function get_graph_data(){
     return get_html_url_prefix()+'/obs.html/data/graph.json';
 }
 function get_html_url_prefix(){
-    return '/taelgar1650'  // this value is replaced by the actual url prefix when compiled
+    return '/taelgar1720'  // this value is replaced by the actual url prefix when compiled
 }
 
 function signal_js_enabled(container){
