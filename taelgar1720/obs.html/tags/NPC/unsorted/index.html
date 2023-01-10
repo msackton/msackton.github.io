@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="none">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="/taelgar1720/favicon.ico" />
+
+                <!-- Set title -->
+                <title>Taelgar 1720</title>
+
+                <!-- Includes -->
+                
+<script src="/taelgar1720/obs.html/static/obsidian_core.js"></script>
+<script src="/taelgar1720/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="/taelgar1720/obs.html/static/master.css" />
+<script src="/taelgar1720/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="/taelgar1720/obs.html/static/flexsearch.bundle.js"></script>
+<script src="/taelgar1720/obs.html/static/pako.js"></script>
+<script src="/taelgar1720/obs.html/static/search.js"></script>
+<script src="/taelgar1720/obs.html/static/dirtree.js"></script>
+<link rel="stylesheet" href="/taelgar1720/obs.html/static/taglist.css" />
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'none';
+                        const HTML_URL_PREFIX = '/taelgar1720';
+                        const PAGE_DEPTH = {page_depth};
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="/taelgar1720/index.html" id="homelink" title="Clear screen and go to homepage">Taelgar 1720</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+                <img src = "/taelgar1720/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+                function openSearch(){
+                        // toggle search popup and continue with extra code if it is enabled this time
+                        if (toggle_id('search-master-div')){
+                                // clear input and put focus on it so that we can start typing immediately
+                                let ss = document.getElementById('search_string');
+                                ss.value = '';
+                                ss.focus()
+                                ss.select()
+                        }
+                }
+        </script>
+                            
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="/taelgar1720/obs.html/dir_index.html" title="View directory tree">
+                    <img src = "/taelgar1720/obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        
+                        <div class="container">
+                                <h1 id="notes">Notes</h1>
+<ul>
+<li><a href="/taelgar1720/People/Extraplanar Powers/Cha'mutte.html">Cha'mutte</a></li>
+<li><a href="/taelgar1720/People/Extraplanar Powers/Lightdancer.html">Lightdancer</a></li>
+<li><a href="/taelgar1720/People/Extraplanar Powers/Cloudspinner.html">Cloudspinner</a></li>
+<li><a href="/taelgar1720/People/Fey/Typhina.html">Typhina</a></li>
+<li><a href="/taelgar1720/People/Fey/Agata.html">Agata</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Ikram.html">Ikram</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Dunmari Rulers/Kotana.html">Kotana</a></li>
+<li><a href="/taelgar1720/People/Other Nonhumans/Grash.html">Grash</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Kassi.html">Kassi</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Dunmari Rulers/Jita.html">Jita</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Mavdyr.html">Mavdyr</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Kaleha.html">Kaleha</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Ardan.html">Ardan</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Asuddha.html">Asuddha</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Kaeso.html">Kaeso</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Roscelia.html">Roscelia</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Lara.html">Lara</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Vola.html">Vola</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Agon.html">Agon</a></li>
+<li><a href="/taelgar1720/People/Other Nonhumans/Tharandros.html">Tharandros</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Alesh.html">Alesh</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Havdar.html">Havdar</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Jasu.html">Jasu</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Badya.html">Badya</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Sura.html">Sura</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Nayan Karnas.html">Nayan Karnas</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Ulfgar Frostbeard.html">Ulfgar Frostbeard</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Frankar.html">Frankar</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Vistra Fireforge.html">Vistra Fireforge</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Fallthra Hardstone.html">Fallthra Hardstone</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Dag Hardstone.html">Dag Hardstone</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Delig Hardstone.html">Delig Hardstone</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Servius.html">Servius</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Fausto.html">Fausto</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Kadmos.html">Kadmos</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Hektor.html">Hektor</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Marcella.html">Marcella</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Casian.html">Casian</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Antonia.html">Antonia</a></li>
+<li><a href="/taelgar1720/People/Halflings/Garret Tealeaf.html">Garret Tealeaf</a></li>
+<li><a href="/taelgar1720/People/Halflings/Wes Strongbones.html">Wes Strongbones</a></li>
+<li><a href="/taelgar1720/People/Halflings/Tye Strongbones.html">Tye Strongbones</a></li>
+<li><a href="/taelgar1720/People/Halflings/Cade Strongbones.html">Cade Strongbones</a></li>
+<li><a href="/taelgar1720/People/Halflings/Callie Charmheart.html">Callie Charmheart</a></li>
+<li><a href="/taelgar1720/People/Halflings/Ander Charmheart.html">Ander Charmheart</a></li>
+<li><a href="/taelgar1720/People/Halflings/Dee Wildcloak.html">Dee Wildcloak</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Eudomes.html">Eudomes</a></li>
+<li><a href="/taelgar1720/People/Giants/Hralgar.html">Hralgar</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Dain Goldhammer.html">Dain Goldhammer</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Alban.html">Alban</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Arcus.html">Arcus</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Balati.html">Balati</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Cintra.html">Cintra</a></li>
+<li><a href="/taelgar1720/People/Extraplanar Powers/Prince of Luck.html">Prince of Luck</a></li>
+<li><a href="/taelgar1720/People/Other Nonhumans/Lengau.html">Lengau</a></li>
+<li><a href="/taelgar1720/People/Extraplanar Powers/Motua.html">Motua</a></li>
+<li><a href="/taelgar1720/People/Other Humans/Arryn.html">Arryn</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Kirian.html">Kirian</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Karmana.html">Karmana</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Rishi.html">Rishi</a></li>
+<li><a href="/taelgar1720/People/Lizardfolk/Elazar.html">Elazar</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Pava.html">Pava</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Avaras.html">Avaras</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Amil.html">Amil</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Saka.html">Saka</a></li>
+<li><a href="/taelgar1720/People/Extraplanar Powers/Archfey Ethlenn.html">Archfey Ethlenn</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Ames Benthey.html">Ames Benthey</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Ysabel.html">Ysabel</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Rinault Essford.html">Rinault Essford</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Rosalind Essford.html">Rosalind Essford</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Wymar Essford.html">Wymar Essford</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Nicholas Wysson.html">Nicholas Wysson</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Ida Rosfeld.html">Ida Rosfeld</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Odo Cordwaner.html">Odo Cordwaner</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Eveyln Totteridge.html">Eveyln Totteridge</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Brot Starsearcher.html">Brot Starsearcher</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Diesla Starsearcher.html">Diesla Starsearcher</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Susanne Garay.html">Susanne Garay</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Perrin Voclain.html">Perrin Voclain</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Arthur Bybet.html">Arthur Bybet</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Jonathon Henwyn.html">Jonathon Henwyn</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Anselm.html">Anselm</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Eremon.html">Eremon</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Conrad.html">Conrad</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Sarabeth.html">Sarabeth</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Selma Wisthelwind.html">Selma Wisthelwind</a></li>
+<li><a href="/taelgar1720/People/Other Nonhumans/Mezzar.html">Mezzar</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Hagrim.html">Hagrim</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Nora Silverspark.html">Nora Silverspark</a></li>
+<li><a href="/taelgar1720/People/Halflings/Marigold Stonebridge.html">Marigold Stonebridge</a></li>
+<li><a href="/taelgar1720/People/Halflings/Venra Stonebridge.html">Venra Stonebridge</a></li>
+<li><a href="/taelgar1720/People/Halflings/Willow Stonebridge.html">Willow Stonebridge</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Annet Bybet.html">Annet Bybet</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Emperor Avatus.html">Emperor Avatus</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Govir.html">Govir</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Albus.html">Albus</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Crispus.html">Crispus</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Drusa.html">Drusa</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Illyan.html">Illyan</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Galen.html">Galen</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Gnaeus.html">Gnaeus</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Lyra.html">Lyra</a></li>
+<li><a href="/taelgar1720/People/Deno'qai/Alayah.html">Alayah</a></li>
+<li><a href="/taelgar1720/People/Deno'qai/Ariel.html">Ariel</a></li>
+<li><a href="/taelgar1720/People/Deno'qai/Enon.html">Enon</a></li>
+<li><a href="/taelgar1720/People/Deno'qai/Itar.html">Itar</a></li>
+<li><a href="/taelgar1720/People/Deno'qai/Jordo.html">Jordo</a></li>
+<li><a href="/taelgar1720/People/Deno'qai/Jothai.html">Jothai</a></li>
+<li><a href="/taelgar1720/People/Deno'qai/Kaslan.html">Kaslan</a></li>
+<li><a href="/taelgar1720/People/Deno'qai/Ninu.html">Ninu</a></li>
+<li><a href="/taelgar1720/People/Deno'qai/Obel.html">Obel</a></li>
+<li><a href="/taelgar1720/People/Deno'qai/Safri.html">Safri</a></li>
+<li><a href="/taelgar1720/People/Deno'qai/Theba.html">Theba</a></li>
+<li><a href="/taelgar1720/People/Deno'qai/Yota.html">Yota</a></li>
+<li><a href="/taelgar1720/People/Deno'qai/Zaro.html">Zaro</a></li>
+<li><a href="/taelgar1720/People/Deno'qai/Zevi of the Bek'eni.html">Zevi of the Bek'eni</a></li>
+<li><a href="/taelgar1720/People/Deno'qai/Zevi of the Ko'zula.html">Zevi of the Ko'zula</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Akan.html">Akan</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Amar.html">Amar</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Amay.html">Amay</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Aram.html">Aram</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Ashar.html">Ashar</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Basu.html">Basu</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Beli.html">Beli</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Camana.html">Camana</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Darshana.html">Darshana</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Devana.html">Devana</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Dunmari werewolf woman.html">Dunmari werewolf woman</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Hada.html">Hada</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Isha.html">Isha</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Jayden.html">Jayden</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Johar.html">Johar</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Jumi.html">Jumi</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Justan.html">Justan</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Kaya.html">Kaya</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Kiran.html">Kiran</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Kisa.html">Kisa</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Padma.html">Padma</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Sajan.html">Sajan</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Saka’s niece.html">Saka’s niece</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Selkan.html">Selkan</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Shandar.html">Shandar</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Shani.html">Shani</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Suma.html">Suma</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Umber.html">Umber</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Delig Firebrand.html">Delig Firebrand</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Dworic.html">Dworic</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Eberk Brawnanvil.html">Eberk Brawnanvil</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Finellen Silverstone.html">Finellen Silverstone</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Magran Boulderbeard.html">Magran Boulderbeard</a></li>
+<li><a href="/taelgar1720/People/Other Nonhumans/Inakara.html">Inakara</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Travok Redpeak.html">Travok Redpeak</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Morkral Hardstone.html">Morkral Hardstone</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Rurik.html">Rurik</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Tak.html">Tak</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Torgga Redpeak.html">Torgga Redpeak</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Vondal Redpeak.html">Vondal Redpeak</a></li>
+<li><a href="/taelgar1720/People/Elves/Belegor.html">Belegor</a></li>
+<li><a href="/taelgar1720/People/Fey/Eleuha.html">Eleuha</a></li>
+<li><a href="/taelgar1720/People/Fey/Illaran.html">Illaran</a></li>
+<li><a href="/taelgar1720/People/Fey/Lady Eventide.html">Lady Eventide</a></li>
+<li><a href="/taelgar1720/People/Fey/Melusine.html">Melusine</a></li>
+<li><a href="/taelgar1720/People/Fey/Somi-nai.html">Somi-nai</a></li>
+<li><a href="/taelgar1720/People/Lizardfolk/Enari.html">Enari</a></li>
+<li><a href="/taelgar1720/People/Giants/Vondar.html">Vondar</a></li>
+<li><a href="/taelgar1720/People/Halflings/Alton Greenleaf.html">Alton Greenleaf</a></li>
+<li><a href="/taelgar1720/People/Halflings/Lyle Greenleaf.html">Lyle Greenleaf</a></li>
+<li><a href="/taelgar1720/People/Halflings/Bree Charmheart.html">Bree Charmheart</a></li>
+<li><a href="/taelgar1720/People/Halflings/Corrin Wildheart.html">Corrin Wildheart</a></li>
+<li><a href="/taelgar1720/People/Halflings/Dani Silversong.html">Dani Silversong</a></li>
+<li><a href="/taelgar1720/People/Halflings/Ewen Silversong.html">Ewen Silversong</a></li>
+<li><a href="/taelgar1720/People/Halflings/Harol Silversong.html">Harol Silversong</a></li>
+<li><a href="/taelgar1720/People/Halflings/Harold Stonebridge.html">Harold Stonebridge</a></li>
+<li><a href="/taelgar1720/People/Halflings/Jasmine Sunmeadow.html">Jasmine Sunmeadow</a></li>
+<li><a href="/taelgar1720/People/Halflings/Oswalt Tealeaf.html">Oswalt Tealeaf</a></li>
+<li><a href="/taelgar1720/People/Halflings/Lerry Wildheart.html">Lerry Wildheart</a></li>
+<li><a href="/taelgar1720/People/Halflings/Lyle Honeyhill.html">Lyle Honeyhill</a></li>
+<li><a href="/taelgar1720/People/Halflings/Pearl Brightmoon.html">Pearl Brightmoon</a></li>
+<li><a href="/taelgar1720/People/Halflings/Wella Brightmoon.html">Wella Brightmoon</a></li>
+<li><a href="/taelgar1720/People/Halflings/Rose Brightmoon.html">Rose Brightmoon</a></li>
+<li><a href="/taelgar1720/People/Halflings/Pearl Copperharp.html">Pearl Copperharp</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Commander Ila.html">Commander Ila</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Daruk.html">Daruk</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Odim Mavdyrson.html">Odim Mavdyrson</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Zegron.html">Zegron</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Drankorian Emperors/Emperor Apollyon.html">Emperor Apollyon</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Drankorian Emperors/Emperor Helena.html">Emperor Helena</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Drankorian Emperors/Emperor Vestian.html">Emperor Vestian</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Dunmari Rulers/Dasa.html">Dasa</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Dunmari Rulers/Samraat Nayan Yarad.html">Samraat Nayan Yarad</a></li>
+<li><a href="/taelgar1720/People/Kenku/Makha.html">Makha</a></li>
+<li><a href="/taelgar1720/People/Kenku/Nahto.html">Nahto</a></li>
+<li><a href="/taelgar1720/People/Kenku/Skoda.html">Skoda</a></li>
+<li><a href="/taelgar1720/People/Lizardfolk/Arrosa.html">Arrosa</a></li>
+<li><a href="/taelgar1720/People/Orcs/Gorkil.html">Gorkil</a></li>
+<li><a href="/taelgar1720/People/Orcs/Orc in the Mirror.html">Orc in the Mirror</a></li>
+<li><a href="/taelgar1720/People/Orcs/Uzgash.html">Uzgash</a></li>
+<li><a href="/taelgar1720/People/Other Humans/Gyles.html">Gyles</a></li>
+<li><a href="/taelgar1720/People/Other Humans/Radomir.html">Radomir</a></li>
+<li><a href="/taelgar1720/People/Other Humans/Resenna.html">Resenna</a></li>
+<li><a href="/taelgar1720/People/Other Nonhumans/Revaka.html">Revaka</a></li>
+<li><a href="/taelgar1720/People/Other Nonhumans/Samerki.html">Samerki</a></li>
+<li><a href="/taelgar1720/People/Other Nonhumans/Werewolf Prisoner.html">Werewolf Prisoner</a></li>
+</ul>
+<blockquote>
+<p><a href="/taelgar1720/obs.html/tags/index.html">View all tags</a></p>
+</blockquote>
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="/taelgar1720/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

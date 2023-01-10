@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="seeker">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="/taelgar1720/favicon.ico" />
+
+                <!-- Set title -->
+                <title>Taelgar 1720</title>
+
+                <!-- Includes -->
+                
+<script src="/taelgar1720/obs.html/static/obsidian_core.js"></script>
+<script src="/taelgar1720/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="/taelgar1720/obs.html/static/master.css" />
+<script src="/taelgar1720/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="/taelgar1720/obs.html/static/flexsearch.bundle.js"></script>
+<script src="/taelgar1720/obs.html/static/pako.js"></script>
+<script src="/taelgar1720/obs.html/static/search.js"></script>
+<script src="/taelgar1720/obs.html/static/dirtree.js"></script>
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'seeker';
+                        const HTML_URL_PREFIX = '/taelgar1720';
+                        const PAGE_DEPTH = 3;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="/taelgar1720/index.html" id="homelink" title="Clear screen and go to homepage">Taelgar 1720</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+                <img src = "/taelgar1720/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+                function openSearch(){
+                        // toggle search popup and continue with extra code if it is enabled this time
+                        if (toggle_id('search-master-div')){
+                                // clear input and put focus on it so that we can start typing immediately
+                                let ss = document.getElementById('search_string');
+                                ss.value = '';
+                                ss.focus()
+                                ss.select()
+                        }
+                }
+        </script>
+                            
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="/taelgar1720/obs.html/dir_index.html" title="View directory tree">
+                    <img src = "/taelgar1720/obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div class="dirtree"><button id="folder-1" class="dir-button" onclick="toggle_dir(this.id)">Campaigns</button>
+<div id="folder-container-1" class="dir-container requires_js " path="/taelgar1720/Campaigns">
+	<button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">Ausson's Crossing Mini Series</button>
+	<div id="folder-container-2" class="dir-container requires_js " path="/taelgar1720/Campaigns/Ausson's Crossing Mini Series">
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1720/Campaigns/Ausson's Crossing Mini Series/AC - Session 1.html"  >AC - Session 1</a></li>
+			<li><a class="" href="/taelgar1720/Campaigns/Ausson's Crossing Mini Series/AC - Session 2.html"  >AC - Session 2</a></li>
+			<li><a class="" href="/taelgar1720/Campaigns/Ausson's Crossing Mini Series/AC - Session 3.html"  >AC - Session 3</a></li>
+			<li><a class="" href="/taelgar1720/Campaigns/Ausson's Crossing Mini Series/AC - Session 4.html"  >AC - Session 4</a></li>
+		</ul>
+	</div>
+	<button id="folder-3" class="dir-button folder_note " href="/taelgar1720/Campaigns\Cleenseau Campaign\Cleenseau Campaign.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Cleenseau Campaign</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="/taelgar1720/Campaigns/Cleenseau Campaign">
+		<button id="folder-4" class="dir-button" onclick="toggle_dir(this.id)">Session Events</button>
+		<div id="folder-container-4" class="dir-container requires_js " path="/taelgar1720/Campaigns/Cleenseau Campaign/Session Events">
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1720/Campaigns/Cleenseau Campaign/Session Events/First Spider Attack on Tavoise.html"  >First Spider Attack on Tavoise</a></li>
+				<li><a class="" href="/taelgar1720/Campaigns/Cleenseau Campaign/Session Events/Second Spider Attack on Tavoise.html"  >Second Spider Attack on Tavoise</a></li>
+				<li><a class="" href="/taelgar1720/Campaigns/Cleenseau Campaign/Session Events/Tragic Flood of the River Enst.html"  >Tragic Flood of the River Enst</a></li>
+			</ul>
+		</div>
+		<button id="folder-5" class="dir-button" onclick="toggle_dir(this.id)">Sessions</button>
+		<div id="folder-container-5" class="dir-container requires_js " path="/taelgar1720/Campaigns/Cleenseau Campaign/Sessions">
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1720/Campaigns/Cleenseau Campaign/Sessions/Cleenseau - Session 01.html"  >Cleenseau - Session 01</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1720/Campaigns/Cleenseau Campaign/Cleenseau Campaign - Index of NPCs.html"  >Cleenseau Campaign - Index of NPCs</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+	</ul>
+</div>
+<button id="folder-6" class="dir-button" onclick="toggle_dir(this.id)">Gazetteer</button>
+<div id="folder-container-6" class="dir-container requires_js " path="/taelgar1720/Gazetteer">
+	<button id="folder-7" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Highlands Region\The Central Highlands Region.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The Central Highlands Region</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Highlands Region">
+		<button id="folder-8" class="dir-button" onclick="toggle_dir(this.id)">Forests</button>
+		<div id="folder-container-8" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Highlands Region/Forests">
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Forests/Ainumarya.html"  >Ainumarya</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Forests/Crimson Forest.html"  >Crimson Forest</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Forests/Elderwood.html"  >Elderwood</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Forests/Forest of Dreams.html"  >Forest of Dreams</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Forests/Forest of Nightmares.html"  >Forest of Nightmares</a></li>
+			</ul>
+		</div>
+		<button id="folder-9" class="dir-button" onclick="toggle_dir(this.id)">Rivers</button>
+		<div id="folder-container-9" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Highlands Region/Rivers">
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Rivers/K'eye.html"  >K'eye</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Rivers/Kayan.html"  >Kayan</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Rivers/Yemo'te.html"  >Yemo'te</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Khatridun.html"  >Khatridun</a></li>
+			<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Zarkandur.html"  >Zarkandur</a></li>
+			<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/~CentralMountains~.html"  >~CentralMountains~</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Lowlands Region\The Central Lowlands Region.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The Central Lowlands Region</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region">
+		<button id="folder-11" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Drankorian Empire\Drankorian Empire.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Drankorian Empire</button>
+		<div id="folder-container-11" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire">
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire/Drankor.html"  >Drankor</a></li>
+			</ul>
+		</div>
+		<button id="folder-12" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Dunmar\Dunmar.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Dunmar</button>
+		<div id="folder-container-12" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar">
+			<button id="folder-13" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Dunmar\Central Dunmar\Central Dunmar.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Central Dunmar</button>
+			<div id="folder-container-13" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar">
+				<button id="folder-14" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Dunmar\Central Dunmar\Tokra\Tokra.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Tokra</button>
+				<div id="folder-container-14" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra">
+					<ul class="dir-list">
+						<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra/Archives.html"  >Archives</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra/Darshana’s caravanserai.html"  >Darshana’s caravanserai</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra/Kirian’s.html"  >Kirian’s</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra/Lakan Monastery.html"  >Lakan Monastery</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra/The Iron Swan.html"  >The Iron Swan</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra/The Red Lily Inn.html"  >The Red Lily Inn</a></li>
+					</ul>
+				</div>
+				<ul class="dir-list">
+					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Akela Inn.html"  >Akela Inn</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Copper Hills.html"  >Copper Hills</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Songara.html"  >Songara</a></li>
+				</ul>
+			</div>
+			<button id="folder-15" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Dunmar\Eastern Dunmar\Eastern Dunmar.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Eastern Dunmar</button>
+			<div id="folder-container-15" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar">
+				<ul class="dir-list">
+					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Askandi.html"  >Askandi</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Bas Udda.html"  >Bas Udda</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Gomat.html"  >Gomat</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Ikram’s.html"  >Ikram’s</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Karawa.html"  >Karawa</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Pava and Avaras' House.html"  >Pava and Avaras' House</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Red Mesa.html"  >Red Mesa</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Shakun’s Wellspring.html"  >Shakun’s Wellspring</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Temple of Shakun.html"  >Temple of Shakun</a></li>
+				</ul>
+			</div>
+			<button id="folder-16" class="dir-button" onclick="toggle_dir(this.id)">Western Dunmar</button>
+			<div id="folder-container-16" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Western Dunmar">
+				<button id="folder-17" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Dunmar\Western Dunmar\Darba\Darba.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Darba</button>
+				<div id="folder-container-17" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Western Dunmar/Darba">
+					<ul class="dir-list">
+						<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Western Dunmar/Darba/The Green Leaf.html"  >The Green Leaf</a></li>
+					</ul>
+				</div>
+				<ul class="dir-list">
+					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Western Dunmar/Nayahar.html"  >Nayahar</a></li>
+				</ul>
+			</div>
+			<ul class="dir-list">
+			</ul>
+		</div>
+		<button id="folder-18" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Nardith\Nardith.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Nardith</button>
+		<div id="folder-container-18" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Nardith">
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nardith/Tharn Todor.html"  >Tharn Todor</a></li>
+			</ul>
+		</div>
+		<button id="folder-19" class="dir-button" onclick="toggle_dir(this.id)">Rivers</button>
+		<div id="folder-container-19" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Rivers">
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Rivers/Hara.html"  >Hara</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Rivers/Kharja.html"  >Kharja</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Rivers/Shrev.html"  >Shrev</a></li>
+			</ul>
+		</div>
+		<button id="folder-20" class="dir-button" onclick="toggle_dir(this.id)">Ruins and Lairs</button>
+		<div id="folder-container-20" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Ruins and Lairs">
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Ruins and Lairs/Agata's lair.html"  >Agata's lair</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Ruins and Lairs/Dwarven outpost.html"  >Dwarven outpost</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Ruins and Lairs/Eudomes' Tower.html"  >Eudomes' Tower</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Ruins and Lairs/Hall of Stories.html"  >Hall of Stories</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Ruins and Lairs/Kharsan.html"  >Kharsan</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Ruins and Lairs/Monastery of Bhishma.html"  >Monastery of Bhishma</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Ruins and Lairs/Raven’s Hold.html"  >Raven’s Hold</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Ruins and Lairs/Stoneborn Statue Dungeon.html"  >Stoneborn Statue Dungeon</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Ruins and Lairs/Vandar.html"  >Vandar</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Ruins and Lairs/ancient elven ruins.html"  >ancient elven ruins</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Garamjala Desert.html"  >Garamjala Desert</a></li>
+			<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Myraeni Gap.html"  >Myraeni Gap</a></li>
+			<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nashtkar.html"  >Nashtkar</a></li>
+			<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Sea of Storms.html"  >Sea of Storms</a></li>
+			<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Yuvanti Mountains.html"  >Yuvanti Mountains</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Far North Region\The Far North Region.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The Far North Region</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Far North Region">
+		<ul class="dir-list">
+		</ul>
+	</div>
+	<button id="folder-22" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\The Green Sea Region.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The Green Sea Region</button>
+	<div id="folder-container-22" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region">
+		<button id="folder-23" class="dir-button" onclick="toggle_dir(this.id)">Eastern Green Sea</button>
+		<div id="folder-container-23" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea">
+			<button id="folder-24" class="dir-button" onclick="toggle_dir(this.id)">Ruins and Lairs</button>
+			<div id="folder-container-24" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Ruins and Lairs">
+				<ul class="dir-list">
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Ruins and Lairs/Arryn’s Tower.html"  >Arryn’s Tower</a></li>
+				</ul>
+			</div>
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Dolphin’s Rest Inn.html"  >Dolphin’s Rest Inn</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Medju.html"  >Medju</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Praznitsky.html"  >Praznitsky</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Quanyi.html"  >Quanyi</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Ursk.html"  >Ursk</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Vermillion Isles.html"  >Vermillion Isles</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Wahacha.html"  >Wahacha</a></li>
+			</ul>
+		</div>
+		<button id="folder-25" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Western Green Sea.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Western Green Sea</button>
+		<div id="folder-container-25" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea">
+			<button id="folder-26" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Greater Sembara.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Greater Sembara</button>
+			<div id="folder-container-26" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara">
+				<button id="folder-27" class="dir-button" onclick="toggle_dir(this.id)">Aurbez and the Ardonne</button>
+				<div id="folder-container-27" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne">
+					<button id="folder-28" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Aurbez and the Ardonne\Duchy of Maseau\Duchy of Maseau.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Duchy of Maseau</button>
+					<div id="folder-container-28" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/Duchy of Maseau">
+						<ul class="dir-list">
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/Duchy of Maseau/Cassons.html"  >Cassons</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/Duchy of Maseau/Evis.html"  >Evis</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/Duchy of Maseau/Valarin.html"  >Valarin</a></li>
+						</ul>
+					</div>
+					<ul class="dir-list">
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/Ausson's Crossing.html"  >Ausson's Crossing</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/March of Ardonne.html"  >March of Ardonne</a></li>
+					</ul>
+				</div>
+				<button id="folder-29" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Highland Kingdoms\Highland Kingdoms.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Highland Kingdoms</button>
+				<div id="folder-container-29" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Highland Kingdoms">
+					<ul class="dir-list">
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Highland Kingdoms/Ardlas.html"  >Ardlas</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Highland Kingdoms/Breva.html"  >Breva</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Highland Kingdoms/Lavnoch.html"  >Lavnoch</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Highland Kingdoms/Zovcka.html"  >Zovcka</a></li>
+					</ul>
+				</div>
+				<button id="folder-30" class="dir-button" onclick="toggle_dir(this.id)">Roads</button>
+				<div id="folder-container-30" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Roads">
+					<ul class="dir-list">
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Roads/Bandit's Way.html"  >Bandit's Way</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Roads/Dunmar Road.html"  >Dunmar Road</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Roads/Great South Road.html"  >Great South Road</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Roads/South Watch Road.html"  >South Watch Road</a></li>
+					</ul>
+				</div>
+				<button id="folder-31" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Sembara\Sembara.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Sembara</button>
+				<div id="folder-container-31" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara">
+					<button id="folder-32" class="dir-button" onclick="toggle_dir(this.id)">The Borderlands</button>
+					<div id="folder-container-32" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands">
+						<button id="folder-33" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Sembara\The Borderlands\Cleenseau Region\Cleenseau Region.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Cleenseau Region</button>
+						<div id="folder-container-33" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region">
+							<ul class="dir-list">
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Amance Brook.html"  >Amance Brook</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Army Garrison of Cleenseau.html"  >Army Garrison of Cleenseau</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Asineau.html"  >Asineau</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Aulout.html"  >Aulout</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Beury.html"  >Beury</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Cleenseau.html"  >Cleenseau</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Cleenseau Wood.html"  >Cleenseau Wood</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Dallet.html"  >Dallet</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Essford Manor.html"  >Essford Manor</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Ganboa.html"  >Ganboa</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Garrison Gate of Cleenseau.html"  >Garrison Gate of Cleenseau</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Lord's Council of Cleenseau.html"  >Lord's Council of Cleenseau</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Lord's Guard of Cleenseau.html"  >Lord's Guard of Cleenseau</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/North Gate of Cleenseau.html"  >North Gate of Cleenseau</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/River Gate of Cleenseau.html"  >River Gate of Cleenseau</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Taviose.html"  >Taviose</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Temple of the Warlord in Cleenseau.html"  >Temple of the Warlord in Cleenseau</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/The Bandit’s End.html"  >The Bandit’s End</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/The Crossroads Inn.html"  >The Crossroads Inn</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/The Fox’s Flagon.html"  >The Fox’s Flagon</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/The River’s Blessing.html"  >The River’s Blessing</a></li>
+								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Valit.html"  >Valit</a></li>
+							</ul>
+						</div>
+						<ul class="dir-list">
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Barony of Aveil.html"  >Barony of Aveil</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Barony of Vaubonne.html"  >Barony of Vaubonne</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Rinburg.html"  >Rinburg</a></li>
+						</ul>
+					</div>
+					<button id="folder-34" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Sembara\The Heartlands\The Heartlands.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The Heartlands</button>
+					<div id="folder-container-34" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands">
+						<ul class="dir-list">
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Dock Workers Great and Honorable Charitable Home for the Lost and Wretched.html"  >Dock Workers Great and Honorable Charitable Home for the Lost and Wretched</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Duchy of Arnbury.html"  >Duchy of Arnbury</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Duchy of Cheimen.html"  >Duchy of Cheimen</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Duchy of Seham.html"  >Duchy of Seham</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Duchy of Sembara.html"  >Duchy of Sembara</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Duchy of Wisford.html"  >Duchy of Wisford</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Embry.html"  >Embry</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Fellburn.html"  >Fellburn</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Lord Mayor’s Workhouse.html"  >Lord Mayor’s Workhouse</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Queen’s Own Home for Children.html"  >Queen’s Own Home for Children</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Wisford.html"  >Wisford</a></li>
+						</ul>
+					</div>
+					<button id="folder-35" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Sembara\The Highlands\The Highlands.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The Highlands</button>
+					<div id="folder-container-35" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Highlands">
+						<ul class="dir-list">
+						</ul>
+					</div>
+					<button id="folder-36" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Sembara\The Northlands\The Northlands.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The Northlands</button>
+					<div id="folder-container-36" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Northlands">
+						<ul class="dir-list">
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Northlands/Duchy of Telham.html"  >Duchy of Telham</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Northlands/Telham.html"  >Telham</a></li>
+						</ul>
+					</div>
+					<button id="folder-37" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Sembara\The Western Marches\The Western Marches.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The Western Marches</button>
+					<div id="folder-container-37" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches">
+						<ul class="dir-list">
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches/Barony of Ainwick.html"  >Barony of Ainwick</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches/Barony of Dunfry.html"  >Barony of Dunfry</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches/Dunfry.html"  >Dunfry</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches/Marches of Enford.html"  >Marches of Enford</a></li>
+							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches/Marches of ~CentralMountains~.html"  >Marches of ~CentralMountains~</a></li>
+						</ul>
+					</div>
+					<ul class="dir-list">
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/Army of Mostreve.html"  >Army of Mostreve</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/Army of the North.html"  >Army of the North</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/Army of the South.html"  >Army of the South</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/Army of the West.html"  >Army of the West</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/Miltary Organization of Sembara.html"  >Miltary Organization of Sembara</a></li>
+					</ul>
+				</div>
+				<button id="folder-38" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Tyrwingha\Tyrwingha.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Tyrwingha</button>
+				<div id="folder-container-38" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha">
+					<ul class="dir-list">
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha/Aben River.html"  >Aben River</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha/Abenfyrd.html"  >Abenfyrd</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha/Clawyn.html"  >Clawyn</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha/Oracle of the Riven.html"  >Oracle of the Riven</a></li>
+						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha/Tafolwern.html"  >Tafolwern</a></li>
+					</ul>
+				</div>
+				<ul class="dir-list">
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Addermarch.html"  >Addermarch</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aine Hills.html"  >Aine Hills</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Braebein.html"  >Braebein</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Dominion of Atavus.html"  >Dominion of Atavus</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Free City of Tollen.html"  >Free City of Tollen</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Mostreve Hills.html"  >Mostreve Hills</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Ozabal.html"  >Ozabal</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Western Gulf.html"  >Western Gulf</a></li>
+				</ul>
+			</div>
+			<button id="folder-39" class="dir-button" onclick="toggle_dir(this.id)">Rivers</button>
+			<div id="folder-container-39" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers">
+				<ul class="dir-list">
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/Lake Derwent.html"  >Lake Derwent</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/Lake Kamchak.html"  >Lake Kamchak</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/Lake Pekul.html"  >Lake Pekul</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/Rive Kem.html"  >Rive Kem</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Enst.html"  >River Enst</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Niva.html"  >River Niva</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Semb.html"  >River Semb</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Teft.html"  >River Teft</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Volta.html"  >River Volta</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Wistel.html"  >River Wistel</a></li>
+				</ul>
+			</div>
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Cymea.html"  >Cymea</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Istabor Alliance.html"  >Istabor Alliance</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Plaguelands.html"  >Plaguelands</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Skaegenland.html"  >Skaegenland</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Vostok.html"  >Vostok</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/The Green Sea.html"  >The Green Sea</a></li>
+		</ul>
+	</div>
+	<button id="folder-40" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The South Region\The South Region.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The South Region</button>
+	<div id="folder-container-40" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The South Region">
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1720/Gazetteer/The South Region/Azta Lekua.html"  >Azta Lekua</a></li>
+			<li><a class="" href="/taelgar1720/Gazetteer/The South Region/Bedez.html"  >Bedez</a></li>
+			<li><a class="" href="/taelgar1720/Gazetteer/The South Region/Orekatu.html"  >Orekatu</a></li>
+		</ul>
+	</div>
+	<button id="folder-41" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The West Coast Region\The West Coast Region.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The West Coast Region</button>
+	<div id="folder-container-41" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region">
+		<button id="folder-42" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The West Coast Region\Chardonian Empire\Chardonian Empire.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Chardonian Empire</button>
+		<div id="folder-container-42" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire">
+			<button id="folder-43" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The West Coast Region\Chardonian Empire\Chardon\Chardon.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Chardon</button>
+			<div id="folder-container-43" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardon">
+				<ul class="dir-list">
+					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardon/Great Library.html"  >Great Library</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardon/The Chapterhouse.html"  >The Chapterhouse</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardon/The Salty Squid.html"  >The Salty Squid</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardon/The Thirsty Scholar.html"  >The Thirsty Scholar</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardon/University of Chardon.html"  >University of Chardon</a></li>
+				</ul>
+			</div>
+			<button id="folder-44" class="dir-button" onclick="toggle_dir(this.id)">Chasa River Valley</button>
+			<div id="folder-container-44" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chasa River Valley">
+				<ul class="dir-list">
+					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chasa River Valley/Arendum.html"  >Arendum</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chasa River Valley/Erlona.html"  >Erlona</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chasa River Valley/Laughing Wolf Inn.html"  >Laughing Wolf Inn</a></li>
+					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chasa River Valley/Metium.html"  >Metium</a></li>
+				</ul>
+			</div>
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Old Chardon Canal.html"  >Old Chardon Canal</a></li>
+			</ul>
+		</div>
+		<button id="folder-45" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The West Coast Region\Mawar Confederacy\Mawar Confederacy.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Mawar Confederacy</button>
+		<div id="folder-container-45" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Mawar Confederacy">
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Mawar Confederacy/Mawakel Peninsula.html"  >Mawakel Peninsula</a></li>
+			</ul>
+		</div>
+		<button id="folder-46" class="dir-button" onclick="toggle_dir(this.id)">Rivers</button>
+		<div id="folder-container-46" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Rivers">
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Rivers/Chasa.html"  >Chasa</a></li>
+				<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Rivers/Yeraad.html"  >Yeraad</a></li>
+			</ul>
+		</div>
+		<button id="folder-47" class="dir-button" onclick="toggle_dir(this.id)">Ruins and Lairs</button>
+		<div id="folder-container-47" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Ruins and Lairs">
+			<ul class="dir-list">
+				<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Ruins and Lairs/Kin-Aska.html"  >Kin-Aska</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Illoria.html"  >Illoria</a></li>
+			<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Nevos Sea.html"  >Nevos Sea</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+	</ul>
+</div>
+<button id="folder-48" class="dir-button" onclick="toggle_dir(this.id)">History</button>
+<div id="folder-container-48" class="dir-container requires_js " path="/taelgar1720/History">
+	<ul class="dir-list">
+		<li><a class="" href="/taelgar1720/History/A Chronicle of Sembaran History.html"  >A Chronicle of Sembaran History</a></li>
+	</ul>
+</div>
+<button id="folder-49" class="dir-button" onclick="toggle_dir(this.id)">Species</button>
+<div id="folder-container-49" class="dir-container requires_js " path="/taelgar1720/Species">
+	<ul class="dir-list">
+		<li><a class="" href="/taelgar1720/Species/Dwarves.html"  >Dwarves</a></li>
+		<li><a class="" href="/taelgar1720/Species/Elf.html"  >Elf</a></li>
+		<li><a class="" href="/taelgar1720/Species/Halfling.html"  >Halfling</a></li>
+		<li><a class="" href="/taelgar1720/Species/Hobgoblins.html"  >Hobgoblins</a></li>
+		<li><a class="" href="/taelgar1720/Species/Lizardfolk.html"  >Lizardfolk</a></li>
+		<li><a class="" href="/taelgar1720/Species/Orcs.html"  >Orcs</a></li>
+		<li><a class="" href="/taelgar1720/Species/Stoneborn.html"  >Stoneborn</a></li>
+	</ul>
+</div>
+<button id="folder-50" class="dir-button" onclick="toggle_dir(this.id)">Time</button>
+<div id="folder-container-50" class="dir-container requires_js " path="/taelgar1720/Time">
+	<button id="folder-51" class="dir-button" onclick="toggle_dir(this.id)">Holidays and Festivals</button>
+	<div id="folder-container-51" class="dir-container requires_js " path="/taelgar1720/Time/Holidays and Festivals">
+		<ul class="dir-list">
+			<li><a class="" href="/taelgar1720/Time/Holidays and Festivals/Aagirvala.html"  >Aagirvala</a></li>
+			<li><a class="" href="/taelgar1720/Time/Holidays and Festivals/Day of Renewal.html"  >Day of Renewal</a></li>
+			<li><a class="" href="/taelgar1720/Time/Holidays and Festivals/Feast of Bhishma.html"  >Feast of Bhishma</a></li>
+			<li><a class="" href="/taelgar1720/Time/Holidays and Festivals/Festival of Rebirth.html"  >Festival of Rebirth</a></li>
+			<li><a class="" href="/taelgar1720/Time/Holidays and Festivals/Festival of the Miracle of the Mist.html"  >Festival of the Miracle of the Mist</a></li>
+			<li><a class="" href="/taelgar1720/Time/Holidays and Festivals/Jaankar.html"  >Jaankar</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><a class="" href="/taelgar1720/Time/Calendar Eras.html"  >Calendar Eras</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><a class="" href="/taelgar1720/index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                
+                <div style="width:100%; text-align: right;display: block;margin: 0.5rem;">
+                    <div style="flex:1;display: none;"></div>
+                    <div class="breadcrumbs" style="flex:1 ;padding: 0.5rem; width: fit-content;display: inline;border-radius: 0.2rem;">
+                        <a href="/taelgar1720/" style="color: rgb(var(--normal-text-color));">Home</a> / <span style="color: #666;">People</span> / <span style="color: #666;">PCs</span> / <a href="/taelgar1720/People/PCs/The Dunmar Fellowship/The Dunmar Fellowship.html" style="color: var(--normal-text-color);">The Dunmar Fellowship</a> / <a href="/taelgar1720/People/PCs/The Dunmar Fellowship/Seeker.html" >Seeker</a>
+                    </div>
+                </div>
+<div class="content"><div class="toc">
+<ul>
+<li><a href="#seeker" class="anchor-link">Seeker</a></li>
+<li><a href="#red-mesa-tour-session-32" class="anchor-link">Red Mesa Tour, Session 32</a></li>
+<li><a href="#dream-journey-session-32" class="anchor-link">Dream Journey, Session 32</a></li>
+</ul>
+</div>
+<h3 id="seeker">Seeker</h3>
+<p><img src="/taelgar1720/assets/seeker.jpg"  width="400">   </p>
+<div class="callout callout-warning active callout-folded" rasa="1">
+<div class="callout-title" onclick="toggle(this.parentElement)">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+</div>
+<div class="callout-title-name">Seeker's Backstory <br />
+</div>
+<div class="callout-title-fold"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ChevronDown"><polyline points="6 9 12 15 18 9"></polyline>
+</div>
+</div>
+<div class="callout-content">
+<p>I grew up in the city of Darakan, on the western frontier of Sembara, in the dwarven kingdom of <a href="/taelgar1720/Gazetteer/The%20Central%20Highlands%20Region/Khatridun.html">Khatridun</a>. Darakan, my home, is famous for its fine marbleworks, especially the elaborate stonework marking the gates of the city, set high in a cliff face and reached by a series of marble steps and arches. My parents, proud Stoneworkers from Clan Highkeep, contributed much to the fame of the city, and were renowned as architects. I trained early in my life expecting to become a Stoneworker like them. <br />
+</p>
+<p>When I traveled to <a href="/taelgar1720/Cosmology/Multiverse/Spiritual%20Realms/Divine%20Realms/The%20Heart%20of%20the%20Mountain.html">The Heart of the Mountain</a> for my rite of passage to adulthood, I was indeed confirmed in the Stoneworker caste as I expected. However, then I saw something I did not expect. I saw myself floating in a vast, complex space, extending in more than three dimensions all around me. The mountain is above me, and beyond that the twisting strands of the <a href="/taelgar1720/Cosmology/Multiverse/Energy%20Realms/Plane%20of%20Magic.html">Plane of Magic</a>, caught into runes in the ancient ways of our people. Below me, a sea of sparkling lights extending across the world. In this moment, I had an instant of lucidity and saw the complex, indescribable geometry of the cosmos: magic above, consciousness and dreams below, and the world itself in the middle, but of course "above" and "below" are just crude, imprecise terms for what I actually saw. The moment ended, and the clarity faded, but the memory remained, and the conviction that magic, and consciousness, and the geometry of the worlds are all bound together in some cosmic way. <br />
+</p>
+<p>I had to find a way back to that moment of lucidity. Convinced this vision was not an accident, I took the name Seeker, and left my family and my home to study the ways the world and the planes of magic intersect. Near Darakan, a volcano erupted and a series of ley lines that used to cross all broke apart and avoided the place where the volcano had erupted. This led me to became interested in the physical connections between magic and the world of Taelgar, studying the properties of the material plane itself -- the shape of stones, of mountains, and the forces that change them, slowly, or suddenly. I traveled south to the Great Rift, studying the patterns of magical energy in ley lines around this cataclysm, and saw that the regularity of the intersections between planes was shattered, with ley lines that twisted and turned and just ended in chaotic patterns. <br />
+</p>
+<p>Amazed but still not understanding how everything fit together, I traveled east and spent some time with the Lizardfolk on the coast of the Green Sea, learning more about the <a href="/taelgar1720/Cosmology/Multiverse/Spiritual%20Realms/Proximate%20Realms/Dreamworld.html">Dreamworld</a> and how they perceived the cosmos. From these Lizardfolk, I learned of mystical cults far to the south that perhaps knew more about the connections between dreams, magic, and the architecture of the cosmos. Seeking knowledge, I set off, under the mountains to <a href="/taelgar1720/Gazetteer/The%20West%20Coast%20Region/Chardonian%20Empire/Chardon/Chardon.html">Chardon</a>, where I met the dwarven scholar <a href="/taelgar1720/People/Dwarves/Ulfgar%20Frostbeard.html">Ulfgar Frostbeard</a>, and learned of the Dunmari goddess <a href="/taelgar1720/Cosmology/Gods/Dunmari/Shakun.html">Shakun</a>, goddess of magic and dreams. <br />
+</p>
+<p>I was told that in the small village of <a href="/taelgar1720/Gazetteer/The%20Central%20Lowlands%20Region/Dunmar/Eastern%20Dunmar/Karawa.html">Karawa</a>, in eastern <a href="/taelgar1720/Gazetteer/The%20Central%20Lowlands%20Region/Dunmar/Dunmar.html">Dunmar</a>, a cult of <a href="/taelgar1720/Cosmology/Gods/Dunmari/Shakun.html">Shakun</a> could be found, at a point near where the new lands that arose with the fall of <a href="/taelgar1720/People/Extraplanar%20Powers/Cha%27mutte.html">Cha'mutte</a> began. Deeply interested in the effects of cataclysmic change on the material and magical worlds, I headed to <a href="/taelgar1720/Gazetteer/The%20Central%20Lowlands%20Region/Dunmar/Dunmar.html">Dunmar</a>. Traveling through <a href="/taelgar1720/Gazetteer/The%20Central%20Lowlands%20Region/Dunmar/Dunmar.html">Dunmar</a>, making maps and drawing multidimensional diagrams to extrapolate the shape of the <a href="/taelgar1720/Cosmology/Multiverse/Energy%20Realms/Plane%20of%20Magic.html">Plane of Magic</a>, I heard rumors again of <a href="/taelgar1720/Gazetteer/The%20Central%20Lowlands%20Region/Dunmar/Eastern%20Dunmar/Karawa.html">Karawa</a>, that it was a nexus of connection between the <a href="/taelgar1720/Cosmology/Multiverse/Spiritual%20Realms/Proximate%20Realms/Dreamworld.html">Dreamworld</a> and the <a href="/taelgar1720/Cosmology/Multiverse/Energy%20Realms/Plane%20of%20Magic.html">Plane of Magic</a>, and that <a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a>, the Speaker of <a href="/taelgar1720/Cosmology/Gods/Dunmari/Shakun.html">Shakun</a>, would be the person to talk to. So I set off, traveling to <a href="/taelgar1720/Gazetteer/The%20Central%20Lowlands%20Region/Dunmar/Eastern%20Dunmar/Karawa.html">Karawa</a>, eager to learn more. <br />
+</p>
+<p>Dates from backstory: <br />
+</p>
+<p>5844: Seeker is born in Darakan (1711 DE, 154th year of the Nayan Dynasty) <br />
+5863: Brother <a href="/taelgar1720/People/Dwarves/Frankar.html">Frankar</a> vanishes in a storm, after constructing a giant machine of gears and stone and gems and magic that is destroyed, leaving behind a dead white salamander burned to a crisp.  <br />
+5878: Seeker travels to <a href="/taelgar1720/Cosmology/Multiverse/Spiritual%20Realms/Divine%20Realms/The%20Heart%20of%20the%20Mountain.html">The Heart of the Mountain</a> and has a vision (1745 DE, 188th year of the Nayan Dynasty) <br />
+5879: Seeker leaves home, spending a season with the Lizardfolk in Sembara, and then traveling across the mountains to <a href="/taelgar1720/Gazetteer/The%20West%20Coast%20Region/Chardonian%20Empire/Chardon/Chardon.html">Chardon</a>, and then east to <a href="/taelgar1720/Gazetteer/The%20Central%20Lowlands%20Region/Dunmar/Dunmar.html">Dunmar</a> (1746 DE, 189th year of the Nayan Dynasty) <br />
+</p>
+<p>Travels from 5879-5881: <br />
+- Oct - Nov 5879: left home, traveled east into Sembara <br />
+- Nov 5879 - May 5880: stayed with lizardfolk on eastern border of Sembara <br />
+- Jun - Sept 5880:  travel from lizardfolk to <a href="/taelgar1720/Gazetteer/The%20West%20Coast%20Region/Chardonian%20Empire/Chardon/Chardon.html">Chardon</a> <br />
+- Oct - Dec 5880: stayed in <a href="/taelgar1720/Gazetteer/The%20West%20Coast%20Region/Chardonian%20Empire/Chardon/Chardon.html">Chardon</a> with <a href="/taelgar1720/People/Dwarves/Ulfgar%20Frostbeard.html">Ulfgar Frostbeard</a> <br />
+- Dec 5880 - Mar 5881: traveled to <a href="/taelgar1720/Gazetteer/The%20Central%20Lowlands%20Region/Dunmar/Eastern%20Dunmar/Karawa.html">Karawa</a> overland, stopping briefly at <a href="/taelgar1720/Gazetteer/The%20Central%20Lowlands%20Region/Dunmar/Central%20Dunmar/Songara.html">Songara</a> and <a href="/taelgar1720/Gazetteer/The%20Central%20Lowlands%20Region/Dunmar/Central%20Dunmar/Tokra/Tokra.html">Tokra</a>, where stayed at the <a href="/taelgar1720/Gazetteer/The%20Central%20Lowlands%20Region/Dunmar/Central%20Dunmar/Tokra/The%20Iron%20Swan.html">The Iron Swan</a> an inn, run by a retired Dwarven adventurer, <a href="/taelgar1720/People/Dwarves/Vistra%20Fireforge.html">Vistra Fireforge</a>, and located in the small dwarvish quarter of the city behind the <a href="/taelgar1720/Gazetteer/The%20Central%20Lowlands%20Region/Dunmar/Central%20Dunmar/Tokra/Archives.html">Archives</a>. In <a href="/taelgar1720/Gazetteer/The%20Central%20Lowlands%20Region/Dunmar/Central%20Dunmar/Tokra/Tokra.html">Tokra</a> he also met the Hardstone clan, especially <a href="/taelgar1720/People/Dwarves/Fallthra%20Hardstone.html">Fallthra Hardstone</a>, the matriarch, <a href="/taelgar1720/People/Dwarves/Delig%20Hardstone.html">Delig Hardstone</a>, her brother, and <a href="/taelgar1720/People/Dwarves/Dag%20Hardstone.html">Dag Hardstone</a>, her son, still only a teenager, not yet having traveled to <a href="/taelgar1720/Cosmology/Multiverse/Spiritual%20Realms/Divine%20Realms/The%20Heart%20of%20the%20Mountain.html">The Heart of the Mountain</a>. They work at the <a href="/taelgar1720/Gazetteer/The%20Central%20Lowlands%20Region/Dunmar/Central%20Dunmar/Tokra/Archives.html">Archives</a>, as architects, janitors, supers. Work some minor runic magic to protect scrolls, mend damage, and the like, as well as making magical runic imprints of particularly valuable material that can then be copied and sent to <a href="/taelgar1720/Gazetteer/The%20Central%20Lowlands%20Region/Dunmar/Western%20Dunmar/Nayahar.html">Nayahar</a> or <a href="/taelgar1720/Gazetteer/The%20Central%20Lowlands%20Region/Dunmar/Western%20Dunmar/Darba/Darba.html">Darba</a> or <a href="/taelgar1720/Gazetteer/The%20West%20Coast%20Region/Chardonian%20Empire/Chardon/Chardon.html">Chardon</a> without risk of error. <br />
+</p>
+<p>5881: Seeker arrives in <a href="/taelgar1720/Gazetteer/The%20Central%20Lowlands%20Region/Dunmar/Eastern%20Dunmar/Karawa.html">Karawa</a> and our adventures begin (1748 DE, 191st year of the Nayan Dynasty) <br />
+</p>
+</div>
+</div>
+<div class="callout callout-warning active callout-folded" rasa="1">
+<div class="callout-title" onclick="toggle(this.parentElement)">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+</div>
+<div class="callout-title-name">Mesa Tour, Session 32 <br />
+</div>
+<div class="callout-title-fold"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ChevronDown"><polyline points="6 9 12 15 18 9"></polyline>
+</div>
+</div>
+<div class="callout-content">
+<h3 id="red-mesa-tour-session-32">Red Mesa Tour, Session 32</h3>
+<p>Having promised you a tour of the mesa, one morning <a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a> comes to meet you, saying the mystai are ready for you. You enter the temple, following the same route you took when you were here for the ritual of <a href="/taelgar1720/Cosmology/Gods/Dunmari/Shakun.html">Shakun</a>’s Heart. But rather than descending to the deepest level, you turn on a side path.  <br />
+</p>
+<p>You are walking through the rock of the Mesa here, and it feels like nothing you have experienced before. The rock itself seems to move out of your way as the mystai ahead speaks, a rough hewn tunnel opening in front of you as you walk.  <br />
+</p>
+<p>After a short while, the passage opens into a huge cavern. There is no light, except a dim reddish glow that seems to emanate from the rocks themselves. You can feel the open space though, extending beyond the range of you darkvision.  <br />
+</p>
+<p>The mystai speaks a word in a language you don’t know, and suddenly the cavern flairs into light, the reddish glow of a sunset.  <br />
+</p>
+<p>In front of you, you see a grove of low bushes, each with a giant inflorescence, all made of stone, but waving slightly in the air.  <br />
+</p>
+<p>On the far wall, there is a waterfall, cascading down, but not of water, it seems to be of white smooth limestone or something, flowing slowly into a pool. Around the pool are a series of small vines, also made of red sandstone.  <br />
+</p>
+<p>Finally, there is a low tree of a dark granite, with lighter quartz leaves. Growing from it are two red stone apples.  <br />
+</p>
+<p><a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a> turns to you and says “Welcome to our gardens! They are normally much lusher, but we have harvested everything we can to turn to potions, and these stones grow very slowly.”  <br />
+</p>
+<p>Seeker says, "These gardens are beautiful nonetheless, and I am grateful for even a glimpse of this magical place. My gratitude to <a href="/taelgar1720/Cosmology/Gods/Dunmari/Shakun.html">Shakun</a>, to you, and to the mystai of this order who have tended this garden surely for generations. I am especially curious to know the source and power of this waterfall, seemingly of stone! May I investigate more closely, and perhaps make some sketches? The shrubs and flowers and vines... all very strange... and the apples! What potions beyond the healing mud can be made here?" <br />
+</p>
+<p><a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a> is happy for you to sketch and investigate as much as you like, and tells you some of what they have made. The apples, when ripe, can make an elixir of health that cures all poison, disease, blindness and sickness, but requires four apples and it takes months for them to ripen. They just harvested the four ripest a few days ago, and <a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a> hopes to present your party with one of these potions before you leave. Berries grow on the vines which can be used to make potions that allow you to resist damage of certain types. The petals of the giant flowers can be harvested to make healing mud, when mixed with the flowing rock of the waterfall. These have all been harvested, you can see, for the shrubs just have the giant central inflorescence of the flower left, no petals. But <a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a> says they will regrow over the next month or two.  <br />
+</p>
+<p>The waterfall looks kind of like flowstone. It just emerges from the wall of the cavern, without an obvious source, and is used to mix with all the other living stone to make potions. When you approach the stone pool below the waterfall, and investigate a bit more, it seems very strange. If you touch it and slowly dip your hand, it parts for you, and you can draw up something that feels almost like a liquid, but if you push hard on it, it is solid rock (basically, this is a non-Newtonian fluid).  <br />
+</p>
+<p>As for the power of this place, <a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a> tells you that the magical energy to grow these things comes from <a href="/taelgar1720/not_created.html" class="nonexistent-link">The Heart of Shakun</a>, and that he has always liked to think that this is the garden that <a href="/taelgar1720/Cosmology/Gods/Dunmari/Shakun.html">Shakun</a> imagines for herself, manifest of the living rock that is now <a href="/taelgar1720/Cosmology/Gods/Dunmari/Shakun.html">Shakun</a>'s body. When <a href="/taelgar1720/not_created.html" class="nonexistent-link">The Heart of Shakun</a> was missing, the rock ceased to grow, the waterfall turned brittle and hard, and the delicate stone of the vines and flowers began to crack and crumble.  <br />
+</p>
+</div>
+</div>
+<div class="callout callout-warning active callout-folded" rasa="1">
+<div class="callout-title" onclick="toggle(this.parentElement)">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+</div>
+<div class="callout-title-name">Seeker's Dream Journey, Session 32 <br />
+</div>
+<div class="callout-title-fold"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ChevronDown"><polyline points="6 9 12 15 18 9"></polyline>
+</div>
+</div>
+<div class="callout-content">
+<h3 id="dream-journey-session-32">Dream Journey, Session 32</h3>
+<p><a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a> asks Seeker to meet him at the top of the mesa, at dusk. When Seeker arrives, <a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a> is waiting, holding his dream staff, the same staff of white ash with a silver crescent design on the top. He seems relaxed and at peace in a way that you have not seen before. The staff seems to shimmer slightly -- somehow the return of <a href="/taelgar1720/Cosmology/Gods/Dunmari/Shakun.html">Shakun</a>'s Heart has added to its power, allowing it to recharge. <a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a> asks you to focus on an image, an anchor that will guide and shape your experience in the <a href="/taelgar1720/Cosmology/Multiverse/Spiritual%20Realms/Proximate%20Realms/Dreamworld.html">Dreamworld</a>.  <br />
+</p>
+<p>As you concentrate on the image of <a href="/taelgar1720/People/Dwarves/Frankar.html">Frankar</a>, he brings the staff down, and it seems to pass through you. Looking down, your body is translucent, and you are floating, the light rapidly fading from the sky. You float, or are pulled, rapidly upward, the ground below vanishing, only a thin line of energy stretching back towards your distant body below. As you ascend, lights begin to appear, almost like stars, but full of dazzling color. They surround you in all directions -- above, below, to all sides -- moving and shifting in a hypnotic pattern. As you stare, dazed, you can hear <a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a>'s voice in the back of your mind, "Concentrate on your anchor!" <br />
+</p>
+<p>As you focus on <a href="/taelgar1720/People/Dwarves/Frankar.html">Frankar</a>, sitting and studying with him, the stars start to dim and fade, except for one, in the distance, the grows brighter and brighter as it pulls you towards it, until you crash through the bright white light into a empty stone chamber, completely circular, filled with salamanders. But these are not white salamanders. Each is unique. You see one that seems to be made of pure flame, one that is green and seems to be covered in moss, one that is heavy dark gray stone with earth that shakes from its body with each step, one that has horns and a spiked tail and is chasing the others nipping at them, one that seems to a wave in salamander form, one that is covered in runes, one that is lumbers with heavy footfalls and seems to grow and shrink with each step, one that appears almost as a storm cloud in salamander form.  Possibly others as well, they move quickly, running around and across each other.  <br />
+</p>
+<p>There is only one exit from the chamber, straight ahead. The salamanders seem to avoid the exit.  <br />
+</p>
+<p>You grab the fiery salamander by the tail, dragging it to the exit.  <br />
+</p>
+<p>As you step through the exit, the salamander burns to a crisp, but keeps wiggling and squirming in your grasp. The hall itself starts to shift then, the walls falling away and the room you were in vanishing, the stone falling away until you are standing on nothing but a scaffolding.  <br />
+</p>
+<p>You are looking at the inside of what seems like a complicated, whirling orrery. There are spheres within spheres turning and turning.  <br />
+</p>
+<p>From where you are standing, you can see below you what looks like a roiling sea, but not of water. It looks almost like shifting multicolored sands, sometimes a flare of flame or lightning or other intense energy, but mostly just swirling smooth sand that flows like water.  <br />
+</p>
+<p>Above you, you can see turning crystal spheres, opaque, spinning on a matte black background. Stars shine on the black background, multi colored, winking in and out as the opaque spheres pass them, reminding you of what you saw when you started this journey.  <br />
+</p>
+<p>Then, drifting on the sea of sand, an arch of fire. The salamander wiggles, trying to get to it, and as the arch floats past you can see, beyond it, a land of fire. Huge pillars of fire surround a city of brass, shining in the orange light of the fire the surrounds it. A river of magma flows past. In the fiery sky, an ash cloud drops rain of liquid mercury.  <br />
+</p>
+<p>The arch floats closer and closer, the salamander struggling to get through, it’s burnt body energetic and eager.  <br />
+</p>
+<p>You close your eyes for a moment, grimacing, wincing away from the image of the land of fire and its city of brass, thinking, is that where you've gone, Frank, child? What power has tempted you there? I'll find you, rescue you!  <br />
+</p>
+<p>You open my eyes again and face the arch of fire, now holding hidden in your left palm a tiny intricately worked figurine of white stone, depicting your fond memory of an innocent childhood <a href="/taelgar1720/People/Dwarves/Frankar.html">Frankar</a>. With your right hand you trace a spherical rune of protection around your body, a sphere of ice as clear as glass. You release the burnt salamander and follow it.   <br />
+</p>
+<p>You step forward into the arch of fire. For a brief moment, you step into darkness, an empty void, and feel a sensation of falling, as if you are diving into a clear pool. Above you, you can see a distorted reflection of your childhood home, as if seen through rippling water. There are multiple layers of images, each more twisted and blurred than the last. Below you, you are diving towards the "bottom" of this space, the shifting multicolored sands bubbling and boiling. Around you, a mist clings like water, thin and wispy in some directions, thick and opaque in others, seeming to reflect the colors of the sands below. As you dive, you are being pulled by a thin stream of flame, the burnt salamander ahead of you. You can see, briefly, laid out almost like a map on the "bottom" of this space, the burning land of fire and magme; a land of swirling clouds and flashes of lightning; a land of earth and stone; and a land of pure water reaching to endless depths. <br />
+</p>
+<p>You glimpse this arrangement just for a moment -- the mists and fogs of the "water", the energetic multicolored sands "below", the map of elemental realms floating above the sands, surrounded by fogs, some parts hidden and opaque, others only lightly obscured -- before you are pulled toward the arch of fire.  <br />
+</p>
+<p>As you approach the arch of fire, the thin silvery tether connecting you to <a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a>, the <a href="/taelgar1720/Gazetteer/The%20Central%20Lowlands%20Region/Dunmar/Eastern%20Dunmar/Red%20Mesa.html">Red Mesa</a>, and the Dream staff grows taunt. You can see, clearly, the land of fire beyond the arch as the salamander dives forward, passing beyond the portal into this strange fiery realm. But the tether prevents you from going further, and you are pulled back, swirling back through the twisting stars and crashing back into your body, the memory of the smoke and fire and ash that consumed everything in that land.  <br />
+</p>
+<p><a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a> looks at you as you open your eyes, with concern. "I know not what you saw, but I could feel you approaching a portal to elsewhere. Had you stepped through, you would have broken your tether and I could not have retrieved you. I am sorry I had to pull you back."
+</p>
+</div>
+</div></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Delwath.html">delwath</a></li>
+	<li><a class="backlink" href="/taelgar1720/People/Dwarves/Ulfgar Frostbeard.html">ulfgar frostbeard</a></li>
+	<li><a class="backlink" href="/taelgar1720/People/Dwarves/Frankar.html">frankar</a></li>
+	<li><a class="backlink" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Wellby.html">wellby</a></li>
+	<li><a class="backlink" href="/taelgar1720/People/PCs/The Dunmar Fellowship/The Dunmar Fellowship.html">the dunmar fellowship</a></li>
+	<li><a class="backlink" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Mikasa.html">mikasa</a></li>
+	<li><a class="backlink" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Raven.html">raven</a></li>
+	<li><a class="backlink" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Spirala.html">spirala</a></li>
+	<li><a class="backlink" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Caulaus.html">caulaus</a></li>
+	<li><a class="backlink" href="/taelgar1720/People/Dunmari/Jumi.html">jumi</a></li>
+	<li><a class="backlink" href="/taelgar1720/People/Fey/Illaran.html">illaran</a></li>
+	<li><a class="backlink" href="/taelgar1720/People/Giants/Vondar.html">vondar</a></li>
+	<li><a class="backlink" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Companions/Ladder.html">ladder</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="/taelgar1720/obs.html/tags/PC/DunmarFrontier/index.html">PC/DunmarFrontier</a></li>
+</ul>
+</div>
+
+</div>
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="/taelgar1720/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>
