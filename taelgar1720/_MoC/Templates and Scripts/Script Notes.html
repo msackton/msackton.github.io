@@ -5,7 +5,7 @@
         <head>
                 <!-- Page information -->
                 <meta charset="UTF-8" />
-                <meta name="node_id" content="am'khazar">
+                <meta name="node_id" content="script notes">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="shortcut icon" href="/taelgar1720/favicon.ico" />
 
@@ -47,9 +47,9 @@
 
                 <!-- Onload tweaks -->
                 <script>
-                        const CURRENT_NODE = 'am'khazar';
+                        const CURRENT_NODE = 'script notes';
                         const HTML_URL_PREFIX = '/taelgar1720';
-                        const PAGE_DEPTH = 1;
+                        const PAGE_DEPTH = 2;
                 </script>
         </head>
 
@@ -663,9 +663,9 @@
 	</ul>
 </div>
 <button id="folder-55" class="dir-button" onclick="toggle_dir(this.id)">_MoC</button>
-<div id="folder-container-55" class="dir-container requires_js " path="/taelgar1720/_MoC">
+<div id="folder-container-55" class="dir-container requires_js active" path="/taelgar1720/_MoC">
 	<button id="folder-56" class="dir-button" onclick="toggle_dir(this.id)">Templates and Scripts</button>
-	<div id="folder-container-56" class="dir-container requires_js " path="/taelgar1720/_MoC/Templates and Scripts">
+	<div id="folder-container-56" class="dir-container requires_js active" path="/taelgar1720/_MoC/Templates and Scripts">
 		<ul class="dir-list">
 			<li><a class="" href="/taelgar1720/_MoC/Templates and Scripts/Export.html"  >Export</a></li>
 			<li><a class="" href="/taelgar1720/_MoC/Templates and Scripts/Script Notes.html"  >Script Notes</a></li>
@@ -711,26 +711,47 @@
                 <div style="width:100%; text-align: right;display: block;margin: 0.5rem;">
                     <div style="flex:1;display: none;"></div>
                     <div class="breadcrumbs" style="flex:1 ;padding: 0.5rem; width: fit-content;display: inline;border-radius: 0.2rem;">
-                        <a href="/taelgar1720/" style="color: rgb(var(--normal-text-color));">Home</a> / <a href="/taelgar1720/Worldbuilding/WorldBuilding.html" style="color: var(--normal-text-color);">Worldbuilding</a> / <a href="/taelgar1720/Worldbuilding/Am'khazar.html" >Am'khazar</a>
+                        <a href="/taelgar1720/" style="color: rgb(var(--normal-text-color));">Home</a> / <span style="color: #666;">_MoC</span> / <span style="color: #666;">Templates and Scripts</span> / <a href="/taelgar1720/_MoC/Templates and Scripts/Script Notes.html" >Script Notes</a>
                     </div>
                 </div>
-<div class="content"><div class="toc">
-<ul></ul>
-</div></div>
-<div class="note-footer">
-<div class="backlinks">
-<h2>Backlinks</h2>
+<div class="content"><h1 id="scripts-notes">Scripts notes</h1>
+<div class="toc">
 <ul>
-	<li><a class="backlink" href="/taelgar1720/Species/Dwarves.html">dwarves</a></li>
-	<li><a class="backlink" href="/taelgar1720/People/Dwarves/Brot Starsearcher.html">brot starsearcher</a></li>
+<li><a href="#scripts-notes" class="anchor-link">Scripts notes</a><ul>
+<li><a href="#convert_markdown-py" class="anchor-link">convert_markdown.py</a></li>
+<li><a href="#customjs" class="anchor-link">customJS</a></li>
+<li><a href="#view" class="anchor-link">view</a></li>
+<li><a href="#templater" class="anchor-link">templater</a></li>
+</ul>
+</li>
 </ul>
 </div>
+<p>I've copied all javascript and python code that interact with obsidian or markdown to the <code>_scripts</code> directory (my filter_sercrets.py script for git smudge/clean lives elsewhere, in the .scripts directory).   </p>
+<p>There are currently three things in here:   </p>
+<h4 id="convert_markdown-py"><strong>convert_markdown.py</strong></h4>
+<p>This is the python script that takes the obsdiantohtml md output and cleans it by replacing dv.view() code with Python replacements, and removing Date blocks. This needs to be fixed to work with the new javascript so it won't do anything yet. I will update this readme with run instructions once it is functional.   </p>
+<h4 id="customjs"><strong>customJS</strong></h4>
+<p>This folder contains javascript code that can be imported into either a templater javascript block or a dataviewjs block by using:   </p>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="n">FUNCTIONNAME</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">customJS</span>
+</code></pre></div>
+
+
+</div>
+
+<p>FUNCTIONNAME is the name of a file containing a class with various methods. My understanding is the file needs to be named FUNCTIONNAME.js and the class should be the same as the filename. You'll need to set the customJS scripts folder to <code>_scripts/customJS</code>, of course.    </p>
+<p>Right now, the only class that exists here is metadataUtils. All the metadataUtils functions take the metadata object as their first argument, with optional additional arguments depending on the function.    </p>
+<h4 id="view"><strong>view</strong></h4>
+<p>This folder contains dataview functions that can be used with dv.view("/path/to/function", arguments).    </p>
+<p>Currently, get_PageDatedValue and get_RegnalYear work, but get_CampaignBasedValue doesn't, for unclear reasons.   </p>
+<h4 id="templater"><strong>templater</strong></h4>
+<p>This folder contains templater user functions. The generateHeader function will create a header depending on the type frontmatter. Currently only the NPC type works.</p></div>
+<div class="note-footer">
+<div class="backlinks" style="display:none"></div>
 
 <div class="tags">
-<h2>Tags</h2>
-<ul>
-	<li><a class="backlink" href="/taelgar1720/obs.html/tags/stub/index.html">stub</a></li>
-</ul>
+
 </div>
 
 </div>

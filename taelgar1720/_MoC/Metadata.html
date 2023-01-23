@@ -5,7 +5,7 @@
         <head>
                 <!-- Page information -->
                 <meta charset="UTF-8" />
-                <meta name="node_id" content="am'khazar">
+                <meta name="node_id" content="metadata">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="shortcut icon" href="/taelgar1720/favicon.ico" />
 
@@ -47,7 +47,7 @@
 
                 <!-- Onload tweaks -->
                 <script>
-                        const CURRENT_NODE = 'am'khazar';
+                        const CURRENT_NODE = 'metadata';
                         const HTML_URL_PREFIX = '/taelgar1720';
                         const PAGE_DEPTH = 1;
                 </script>
@@ -663,7 +663,7 @@
 	</ul>
 </div>
 <button id="folder-55" class="dir-button" onclick="toggle_dir(this.id)">_MoC</button>
-<div id="folder-container-55" class="dir-container requires_js " path="/taelgar1720/_MoC">
+<div id="folder-container-55" class="dir-container requires_js active" path="/taelgar1720/_MoC">
 	<button id="folder-56" class="dir-button" onclick="toggle_dir(this.id)">Templates and Scripts</button>
 	<div id="folder-container-56" class="dir-container requires_js " path="/taelgar1720/_MoC/Templates and Scripts">
 		<ul class="dir-list">
@@ -711,26 +711,268 @@
                 <div style="width:100%; text-align: right;display: block;margin: 0.5rem;">
                     <div style="flex:1;display: none;"></div>
                     <div class="breadcrumbs" style="flex:1 ;padding: 0.5rem; width: fit-content;display: inline;border-radius: 0.2rem;">
-                        <a href="/taelgar1720/" style="color: rgb(var(--normal-text-color));">Home</a> / <a href="/taelgar1720/Worldbuilding/WorldBuilding.html" style="color: var(--normal-text-color);">Worldbuilding</a> / <a href="/taelgar1720/Worldbuilding/Am'khazar.html" >Am'khazar</a>
+                        <a href="/taelgar1720/" style="color: rgb(var(--normal-text-color));">Home</a> / <span style="color: #666;">_MoC</span> / <a href="/taelgar1720/_MoC/Metadata.html" >Metadata</a>
                     </div>
                 </div>
 <div class="content"><div class="toc">
 <ul></ul>
-</div></div>
-<div class="note-footer">
-<div class="backlinks">
-<h2>Backlinks</h2>
-<ul>
-	<li><a class="backlink" href="/taelgar1720/Species/Dwarves.html">dwarves</a></li>
-	<li><a class="backlink" href="/taelgar1720/People/Dwarves/Brot Starsearcher.html">brot starsearcher</a></li>
-</ul>
 </div>
+<p>This note outlines all the metadata used by the header scripts and other associated scripts.   </p>
+<p>Note that core does not mean required (only type and name are really required), but without it there will be missing information in the header. Of course, some core items should be blank if they haven't happened yet (died, reignEnd, etc).    </p>
+<table>
+<thead>
+<tr>
+<th>metadata key</th>
+<th>scripts (plugin)</th>
+<th>optional/core?</th>
+<th>values</th>
+<th>used for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>all (eventually)</td>
+<td>core</td>
+<td>NPC, Building, Place, PC, Item, Ruler</td>
+<td>sets the expected yaml frontmatter, sets the header format. Additional types will be added over time.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>generateHeader (templater)</td>
+<td>core</td>
+<td>any string</td>
+<td>sets the h1 text for the note in all headers</td>
+</tr>
+<tr>
+<td>species</td>
+<td>generateHeader (templater)</td>
+<td>core (NPC, Ruler)</td>
+<td>any string</td>
+<td>sets the species displayed in the header</td>
+</tr>
+<tr>
+<td>ancestry</td>
+<td>generateHeader (templater)</td>
+<td>core (NPC, Ruler)</td>
+<td>any string</td>
+<td>sets the ancestry displayed in the header</td>
+</tr>
+<tr>
+<td>pronouns</td>
+<td>metadataUtils (customJS), generateHeader (templater)</td>
+<td>optional (NPC, Ruler)</td>
+<td>any string</td>
+<td>overrides default pronoun calculation in metadataUtils.get_Pronouns()</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>metadataUtils (customJS), generateHeader (templater)</td>
+<td>core (NPC, Ruler)</td>
+<td>male, female, nonbinary</td>
+<td>determines pronouns in NPC and Ruler headers</td>
+</tr>
+<tr>
+<td>born</td>
+<td>metadataUtils (customJS), get_PageDatedValue, get_RegnalValue (dataview)</td>
+<td>core (NPC, Ruler)</td>
+<td>any year</td>
+<td>calculate age in header, determine the year something started existing in metadataUtils.get_existYear</td>
+</tr>
+<tr>
+<td>created</td>
+<td>metadataUtils (customJS), get_PageDatedValue (dataview)</td>
+<td>core (Item)</td>
+<td>any year</td>
+<td>calculate age in header, determine the year something started existing in metadataUtils.get_existYear</td>
+</tr>
+<tr>
+<td>built</td>
+<td>metadataUtils (customJS), get_PageDatedValue (dataview)</td>
+<td>core (Building)</td>
+<td>any year</td>
+<td>calculate age in header, determine the year something started existing in metadataUtils.get_existYear</td>
+</tr>
+<tr>
+<td>died</td>
+<td>get_PageDatedValue, get_RegnalValue (dataview)</td>
+<td>core (NPC, Ruler)</td>
+<td>any year</td>
+<td>calculate death date and age at death in header</td>
+</tr>
+<tr>
+<td>destroyed</td>
+<td>get_PageDatedValue (dataview)</td>
+<td>core (Building, Item)</td>
+<td>any year</td>
+<td>calculate destruction date and age at destruction in header</td>
+</tr>
+<tr>
+<td>preExistError</td>
+<td>get_PageDatedValue (dataview)</td>
+<td>optional (any)</td>
+<td>any string</td>
+<td>overrides default message to report when current year is before year born/created/built</td>
+</tr>
+<tr>
+<td>startPrefix</td>
+<td>get_PageDatedValue (dataview)</td>
+<td>optional (any)</td>
+<td>any string</td>
+<td>overrides default value associated with year of birth/creation in age string in header</td>
+</tr>
+<tr>
+<td>endPrefix</td>
+<td>get_PageDatedValue (dataview)</td>
+<td>optional  (any)</td>
+<td>any string</td>
+<td>overrides default value associated with year of death/destruction in age string in header</td>
+</tr>
+<tr>
+<td>endStatus</td>
+<td>get_PageDatedValue (dataview)</td>
+<td>optional  (any)</td>
+<td>any string</td>
+<td>overrides default "died at"/"destroyed at" string (use for petrified, burnt down, etc)</td>
+</tr>
+<tr>
+<td>yearOverride</td>
+<td>get_PageDatedValue, get_RegnalValue (dataview)</td>
+<td>optional (debugging)</td>
+<td>any year</td>
+<td>use to override the Fantasy Calendar today date, mostly for debugging purposes</td>
+</tr>
+<tr>
+<td>reignStart</td>
+<td>get_RegnalValue (dataview)</td>
+<td>core (Ruler)</td>
+<td>any year</td>
+<td>calculate reign start string and reign length in header</td>
+</tr>
+<tr>
+<td>reignEnd</td>
+<td>get_RegnalValue (dataview)</td>
+<td>core (Ruler)</td>
+<td>any year</td>
+<td>calculate reign end string and reign length in header. Redundant if equal to died.</td>
+</tr>
+<tr>
+<td>home</td>
+<td>generateHeader (templater), getLocation (templater)</td>
+<td>obsolete (NPC, Ruler)</td>
+<td>any string (parts comma-delimited)</td>
+<td>sets the "Based in: " text in the header. Each comma-delimited piece will be linked if a file exists with that name.</td>
+</tr>
+<tr>
+<td>homeRegion</td>
+<td>generateHeader (templater), getLocation (templater)</td>
+<td>obsolete (NPC, Ruler)</td>
+<td>any string</td>
+<td>sets the last part of the "Based in: " text in the header. Usually a fairly big region, usually should be linkable.</td>
+</tr>
+<tr>
+<td>origin</td>
+<td>generateHeader (templater), getLocation (templater)</td>
+<td>obsolete (NPC, Ruler)</td>
+<td>any string</td>
+<td>works like home but for origin, if relevant</td>
+</tr>
+<tr>
+<td>originRegion</td>
+<td>generateHeader (templater), getLocation (templater)</td>
+<td>obsolete (NPC, Ruler)</td>
+<td>any string</td>
+<td>works like homeRegion, but for originRegion, if relevant</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>none</td>
+<td>core</td>
+<td>array of strings</td>
+<td>tagging, see below</td>
+</tr>
+<tr>
+<td>affiliations</td>
+<td>none</td>
+<td>core (NPC, Ruler)</td>
+<td>array of strings</td>
+<td>used to link affiliations to people</td>
+</tr>
+<tr>
+<td>aliases</td>
+<td>none</td>
+<td>core</td>
+<td>array of strings</td>
+<td>used for aliases, to simplify auto-linked</td>
+</tr>
+<tr>
+<td>maker</td>
+<td>generateHeader (templater)</td>
+<td>core (Item)</td>
+<td>string</td>
+<td>used to set the maker of an item</td>
+</tr>
+<tr>
+<td>owner</td>
+<td>generateHeader (templater)</td>
+<td>core (Item)</td>
+<td>string</td>
+<td>used to set the owner of an item</td>
+</tr>
+<tr>
+<td>dbbLink</td>
+<td>generateHeader (templater)</td>
+<td>core (Item)</td>
+<td>url</td>
+<td>used to set the mechanics link for an item</td>
+</tr>
+<tr>
+<td>gpValue</td>
+<td>generateHeader (templater)</td>
+<td>core (Item)</td>
+<td>number</td>
+<td>used to set the GP Value of an item</td>
+</tr>
+<tr>
+<td>gpValueMin</td>
+<td>generateHeader (templater)</td>
+<td>optional (Item)</td>
+<td>number</td>
+<td>if the GP Value is not set, will be used as a floor on the item value</td>
+</tr>
+<tr>
+<td>gpValueMax</td>
+<td>generateHeader (templater)</td>
+<td>optional (Item)</td>
+<td>number</td>
+<td>if the GP Value is not set, will be used as a ceiling on the item value</td>
+</tr>
+<tr>
+<td>Values that are not used by any scripts, and not currently really implemented, but might be useful:</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>whereabouts: as discussed, a way to track location in time that would be more flexible than location / locationRegion fixed frontmatter   </li>
+<li>currentOwner: for items, who has the thing now. although usually not relevant, this could also be done like whereabouts to track ownership over time.    </li>
+<li>player, campaign: for PCs   </li>
+<li>location, locationRegion: for buildings and places, functioning like home/homeRegion for people   </li>
+<li>population: for places   </li>
+<li>pronunciation: for anything   </li>
+<li>ddbLink: for items, a link to the mechanics of the item on D&amp;D Beyond. Could also extend to PCs, species.    </li>
+<li>languages: for people, indicating the languages they know   </li>
+<li>family: for people, used to track familial affiliations (dwarven clans, halfling families, possibly orc hordes and deno'qai tribes too)   </li>
+<li>lastSeenBy: campaign-specific value of the date the NPC's location was last known by the party. Would be used to auto-populate a Current Location field based on campaign + date information.</li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks" style="display:none"></div>
 
 <div class="tags">
-<h2>Tags</h2>
-<ul>
-	<li><a class="backlink" href="/taelgar1720/obs.html/tags/stub/index.html">stub</a></li>
-</ul>
+
 </div>
 
 </div>
