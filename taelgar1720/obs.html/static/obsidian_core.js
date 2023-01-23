@@ -10,7 +10,7 @@ var CONFIGURED_HTML_URL_PREFIX = "/taelgar1720";
 var RELATIVE_PATHS = 0;
 var documentation_mode = 1;
 var tab_mode = !no_tab_mode;
-var gzip_hash = '307134127223444822049984016189808227254'                       // used to check whether the localStorage data is stale
+var gzip_hash = '336627506148418117640921964003121443663'                       // used to check whether the localStorage data is stale
 
 // global cache
 var fn_cache_ls_available = null;
