@@ -146,19 +146,29 @@
     }
 </script>
                                     <div onclick="openSearch()" class="theme-button requires_js">
-                <img src = "/taelgar1720/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+            <img src = "/taelgar1720/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
         </div>
         <script>
-                function openSearch(){
-                        // toggle search popup and continue with extra code if it is enabled this time
-                        if (toggle_id('search-master-div')){
-                                // clear input and put focus on it so that we can start typing immediately
-                                let ss = document.getElementById('search_string');
-                                ss.value = '';
-                                ss.focus()
-                                ss.select()
-                        }
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
                 }
+            }
         </script>
                             
                                     <div >
@@ -194,6 +204,9 @@
 <li><a href="/taelgar1720/Worldbuilding/Fae.html">Fae</a></li>
 <li><a href="/taelgar1720/Worldbuilding/Centaurs.html">Centaurs</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Eastern Dunmar.html">Eastern Dunmar</a></li>
+<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/The Green Sea.html">The Green Sea</a></li>
+<li><a href="/taelgar1720/Worldbuilding/Hkar.html">Hkar</a></li>
+<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Volta.html">River Volta</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Dunmari Rulers/Dynasties/Aatmaji dynasty.html">Aatmaji dynasty</a></li>
 <li><a href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardonian Empire.html">Chardonian Empire</a></li>
 <li><a href="/taelgar1720/Species/Orcs.html">Orcs</a></li>
@@ -203,10 +216,8 @@
 <li><a href="/taelgar1720/Cosmology/Religions/The Five Siblings/Dunmari Mystery Cults/Dunmari Mystery Cults.html">Dunmari Mystery Cults</a></li>
 <li><a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a></li>
 <li><a href="/taelgar1720/People/PCs/Great War/Companions/Dimitaur.html">Dimitaur</a></li>
-<li><a href="/taelgar1720/Worldbuilding/Hkar.html">Hkar</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire/Organizations/Omnis Pura.html">Omnis Pura</a></li>
 <li><a href="/taelgar1720/People/PCs/The Dunmar Fellowship/Riswynn.html">Riswynn</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/The Green Sea.html">The Green Sea</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nardith/Nardith.html">Nardith</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/Ausson's Crossing.html">Ausson's Crossing</a></li>
 <li><a href="/taelgar1720/Worldbuilding/Western Dunmar.html">Western Dunmar</a></li>
@@ -247,6 +258,8 @@
 <li><a href="/taelgar1720/Cosmology/Gods/Mos Numena/The Mother.html">The Mother</a></li>
 <li><a href="/taelgar1720/Cosmology/Multiverse/Energy Realms/Ethereal Plane.html">Ethereal Plane</a></li>
 <li><a href="/taelgar1720/Cosmology/Multiverse/Spiritual Realms/Astral Plane.html">Astral Plane</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Govir.html">Govir</a></li>
+<li><a href="/taelgar1720/Events/Unsorted/Summer Gnoll Raids of 1748.html">Summer Gnoll Raids of 1748</a></li>
 <li><a href="/taelgar1720/Worldbuilding/Pandar.html">Pandar</a></li>
 <li><a href="/taelgar1720/Worldbuilding/Eastern Green Sea.html">Eastern Green Sea</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire/Organizations/Occulta Ludum.html">Occulta Ludum</a></li>
@@ -267,7 +280,6 @@
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Duchy of Wisford.html">Duchy of Wisford</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Teft.html">River Teft</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Northlands/Telham.html">Telham</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Volta.html">River Volta</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches/Barony of Ainwick.html">Barony of Ainwick</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches/Barony of Dunfry.html">Barony of Dunfry</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches/Marches of Enford.html">Marches of Enford</a></li>
@@ -277,9 +289,6 @@
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/Rive Kem.html">Rive Kem</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Niva.html">River Niva</a></li>
 <li><a href="/taelgar1720/Worldbuilding/Mawakel Penisula.html">Mawakel Penisula</a></li>
-<li><a href="/taelgar1720/Gazetteer/The West Coast Region/Mawar Confederacy/Mawakel Peninsula.html">Mawakel Peninsula</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Govir.html">Govir</a></li>
-<li><a href="/taelgar1720/History/Historical Events/Summer Gnoll Raids of 1748.html">Summer Gnoll Raids of 1748</a></li>
 <li><a href="/taelgar1720/People/Dunmari/Illyan.html">Illyan</a></li>
 <li><a href="/taelgar1720/People/Orcs/Hordes/Dustthorn Horde.html">Dustthorn Horde</a></li>
 <li><a href="/taelgar1720/People/Orcs/Hordes/Grash's Horde.html">Grash's Horde</a></li>

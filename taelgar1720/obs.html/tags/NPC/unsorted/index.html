@@ -146,19 +146,29 @@
     }
 </script>
                                     <div onclick="openSearch()" class="theme-button requires_js">
-                <img src = "/taelgar1720/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+            <img src = "/taelgar1720/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
         </div>
         <script>
-                function openSearch(){
-                        // toggle search popup and continue with extra code if it is enabled this time
-                        if (toggle_id('search-master-div')){
-                                // clear input and put focus on it so that we can start typing immediately
-                                let ss = document.getElementById('search_string');
-                                ss.value = '';
-                                ss.focus()
-                                ss.select()
-                        }
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
                 }
+            }
         </script>
                             
                                     <div >
@@ -192,6 +202,26 @@
 <ul>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Bertram II.html">Bertram II</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Blanche II.html">Blanche II</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Marion of Cleenseau.html">Marion of Cleenseau</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Béatrix of Cleenseau.html">Béatrix of Cleenseau</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Narrisa de Abadelle.html">Narrisa de Abadelle</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Cedric Cyfenwid.html">Cedric Cyfenwid</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Nicholas the Beggar.html">Nicholas the Beggar</a></li>
+<li><a href="/taelgar1720/People/Mawarans/Sulfi Mahadra.html">Sulfi Mahadra</a></li>
+<li><a href="/taelgar1720/People/Lizardfolk/Amaya.html">Amaya</a></li>
+<li><a href="/taelgar1720/People/Lizardfolk/Benat.html">Benat</a></li>
+<li><a href="/taelgar1720/People/Lizardfolk/Itzal.html">Itzal</a></li>
+<li><a href="/taelgar1720/People/Mawarans/Azar.html">Azar</a></li>
+<li><a href="/taelgar1720/People/Mawarans/Hiyasa.html">Hiyasa</a></li>
+<li><a href="/taelgar1720/People/Mawarans/Jaeson.html">Jaeson</a></li>
+<li><a href="/taelgar1720/People/Mawarans/Orden.html">Orden</a></li>
+<li><a href="/taelgar1720/People/Mawarans/Rayna.html">Rayna</a></li>
+<li><a href="/taelgar1720/People/Mawarans/Samar.html">Samar</a></li>
+<li><a href="/taelgar1720/People/Mawarans/Sefa.html">Sefa</a></li>
+<li><a href="/taelgar1720/People/Mawarans/Yaz.html">Yaz</a></li>
+<li><a href="/taelgar1720/People/Other Humans/Airion.html">Airion</a></li>
+<li><a href="/taelgar1720/People/Other Nonhumans/Illius.html">Illius</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Raoul Bûcheron.html">Raoul Bûcheron</a></li>
 </ul>
 <blockquote>
 <p><a href="/taelgar1720/obs.html/tags/index.html">View all tags</a></p>
