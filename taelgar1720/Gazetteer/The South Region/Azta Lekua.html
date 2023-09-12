@@ -13,11 +13,19 @@
                 <title>Taelgar 1720</title>
 
                 <!-- Includes -->
-                
-<script src="/taelgar1720/obs.html/static/obsidian_core.js"></script>
+                <script src="/taelgar1720/obs.html/static/obsidian_core.js"></script>
 <script src="/taelgar1720/obs.html/static/encoding.js"></script>
 <link rel="stylesheet" href="/taelgar1720/obs.html/static/master.css" />
-<script src="/taelgar1720/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
 <script>
   MathJax = {
     loader: {
@@ -45,6 +53,8 @@
 <script src="/taelgar1720/obs.html/static/dirtree.js"></script>
 
 
+
+
                 <!-- Onload tweaks -->
                 <script>
                         const CURRENT_NODE = 'azta lekua';
@@ -70,8 +80,8 @@
                         <div id="search-results"></div>
                     </div>
                     <div id="search-instructions">
-                        <div class="prompt-instruction">
-                                <b>esc</b> to dismiss
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
                         </div>
                     </div>
             </div>
@@ -189,7 +199,6 @@
     <label for="cars">Theme </label>
 
     <select name="theme" id="theme" onchange="set_theme(this.value)">
-      <option value="light">light</option>
       <option value="obs-light" selected="selected">obsidian-light</option>
       <option value="obs-dark">obsidian-dark</option>
     </select> 
@@ -199,482 +208,1126 @@
                         <div id="left_pane" class="left_pane active">
     <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
     <div id="left_pane_content" class="left_pane_content">
-            <div class="dirtree"><button id="folder-1" class="dir-button" onclick="toggle_dir(this.id)">Campaigns</button>
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Campaigns</button>
 <div id="folder-container-1" class="dir-container requires_js " path="/taelgar1720/Campaigns">
-	<button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">Ausson's Crossing Mini Series</button>
-	<div id="folder-container-2" class="dir-container requires_js " path="/taelgar1720/Campaigns/Ausson's Crossing Mini Series">
-		<ul class="dir-list">
-			<li><a class="" href="/taelgar1720/Campaigns/Ausson's Crossing Mini Series/AC - Session 1.html"  >AC - Session 1</a></li>
-			<li><a class="" href="/taelgar1720/Campaigns/Ausson's Crossing Mini Series/AC - Session 2.html"  >AC - Session 2</a></li>
-			<li><a class="" href="/taelgar1720/Campaigns/Ausson's Crossing Mini Series/AC - Session 3.html"  >AC - Session 3</a></li>
-			<li><a class="" href="/taelgar1720/Campaigns/Ausson's Crossing Mini Series/AC - Session 4.html"  >AC - Session 4</a></li>
-		</ul>
-	</div>
-	<button id="folder-3" class="dir-button folder_note " href="/taelgar1720/Campaigns\Cleenseau Campaign\Cleenseau Campaign.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Cleenseau Campaign</button>
-	<div id="folder-container-3" class="dir-container requires_js " path="/taelgar1720/Campaigns/Cleenseau Campaign">
-		<button id="folder-4" class="dir-button" onclick="toggle_dir(this.id)">Sessions</button>
-		<div id="folder-container-4" class="dir-container requires_js " path="/taelgar1720/Campaigns/Cleenseau Campaign/Sessions">
+	<button id="folder-2" class="dir-button folder_note  " href="/taelgar1720/Campaigns\Cleenseau Campaign\Cleenseau Campaign.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Cleenseau Campaign</button>
+	<div id="folder-container-2" class="dir-container requires_js " path="/taelgar1720/Campaigns/Cleenseau Campaign">
+		<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Sessions</button>
+		<div id="folder-container-3" class="dir-container requires_js " path="/taelgar1720/Campaigns/Cleenseau Campaign/Sessions">
 			<ul class="dir-list">
-				<li><a class="" href="/taelgar1720/Campaigns/Cleenseau Campaign/Sessions/Cleenseau - Session 01.html"  >Cleenseau - Session 01</a></li>
-				<li><a class="" href="/taelgar1720/Campaigns/Cleenseau Campaign/Sessions/Cleenseau - Session 02.html"  >Cleenseau - Session 02</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Campaigns/Cleenseau Campaign/Sessions/Cleenseau - Session 01.html"  >Cleenseau - Session 01</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Campaigns/Cleenseau Campaign/Sessions/Cleenseau - Session 02.html"  >Cleenseau - Session 02</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Campaigns/Cleenseau Campaign/Sessions/Cleenseau - Session 03.html"  >Cleenseau - Session 03</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Campaigns/Cleenseau Campaign/Sessions/Cleenseau - Session 04.html"  >Cleenseau - Session 04</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Campaigns/Cleenseau Campaign/Sessions/Cleenseau - Session 05.html"  >Cleenseau - Session 05</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Campaigns/Cleenseau Campaign/Sessions/Cleenseau - Session 06.html"  >Cleenseau - Session 06</a></li>
 			</ul>
 		</div>
 		<ul class="dir-list">
-			<li><a class="" href="/taelgar1720/Campaigns/Cleenseau Campaign/Cleenseau Campaign - Index of NPCs.html"  >Cleenseau Campaign - Index of NPCs</a></li>
-			<li><a class="" href="/taelgar1720/Campaigns/Cleenseau Campaign/Cleenseau Campaign - Timeline.html"  >Cleenseau Campaign - Timeline</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Campaigns/Cleenseau Campaign/Cleenseau Campaign - Index of NPCs.html"  >Cleenseau Campaign - Index of NPCs</a></li>
 		</ul>
 	</div>
 	<ul class="dir-list">
 	</ul>
 </div>
-<button id="folder-5" class="dir-button" onclick="toggle_dir(this.id)">Gazetteer</button>
-<div id="folder-container-5" class="dir-container requires_js active" path="/taelgar1720/Gazetteer">
-	<button id="folder-6" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Highlands Region\The Central Highlands Region.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The Central Highlands Region</button>
-	<div id="folder-container-6" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Highlands Region">
-		<button id="folder-7" class="dir-button" onclick="toggle_dir(this.id)">Deno'qai Tribes</button>
-		<div id="folder-container-7" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Highlands Region/Deno'qai Tribes">
+<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Cosmology</button>
+<div id="folder-container-4" class="dir-container requires_js " path="/taelgar1720/Cosmology">
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Gods</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="/taelgar1720/Cosmology/Gods">
+		<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Demigods</button>
+		<div id="folder-container-6" class="dir-container requires_js " path="/taelgar1720/Cosmology/Gods/Demigods">
 			<ul class="dir-list">
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Deno'qai Tribes/Baz'aku.html"  >Baz'aku</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Deno'qai Tribes/Bek'eni.html"  >Bek'eni</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Deno'qai Tribes/Ko'zula.html"  >Ko'zula</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Deno'qai Tribes/Shu'anra.html"  >Shu'anra</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Deno'qai Tribes/Te'kula.html"  >Te'kula</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Demigods/Fox and Hunter.html"  >Fox and Hunter</a></li>
 			</ul>
 		</div>
-		<button id="folder-8" class="dir-button" onclick="toggle_dir(this.id)">Forests</button>
-		<div id="folder-container-8" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Highlands Region/Forests">
+		<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Embodied Gods</button>
+		<div id="folder-container-7" class="dir-container requires_js " path="/taelgar1720/Cosmology/Gods/Embodied Gods">
 			<ul class="dir-list">
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Forests/Ainumarya.html"  >Ainumarya</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Forests/Crimson Forest.html"  >Crimson Forest</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Forests/Elderwood.html"  >Elderwood</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Forests/Forest of Dreams.html"  >Forest of Dreams</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Forests/Forest of Nightmares.html"  >Forest of Nightmares</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Embodied Gods/Bahrazel.html"  >Bahrazel</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Embodied Gods/Mad One.html"  >Mad One</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Embodied Gods/Thark.html"  >Thark</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Embodied Gods/The First Ones.html"  >The First Ones</a></li>
 			</ul>
 		</div>
-		<button id="folder-9" class="dir-button" onclick="toggle_dir(this.id)">Rivers</button>
-		<div id="folder-container-9" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Highlands Region/Rivers">
+		<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>High Gods</button>
+		<div id="folder-container-8" class="dir-container requires_js " path="/taelgar1720/Cosmology/Gods/High Gods">
 			<ul class="dir-list">
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Rivers/K'eye.html"  >K'eye</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Rivers/Kayan.html"  >Kayan</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Rivers/Yemo'te.html"  >Yemo'te</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/High Gods/Ako.html"  >Ako</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/High Gods/Anida.html"  >Anida</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/High Gods/Arha.html"  >Arha</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/High Gods/G’Zab.html"  >G’Zab</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/High Gods/Jinnik.html"  >Jinnik</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/High Gods/Malik.html"  >Malik</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/High Gods/Sampa.html"  >Sampa</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/High Gods/Shurat.html"  >Shurat</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/High Gods/Umidzka.html"  >Umidzka</a></li>
 			</ul>
 		</div>
-		<ul class="dir-list">
-			<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Khatridun.html"  >Khatridun</a></li>
-			<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Zarkandur.html"  >Zarkandur</a></li>
-			<li><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/~CentralMountains~.html"  >~CentralMountains~</a></li>
-		</ul>
-	</div>
-	<button id="folder-10" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Lowlands Region\The Central Lowlands Region.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The Central Lowlands Region</button>
-	<div id="folder-container-10" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region">
-		<button id="folder-11" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Drankorian Empire\Drankorian Empire.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Drankorian Empire</button>
-		<div id="folder-container-11" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire">
-			<button id="folder-12" class="dir-button" onclick="toggle_dir(this.id)">Organizations</button>
-			<div id="folder-container-12" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire/Organizations">
+		<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Incorporeal Gods</button>
+		<div id="folder-container-9" class="dir-container requires_js " path="/taelgar1720/Cosmology/Gods/Incorporeal Gods">
+			<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dunmari</button>
+			<div id="folder-container-10" class="dir-container requires_js " path="/taelgar1720/Cosmology/Gods/Incorporeal Gods/Dunmari">
 				<ul class="dir-list">
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire/Organizations/Occulta Ludum.html"  >Occulta Ludum</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire/Organizations/Omnis Pura.html"  >Omnis Pura</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Incorporeal Gods/Dunmari/Aagir.html"  >Aagir</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Incorporeal Gods/Dunmari/Bhishma.html"  >Bhishma</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Incorporeal Gods/Dunmari/Chidya.html"  >Chidya</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Incorporeal Gods/Dunmari/Jeevali.html"  >Jeevali</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Incorporeal Gods/Dunmari/Laka.html"  >Laka</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Incorporeal Gods/Dunmari/Shakun.html"  >Shakun</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Incorporeal Gods/Dunmari/Sonkar.html"  >Sonkar</a></li>
+				</ul>
+			</div>
+			<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Mos Numena</button>
+			<div id="folder-container-11" class="dir-container requires_js " path="/taelgar1720/Cosmology/Gods/Incorporeal Gods/Mos Numena">
+				<ul class="dir-list">
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Incorporeal Gods/Mos Numena/The Father.html"  >The Father</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Incorporeal Gods/Mos Numena/The Mother.html"  >The Mother</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Incorporeal Gods/Mos Numena/The Night Queen.html"  >The Night Queen</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Incorporeal Gods/Mos Numena/The Sibyl.html"  >The Sibyl</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Incorporeal Gods/Mos Numena/The Wanderer.html"  >The Wanderer</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Incorporeal Gods/Mos Numena/The Warlord.html"  >The Warlord</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Incorporeal Gods/Mos Numena/The Wildling.html"  >The Wildling</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Incorporeal Gods/Mos Numena/The Wyrdling.html"  >The Wyrdling</a></li>
 				</ul>
 			</div>
 			<ul class="dir-list">
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire/Drankor.html"  >Drankor</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Incorporeal Gods/Kaikkea.html"  >Kaikkea</a></li>
 			</ul>
 		</div>
-		<button id="folder-13" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Dunmar\Dunmar.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Dunmar</button>
-		<div id="folder-container-13" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar">
-			<button id="folder-14" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Dunmar\Central Dunmar\Central Dunmar.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Central Dunmar</button>
-			<div id="folder-container-14" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar">
-				<button id="folder-15" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Dunmar\Central Dunmar\Tokra\Tokra.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Tokra</button>
-				<div id="folder-container-15" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra">
+		<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Kestavo</button>
+		<div id="folder-container-12" class="dir-container requires_js " path="/taelgar1720/Cosmology/Gods/Kestavo">
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Kestavo/Besla.html"  >Besla</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Kestavo/Kamak.html"  >Kamak</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Kestavo/Romil.html"  >Romil</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Kestavo/Vacla.html"  >Vacla</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Kestavo/Ziva.html"  >Ziva</a></li>
+			</ul>
+		</div>
+		<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Tanshi</button>
+		<div id="folder-container-13" class="dir-container requires_js " path="/taelgar1720/Cosmology/Gods/Tanshi">
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Tanshi/Istari.html"  >Istari</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Tanshi/Nisir.html"  >Nisir</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Gods/Tanshi/Yezali.html"  >Yezali</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Multiverse</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="/taelgar1720/Cosmology/Multiverse">
+		<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Echo Realms</button>
+		<div id="folder-container-15" class="dir-container requires_js " path="/taelgar1720/Cosmology/Multiverse/Echo Realms">
+			<button id="folder-16" class="dir-button folder_note  " href="/taelgar1720/Cosmology\Multiverse\Echo Realms\Feywild\Feywild.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Feywild</button>
+			<div id="folder-container-16" class="dir-container requires_js " path="/taelgar1720/Cosmology/Multiverse/Echo Realms/Feywild">
+				<ul class="dir-list">
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Multiverse/Echo Realms/Feywild/Amberglow.html"  >Amberglow</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Multiverse/Echo Realms/Feywild/Dreamhaven.html"  >Dreamhaven</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Multiverse/Echo Realms/Feywild/Fortune's Rest.html"  >Fortune's Rest</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Multiverse/Echo Realms/Feywild/Shimmersong.html"  >Shimmersong</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Multiverse/Echo Realms/Feywild/Splendor's Gleam.html"  >Splendor's Gleam</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Multiverse/Echo Realms/Feywild/Whispervale.html"  >Whispervale</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Multiverse/Echo Realms/Feywild/Wildrun.html"  >Wildrun</a></li>
+				</ul>
+			</div>
+			<button id="folder-17" class="dir-button folder_note  " href="/taelgar1720/Cosmology\Multiverse\Echo Realms\Shadowfell\Shadowfell.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Shadowfell</button>
+			<div id="folder-container-17" class="dir-container requires_js " path="/taelgar1720/Cosmology/Multiverse/Echo Realms/Shadowfell">
+				<ul class="dir-list">
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Multiverse/Echo Realms/Shadowfell/Morkalan.html"  >Morkalan</a></li>
+				</ul>
+			</div>
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Multiverse/Echo Realms/Mirror Realm.html"  >Mirror Realm</a></li>
+			</ul>
+		</div>
+		<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Energy Realms</button>
+		<div id="folder-container-18" class="dir-container requires_js " path="/taelgar1720/Cosmology/Multiverse/Energy Realms">
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Multiverse/Energy Realms/Plane of Magic.html"  >Plane of Magic</a></li>
+			</ul>
+		</div>
+		<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Spiritual Realms</button>
+		<div id="folder-container-19" class="dir-container requires_js " path="/taelgar1720/Cosmology/Multiverse/Spiritual Realms">
+			<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Divine Realms</button>
+			<div id="folder-container-20" class="dir-container requires_js " path="/taelgar1720/Cosmology/Multiverse/Spiritual Realms/Divine Realms">
+				<ul class="dir-list">
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Multiverse/Spiritual Realms/Divine Realms/Shakun's Realm.html"  >Shakun's Realm</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Multiverse/Spiritual Realms/Divine Realms/The Heart of the Mountain.html"  >The Heart of the Mountain</a></li>
+				</ul>
+			</div>
+			<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Primal Realms</button>
+			<div id="folder-container-21" class="dir-container requires_js " path="/taelgar1720/Cosmology/Multiverse/Spiritual Realms/Primal Realms">
+				<ul class="dir-list">
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Multiverse/Spiritual Realms/Primal Realms/Abyss.html"  >Abyss</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Multiverse/Spiritual Realms/Primal Realms/Arborea.html"  >Arborea</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Multiverse/Spiritual Realms/Primal Realms/Pandemonium.html"  >Pandemonium</a></li>
+				</ul>
+			</div>
+			<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Proximate Realms</button>
+			<div id="folder-container-22" class="dir-container requires_js " path="/taelgar1720/Cosmology/Multiverse/Spiritual Realms/Proximate Realms">
+				<ul class="dir-list">
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Multiverse/Spiritual Realms/Proximate Realms/Dreamworld.html"  >Dreamworld</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Multiverse/Spiritual Realms/Proximate Realms/Land of the Dead.html"  >Land of the Dead</a></li>
+				</ul>
+			</div>
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Multiverse/Spiritual Realms/Plane of Souls.html"  >Plane of Souls</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+		</ul>
+	</div>
+	<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Religions</button>
+	<div id="folder-container-23" class="dir-container requires_js " path="/taelgar1720/Cosmology/Religions">
+		<button id="folder-24" class="dir-button folder_note  " href="/taelgar1720/Cosmology\Religions\The Five Siblings\The Five Siblings.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>The Five Siblings</button>
+		<div id="folder-container-24" class="dir-container requires_js " path="/taelgar1720/Cosmology/Religions/The Five Siblings">
+			<button id="folder-25" class="dir-button folder_note  " href="/taelgar1720/Cosmology\Religions\The Five Siblings\Dunmari Mystery Cults\Dunmari Mystery Cults.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Dunmari Mystery Cults</button>
+			<div id="folder-container-25" class="dir-container requires_js " path="/taelgar1720/Cosmology/Religions/The Five Siblings/Dunmari Mystery Cults">
+				<ul class="dir-list">
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Religions/The Five Siblings/Dunmari Mystery Cults/Aagir Mystai.html"  >Aagir Mystai</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Religions/The Five Siblings/Dunmari Mystery Cults/Lakan mystai.html"  >Lakan mystai</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Religions/The Five Siblings/Dunmari Mystery Cults/Order of the Awakened Soul.html"  >Order of the Awakened Soul</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Religions/The Five Siblings/Dunmari Mystery Cults/Shakun Mystai.html"  >Shakun Mystai</a></li>
+				</ul>
+			</div>
+			<ul class="dir-list">
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Religions/Kestavo.html"  >Kestavo</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Cosmology/Religions/Mos Numena.html"  >Mos Numena</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+	</ul>
+</div>
+<button id="folder-26" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Events</button>
+<div id="folder-container-26" class="dir-container requires_js " path="/taelgar1720/Events">
+	<button id="folder-27" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>1718</button>
+	<div id="folder-container-27" class="dir-container requires_js " path="/taelgar1720/Events/1718">
+		<button id="folder-28" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01</button>
+		<div id="folder-container-28" class="dir-container requires_js " path="/taelgar1720/Events/1718/01">
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Events/1718/01/Viepuck's Ritual Experience.html"  >Viepuck's Ritual Experience</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Events/1718/Awakened Soul Disaster.html"  >Awakened Soul Disaster</a></li>
+		</ul>
+	</div>
+	<button id="folder-29" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>1719</button>
+	<div id="folder-container-29" class="dir-container requires_js " path="/taelgar1720/Events/1719">
+		<button id="folder-30" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>10</button>
+		<div id="folder-container-30" class="dir-container requires_js " path="/taelgar1720/Events/1719/10">
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Events/1719/10/First Spider Attack on Tavoise.html"  >First Spider Attack on Tavoise</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Events/1719/10/Second Spider Attack on Tavoise.html"  >Second Spider Attack on Tavoise</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Events/1719/10/Tragic Flood of the River Enst.html"  >Tragic Flood of the River Enst</a></li>
+			</ul>
+		</div>
+		<button id="folder-31" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>11</button>
+		<div id="folder-container-31" class="dir-container requires_js " path="/taelgar1720/Events/1719/11">
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Events/1719/11/Attempted Poisoning of Cleenseau.html"  >Attempted Poisoning of Cleenseau</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+		</ul>
+	</div>
+	<button id="folder-32" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Unsorted</button>
+	<div id="folder-container-32" class="dir-container requires_js " path="/taelgar1720/Events/Unsorted">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Events/Unsorted/Battle of Kin-Aska.html"  >Battle of Kin-Aska</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Events/Unsorted/Battle of Tokra.html"  >Battle of Tokra</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Events/Unsorted/Blood Years.html"  >Blood Years</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Events/Unsorted/Fire War.html"  >Fire War</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Events/Unsorted/Great War.html"  >Great War</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Events/Unsorted/Second Hobgoblin War.html"  >Second Hobgoblin War</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Events/Unsorted/Summer Gnoll Raids of 1748.html"  >Summer Gnoll Raids of 1748</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Events/Unsorted/The Downfall.html"  >The Downfall</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Events/Unsorted/The Exile of Fraternity of the Empty Moon.html"  >The Exile of Fraternity of the Empty Moon</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Events/Unsorted/The Founding of Dunmar.html"  >The Founding of Dunmar</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Events/Unsorted/The Riving.html"  >The Riving</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+	</ul>
+</div>
+<button id="folder-33" class="dir-button active" onclick="toggle_dir(this.id)"><div class="file-icon"></div>Gazetteer</button>
+<div id="folder-container-33" class="dir-container requires_js active" path="/taelgar1720/Gazetteer">
+	<button id="folder-34" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Central Highlands Region</button>
+	<div id="folder-container-34" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Highlands Region">
+		<button id="folder-35" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Deno'qai Tribes</button>
+		<div id="folder-container-35" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Highlands Region/Deno'qai Tribes">
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Deno'qai Tribes/Baz'aku.html"  >Baz'aku</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Deno'qai Tribes/Bek'eni.html"  >Bek'eni</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Deno'qai Tribes/Ko'zula.html"  >Ko'zula</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Deno'qai Tribes/Shu'anra.html"  >Shu'anra</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Deno'qai Tribes/Te'kula.html"  >Te'kula</a></li>
+			</ul>
+		</div>
+		<button id="folder-36" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Central Highlands Region\Dwarven Kingdoms\Dwarven Kingdoms.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Dwarven Kingdoms</button>
+		<div id="folder-container-36" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Highlands Region/Dwarven Kingdoms">
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Dwarven Kingdoms/Am'khazar.html"  >Am'khazar</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Dwarven Kingdoms/Ardith.html"  >Ardith</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Dwarven Kingdoms/Fahnukan.html"  >Fahnukan</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Dwarven Kingdoms/Khatridun.html"  >Khatridun</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Dwarven Kingdoms/Nidzahar.html"  >Nidzahar</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Dwarven Kingdoms/Zarkandur.html"  >Zarkandur</a></li>
+			</ul>
+		</div>
+		<button id="folder-37" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Forests</button>
+		<div id="folder-container-37" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Highlands Region/Forests">
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Forests/Ainumarya.html"  >Ainumarya</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Forests/Crimson Forest.html"  >Crimson Forest</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Forests/Elderwood.html"  >Elderwood</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Forests/Forest of Dreams.html"  >Forest of Dreams</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Forests/Forest of Nightmares.html"  >Forest of Nightmares</a></li>
+			</ul>
+		</div>
+		<button id="folder-38" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Rivers</button>
+		<div id="folder-container-38" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Highlands Region/Rivers">
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/Rivers/K'eye.html"  >K'eye</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Highlands Region/~CentralMountains~.html"  >~CentralMountains~</a></li>
+		</ul>
+	</div>
+	<button id="folder-39" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Central Lowlands Region</button>
+	<div id="folder-container-39" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region">
+		<button id="folder-40" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Drankorian Empire\Drankorian Empire.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Drankorian Empire</button>
+		<div id="folder-container-40" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire">
+			<button id="folder-41" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Organizations</button>
+			<div id="folder-container-41" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire/Organizations">
+				<ul class="dir-list">
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire/Organizations/Omnis Pura.html"  >Omnis Pura</a></li>
+				</ul>
+			</div>
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire/Drankor.html"  >Drankor</a></li>
+			</ul>
+		</div>
+		<button id="folder-42" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Dunmar\Dunmar.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Dunmar</button>
+		<div id="folder-container-42" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar">
+			<button id="folder-43" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Dunmar\Central Dunmar\Central Dunmar.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Central Dunmar</button>
+			<div id="folder-container-43" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar">
+				<button id="folder-44" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Dunmar\Central Dunmar\Tokra\Tokra.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Tokra</button>
+				<div id="folder-container-44" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra">
 					<ul class="dir-list">
-						<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra/Archives.html"  >Archives</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra/Darshana’s caravanserai.html"  >Darshana’s caravanserai</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra/Kirian’s.html"  >Kirian’s</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra/Lakan Monastery.html"  >Lakan Monastery</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra/The Iron Swan.html"  >The Iron Swan</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra/The Red Lily Inn.html"  >The Red Lily Inn</a></li>
+						<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra/Archives.html"  >Archives</a></li>
+						<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra/Darshana’s caravanserai.html"  >Darshana’s caravanserai</a></li>
+						<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra/Kirian’s.html"  >Kirian’s</a></li>
+						<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra/Lakan Monastery.html"  >Lakan Monastery</a></li>
+						<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra/The Iron Swan.html"  >The Iron Swan</a></li>
+						<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Tokra/The Red Lily Inn.html"  >The Red Lily Inn</a></li>
 					</ul>
 				</div>
 				<ul class="dir-list">
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Akela Inn.html"  >Akela Inn</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Askandi.html"  >Askandi</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Copper Hills.html"  >Copper Hills</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Elven Arborea Workshop.html"  >Elven Arborea Workshop</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Songara.html"  >Songara</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Stoneborn Statue Dungeon.html"  >Stoneborn Statue Dungeon</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Vandar.html"  >Vandar</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Askandi.html"  >Askandi</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Elven Arborea Workshop.html"  >Elven Arborea Workshop</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Songara.html"  >Songara</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Central Dunmar/Stoneborn Statue Dungeon.html"  >Stoneborn Statue Dungeon</a></li>
 				</ul>
 			</div>
-			<button id="folder-16" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Dunmar\Eastern Dunmar\Eastern Dunmar.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Eastern Dunmar</button>
-			<div id="folder-container-16" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar">
+			<button id="folder-45" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Dunmar\Eastern Dunmar\Eastern Dunmar.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Eastern Dunmar</button>
+			<div id="folder-container-45" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar">
 				<ul class="dir-list">
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Bas Udda.html"  >Bas Udda</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Gomat.html"  >Gomat</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Ikram’s.html"  >Ikram’s</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Karawa.html"  >Karawa</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Pava and Avaras' House.html"  >Pava and Avaras' House</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Red Mesa.html"  >Red Mesa</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Shakun’s Wellspring.html"  >Shakun’s Wellspring</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Stormcaller Tower.html"  >Stormcaller Tower</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Temple of Shakun.html"  >Temple of Shakun</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Bas Udda.html"  >Bas Udda</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Gomat.html"  >Gomat</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Ikram’s.html"  >Ikram’s</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Karawa.html"  >Karawa</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Pava and Avaras' House.html"  >Pava and Avaras' House</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Red Mesa.html"  >Red Mesa</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Shakun’s Wellspring.html"  >Shakun’s Wellspring</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Stormcaller Tower.html"  >Stormcaller Tower</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Temple of Shakun.html"  >Temple of Shakun</a></li>
 				</ul>
 			</div>
-			<button id="folder-17" class="dir-button" onclick="toggle_dir(this.id)">Roads</button>
-			<div id="folder-container-17" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Roads">
-				<ul class="dir-list">
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Roads/Tokra-Darba Road.html"  >Tokra-Darba Road</a></li>
-				</ul>
-			</div>
-			<button id="folder-18" class="dir-button" onclick="toggle_dir(this.id)">Western Dunmar</button>
-			<div id="folder-container-18" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Western Dunmar">
-				<button id="folder-19" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Dunmar\Western Dunmar\Darba\Darba.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Darba</button>
-				<div id="folder-container-19" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Western Dunmar/Darba">
+			<button id="folder-46" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Western Dunmar</button>
+			<div id="folder-container-46" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Western Dunmar">
+				<button id="folder-47" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Dunmar\Western Dunmar\Darba\Darba.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Darba</button>
+				<div id="folder-container-47" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Western Dunmar/Darba">
 					<ul class="dir-list">
-						<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Western Dunmar/Darba/The Green Leaf.html"  >The Green Leaf</a></li>
 					</ul>
 				</div>
 				<ul class="dir-list">
-					<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Western Dunmar/Nayahar.html"  >Nayahar</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Western Dunmar/Nayahar.html"  >Nayahar</a></li>
 				</ul>
 			</div>
 			<ul class="dir-list">
 			</ul>
 		</div>
-		<button id="folder-20" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Nardith\Nardith.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Nardith</button>
-		<div id="folder-container-20" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Nardith">
+		<button id="folder-48" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Nardith\Nardith.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Nardith</button>
+		<div id="folder-container-48" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Nardith">
 			<ul class="dir-list">
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nardith/Tharn Todor.html"  >Tharn Todor</a></li>
 			</ul>
 		</div>
-		<button id="folder-21" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Nashtkar\Nashtkar.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Nashtkar</button>
-		<div id="folder-container-21" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Nashtkar">
+		<button id="folder-49" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Nashtkar\Nashtkar.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Nashtkar</button>
+		<div id="folder-container-49" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Nashtkar">
 			<ul class="dir-list">
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nashtkar/Agata's lair.html"  >Agata's lair</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nashtkar/Daraar Canyon.html"  >Daraar Canyon</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nashtkar/Dwarven outpost.html"  >Dwarven outpost</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nashtkar/Garamjala Desert.html"  >Garamjala Desert</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nashtkar/Hall of Stories.html"  >Hall of Stories</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nashtkar/Kharsan.html"  >Kharsan</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nashtkar/Monastery of Bhishma.html"  >Monastery of Bhishma</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nashtkar/Raven's Hold.html"  >Raven's Hold</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nashtkar/Agata's lair.html"  >Agata's lair</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nashtkar/Daraar Canyon.html"  >Daraar Canyon</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nashtkar/Garamjala Desert.html"  >Garamjala Desert</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nashtkar/Hall of Stories.html"  >Hall of Stories</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nashtkar/Kharsan.html"  >Kharsan</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nashtkar/Monastery of Bhishma.html"  >Monastery of Bhishma</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nashtkar/Raven's Hold.html"  >Raven's Hold</a></li>
 			</ul>
 		</div>
-		<button id="folder-22" class="dir-button" onclick="toggle_dir(this.id)">Rivers</button>
-		<div id="folder-container-22" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Rivers">
+		<button id="folder-50" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Rivers</button>
+		<div id="folder-container-50" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Rivers">
 			<ul class="dir-list">
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Rivers/Hara.html"  >Hara</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Rivers/Kharja.html"  >Kharja</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Rivers/Shrev.html"  >Shrev</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Rivers/Hara.html"  >Hara</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Rivers/Kharja.html"  >Kharja</a></li>
+			</ul>
+		</div>
+		<button id="folder-51" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Central Lowlands Region\Xurkhaz\Xurkhaz.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Xurkhaz</button>
+		<div id="folder-container-51" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Central Lowlands Region/Xurkhaz">
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Xurkhaz/Khumarz.html"  >Khumarz</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Xurkhaz/Uzgukhar.html"  >Uzgukhar</a></li>
 			</ul>
 		</div>
 		<ul class="dir-list">
-			<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Alcarinquë.html"  >Alcarinquë</a></li>
-			<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Myraeni Gap.html"  >Myraeni Gap</a></li>
-			<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Sea of Storms.html"  >Sea of Storms</a></li>
-			<li><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Yuvanti Mountains.html"  >Yuvanti Mountains</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Alcarinquë.html"  >Alcarinquë</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Myraeni Gap.html"  >Myraeni Gap</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Central Lowlands Region/Yuvanti Mountains.html"  >Yuvanti Mountains</a></li>
 		</ul>
 	</div>
-	<button id="folder-23" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Far North Region\The Far North Region.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The Far North Region</button>
-	<div id="folder-container-23" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Far North Region">
-		<ul class="dir-list">
-		</ul>
-	</div>
-	<button id="folder-24" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\The Green Sea Region.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The Green Sea Region</button>
-	<div id="folder-container-24" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region">
-		<button id="folder-25" class="dir-button" onclick="toggle_dir(this.id)">Eastern Green Sea</button>
-		<div id="folder-container-25" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea">
+	<button id="folder-52" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Green Sea Region\The Green Sea Region.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>The Green Sea Region</button>
+	<div id="folder-container-52" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region">
+		<button id="folder-53" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Eastern Green Sea</button>
+		<div id="folder-container-53" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea">
 			<ul class="dir-list">
-				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Arryn’s Tower.html"  >Arryn’s Tower</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Dolphin’s Rest Inn.html"  >Dolphin’s Rest Inn</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Irrla.html"  >Irrla</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Medju.html"  >Medju</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Praznitsky.html"  >Praznitsky</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Quanyi.html"  >Quanyi</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Ursk.html"  >Ursk</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Vermillion Isles.html"  >Vermillion Isles</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Wahacha.html"  >Wahacha</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Medju.html"  >Medju</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Praznitsky.html"  >Praznitsky</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Quanyi.html"  >Quanyi</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Ursk.html"  >Ursk</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Vermillion Isles.html"  >Vermillion Isles</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Wahacha.html"  >Wahacha</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Zakat.html"  >Zakat</a></li>
 			</ul>
 		</div>
-		<button id="folder-26" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Western Green Sea.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Western Green Sea</button>
-		<div id="folder-container-26" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea">
-			<button id="folder-27" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Greater Sembara.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Greater Sembara</button>
-			<div id="folder-container-27" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara">
-				<button id="folder-28" class="dir-button" onclick="toggle_dir(this.id)">Aurbez and the Ardonne</button>
-				<div id="folder-container-28" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne">
-					<button id="folder-29" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Aurbez and the Ardonne\Duchy of Maseau\Duchy of Maseau.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Duchy of Maseau</button>
-					<div id="folder-container-29" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/Duchy of Maseau">
+		<button id="folder-54" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Western Green Sea.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Western Green Sea</button>
+		<div id="folder-container-54" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea">
+			<button id="folder-55" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Greater Sembara.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Greater Sembara</button>
+			<div id="folder-container-55" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara">
+				<button id="folder-56" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Aurbez and the Ardonne</button>
+				<div id="folder-container-56" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne">
+					<button id="folder-57" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Aurbez and the Ardonne\Duchy of Maseau\Duchy of Maseau.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Duchy of Maseau</button>
+					<div id="folder-container-57" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/Duchy of Maseau">
 						<ul class="dir-list">
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/Duchy of Maseau/Cassons.html"  >Cassons</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/Duchy of Maseau/Evis.html"  >Evis</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/Duchy of Maseau/Valarin.html"  >Valarin</a></li>
+							<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/Duchy of Maseau/Evis.html"  >Evis</a></li>
+							<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/Duchy of Maseau/Valarin.html"  >Valarin</a></li>
 						</ul>
 					</div>
 					<ul class="dir-list">
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/Ausson's Crossing.html"  >Ausson's Crossing</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/March of Ardonne.html"  >March of Ardonne</a></li>
+						<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/Ausson's Crossing.html"  >Ausson's Crossing</a></li>
 					</ul>
 				</div>
-				<button id="folder-30" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Highland Kingdoms\Highland Kingdoms.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Highland Kingdoms</button>
-				<div id="folder-container-30" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Highland Kingdoms">
+				<button id="folder-58" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Highland Kingdoms</button>
+				<div id="folder-container-58" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Highland Kingdoms">
 					<ul class="dir-list">
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Highland Kingdoms/Ardlas.html"  >Ardlas</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Highland Kingdoms/Breva.html"  >Breva</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Highland Kingdoms/Lavnoch.html"  >Lavnoch</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Highland Kingdoms/Zovcka.html"  >Zovcka</a></li>
+						<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Highland Kingdoms/Ardlas.html"  >Ardlas</a></li>
+						<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Highland Kingdoms/Zovcka.html"  >Zovcka</a></li>
 					</ul>
 				</div>
-				<button id="folder-31" class="dir-button" onclick="toggle_dir(this.id)">Roads</button>
-				<div id="folder-container-31" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Roads">
+				<button id="folder-59" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Roads</button>
+				<div id="folder-container-59" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Roads">
 					<ul class="dir-list">
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Roads/Bandit's Way.html"  >Bandit's Way</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Roads/Dunmar Road.html"  >Dunmar Road</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Roads/Great South Road.html"  >Great South Road</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Roads/South Watch Road.html"  >South Watch Road</a></li>
+						<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Roads/Bandit's Way.html"  >Bandit's Way</a></li>
+						<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Roads/Great South Road.html"  >Great South Road</a></li>
+						<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Roads/South Watch Road.html"  >South Watch Road</a></li>
 					</ul>
 				</div>
-				<button id="folder-32" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Sembara\Sembara.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Sembara</button>
-				<div id="folder-container-32" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara">
-					<button id="folder-33" class="dir-button" onclick="toggle_dir(this.id)">The Borderlands</button>
-					<div id="folder-container-33" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands">
-						<button id="folder-34" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Sembara\The Borderlands\Cleenseau Region\Cleenseau Region.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Cleenseau Region</button>
-						<div id="folder-container-34" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region">
+				<button id="folder-60" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Sembara\Sembara.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Sembara</button>
+				<div id="folder-container-60" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara">
+					<button id="folder-61" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Borderlands</button>
+					<div id="folder-container-61" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands">
+						<button id="folder-62" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Sembara\The Borderlands\Cleenseau Region\Cleenseau Region.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Cleenseau Region</button>
+						<div id="folder-container-62" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region">
 							<ul class="dir-list">
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Amance Brook.html"  >Amance Brook</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Army Garrison of Cleenseau.html"  >Army Garrison of Cleenseau</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Asineau.html"  >Asineau</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Aulout.html"  >Aulout</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Beury.html"  >Beury</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Cleenseau.html"  >Cleenseau</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Cleenseau Wood.html"  >Cleenseau Wood</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Dallet.html"  >Dallet</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Edur.html"  >Edur</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Essford Manor.html"  >Essford Manor</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Ganboa.html"  >Ganboa</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Garrison Gate of Cleenseau.html"  >Garrison Gate of Cleenseau</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Lord's Council of Cleenseau.html"  >Lord's Council of Cleenseau</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Lord's Guard of Cleenseau.html"  >Lord's Guard of Cleenseau</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/North Gate of Cleenseau.html"  >North Gate of Cleenseau</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/River Gate of Cleenseau.html"  >River Gate of Cleenseau</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Taviose.html"  >Taviose</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Temple of the Warlord in Cleenseau.html"  >Temple of the Warlord in Cleenseau</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/The Bandit’s End.html"  >The Bandit’s End</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/The Crossroads Inn.html"  >The Crossroads Inn</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/The Fox’s Flagon.html"  >The Fox’s Flagon</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/The River’s Blessing.html"  >The River’s Blessing</a></li>
-								<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Valit.html"  >Valit</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Amance Brook.html"  >Amance Brook</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Army Garrison of Cleenseau.html"  >Army Garrison of Cleenseau</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Asineau.html"  >Asineau</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Aulout.html"  >Aulout</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Beury.html"  >Beury</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Cleenseau.html"  >Cleenseau</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Cleenseau Wood.html"  >Cleenseau Wood</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Dallet.html"  >Dallet</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Essford Manor.html"  >Essford Manor</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Ganboa.html"  >Ganboa</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Garrison Gate of Cleenseau.html"  >Garrison Gate of Cleenseau</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Lord's Guard of Cleenseau.html"  >Lord's Guard of Cleenseau</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/North Gate of Cleenseau.html"  >North Gate of Cleenseau</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/River Gate of Cleenseau.html"  >River Gate of Cleenseau</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Taviose.html"  >Taviose</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Temple of the Warlord in Cleenseau.html"  >Temple of the Warlord in Cleenseau</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/The Bandit’s End.html"  >The Bandit’s End</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/The Crossroads Inn.html"  >The Crossroads Inn</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/The Fox’s Flagon.html"  >The Fox’s Flagon</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/The River’s Blessing.html"  >The River’s Blessing</a></li>
+								<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Cleenseau Region/Valit.html"  >Valit</a></li>
 							</ul>
 						</div>
 						<ul class="dir-list">
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Barony of Aveil.html"  >Barony of Aveil</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Barony of Vaubonne.html"  >Barony of Vaubonne</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Rinburg.html"  >Rinburg</a></li>
+							<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Barony of Aveil.html"  >Barony of Aveil</a></li>
+							<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Rinburg.html"  >Rinburg</a></li>
 						</ul>
 					</div>
-					<button id="folder-35" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Sembara\The Heartlands\The Heartlands.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The Heartlands</button>
-					<div id="folder-container-35" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands">
+					<button id="folder-63" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Heartlands</button>
+					<div id="folder-container-63" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands">
 						<ul class="dir-list">
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Dock Workers Great and Honorable Charitable Home for the Lost and Wretched.html"  >Dock Workers Great and Honorable Charitable Home for the Lost and Wretched</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Duchy of Arnbury.html"  >Duchy of Arnbury</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Duchy of Cheimen.html"  >Duchy of Cheimen</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Duchy of Seham.html"  >Duchy of Seham</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Duchy of Sembara.html"  >Duchy of Sembara</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Duchy of Wisford.html"  >Duchy of Wisford</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Embry.html"  >Embry</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Fellburn.html"  >Fellburn</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Lord Mayor’s Workhouse.html"  >Lord Mayor’s Workhouse</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Queen’s Own Home for Children.html"  >Queen’s Own Home for Children</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Wisford.html"  >Wisford</a></li>
+							<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Dock Workers Great and Honorable Charitable Home for the Lost and Wretched.html"  >Dock Workers Great and Honorable Charitable Home for the Lost and Wretched</a></li>
+							<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Embry.html"  >Embry</a></li>
+							<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Fellburn.html"  >Fellburn</a></li>
+							<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Lord Mayor’s Workhouse.html"  >Lord Mayor’s Workhouse</a></li>
+							<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Queen’s Own Home for Children.html"  >Queen’s Own Home for Children</a></li>
+							<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Wisford.html"  >Wisford</a></li>
 						</ul>
 					</div>
-					<button id="folder-36" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Sembara\The Highlands\The Highlands.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The Highlands</button>
-					<div id="folder-container-36" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Highlands">
+					<button id="folder-64" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Sembara\The Highlands\The Highlands.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>The Highlands</button>
+					<div id="folder-container-64" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Highlands">
 						<ul class="dir-list">
 						</ul>
 					</div>
-					<button id="folder-37" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Sembara\The Northlands\The Northlands.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The Northlands</button>
-					<div id="folder-container-37" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Northlands">
+					<button id="folder-65" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Northlands</button>
+					<div id="folder-container-65" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Northlands">
 						<ul class="dir-list">
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Northlands/Duchy of Telham.html"  >Duchy of Telham</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Northlands/Telham.html"  >Telham</a></li>
+							<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Northlands/Duchy of Telham.html"  >Duchy of Telham</a></li>
 						</ul>
 					</div>
-					<button id="folder-38" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Sembara\The Western Marches\The Western Marches.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The Western Marches</button>
-					<div id="folder-container-38" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches">
+					<button id="folder-66" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Western Marches</button>
+					<div id="folder-container-66" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches">
 						<ul class="dir-list">
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches/Barony of Ainwick.html"  >Barony of Ainwick</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches/Barony of Dunfry.html"  >Barony of Dunfry</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches/Dunfry.html"  >Dunfry</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches/Marches of Enford.html"  >Marches of Enford</a></li>
-							<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches/Marches of ~CentralMountains~.html"  >Marches of ~CentralMountains~</a></li>
+							<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches/Dunfry.html"  >Dunfry</a></li>
 						</ul>
 					</div>
 					<ul class="dir-list">
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/Army of Mostreve.html"  >Army of Mostreve</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/Army of the North.html"  >Army of the North</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/Army of the South.html"  >Army of the South</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/Army of the West.html"  >Army of the West</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/Miltary Organization of Sembara.html"  >Miltary Organization of Sembara</a></li>
+						<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/Army of the West.html"  >Army of the West</a></li>
 					</ul>
 				</div>
-				<button id="folder-39" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Tyrwingha\Tyrwingha.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Tyrwingha</button>
-				<div id="folder-container-39" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha">
+				<button id="folder-67" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Greater Sembara\Tyrwingha\Tyrwingha.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Tyrwingha</button>
+				<div id="folder-container-67" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha">
 					<ul class="dir-list">
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha/Aben River.html"  >Aben River</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha/Abenfyrd.html"  >Abenfyrd</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha/Clawyn.html"  >Clawyn</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha/Oracle of the Riven.html"  >Oracle of the Riven</a></li>
-						<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha/Tafolwern.html"  >Tafolwern</a></li>
+						<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha/Aben River.html"  >Aben River</a></li>
+						<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha/Abenfyrd.html"  >Abenfyrd</a></li>
+						<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha/Clawyn.html"  >Clawyn</a></li>
+						<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha/Oracle of the Riven.html"  >Oracle of the Riven</a></li>
+						<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha/Tafolwern.html"  >Tafolwern</a></li>
 					</ul>
 				</div>
 				<ul class="dir-list">
-					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Addermarch.html"  >Addermarch</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aine Hills.html"  >Aine Hills</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Braebein.html"  >Braebein</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Dominion of Atavus.html"  >Dominion of Atavus</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Free City of Tollen.html"  >Free City of Tollen</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Mostreve Hills.html"  >Mostreve Hills</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Ozabal.html"  >Ozabal</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Western Gulf.html"  >Western Gulf</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aine Hills.html"  >Aine Hills</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Dominion of Atavus.html"  >Dominion of Atavus</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Mostreve Hills.html"  >Mostreve Hills</a></li>
 				</ul>
 			</div>
-			<button id="folder-40" class="dir-button" onclick="toggle_dir(this.id)">Rivers</button>
-			<div id="folder-container-40" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers">
+			<button id="folder-68" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Rivers</button>
+			<div id="folder-container-68" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers">
 				<ul class="dir-list">
-					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/Lake Derwent.html"  >Lake Derwent</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/Lake Kamchak.html"  >Lake Kamchak</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/Lake Pekul.html"  >Lake Pekul</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/Rive Kem.html"  >Rive Kem</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Enst.html"  >River Enst</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Niva.html"  >River Niva</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Semb.html"  >River Semb</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Teft.html"  >River Teft</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Volta.html"  >River Volta</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Wistel.html"  >River Wistel</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/Lake Kamchak.html"  >Lake Kamchak</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Enst.html"  >River Enst</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Istaros.html"  >River Istaros</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Semb.html"  >River Semb</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Volta.html"  >River Volta</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Wistel.html"  >River Wistel</a></li>
+				</ul>
+			</div>
+			<button id="folder-69" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The Green Sea Region\Western Green Sea\Tollen\Tollen.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Tollen</button>
+			<div id="folder-container-69" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Tollen">
+				<ul class="dir-list">
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Tollen/Bridgeward.html"  >Bridgeward</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Tollen/Fiskurth.html"  >Fiskurth</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Tollen/Godshome.html"  >Godshome</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Tollen/Gold Street.html"  >Gold Street</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Tollen/Guildgate.html"  >Guildgate</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Tollen/Skepwalk.html"  >Skepwalk</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Tollen/Southbridge.html"  >Southbridge</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Tollen/Temple of Kaikkea.html"  >Temple of Kaikkea</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Tollen/University of Tollen.html"  >University of Tollen</a></li>
 				</ul>
 			</div>
 			<ul class="dir-list">
-				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Cymea.html"  >Cymea</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Istabor Alliance.html"  >Istabor Alliance</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Plaguelands.html"  >Plaguelands</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Skaegenland.html"  >Skaegenland</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Vostok.html"  >Vostok</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Cymea.html"  >Cymea</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Isingue.html"  >Isingue</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Istabor Alliance.html"  >Istabor Alliance</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Plaguelands.html"  >Plaguelands</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Vostok.html"  >Vostok</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Western Gulf.html"  >Western Gulf</a></li>
 			</ul>
 		</div>
 		<ul class="dir-list">
-			<li><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/The Green Sea.html"  >The Green Sea</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The Green Sea Region/The Green Sea.html"  >The Green Sea</a></li>
 		</ul>
 	</div>
-	<button id="folder-41" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The South Region\The South Region.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The South Region</button>
-	<div id="folder-container-41" class="dir-container requires_js active" path="/taelgar1720/Gazetteer/The South Region">
+	<button id="folder-70" class="dir-button active" onclick="toggle_dir(this.id)"><div class="file-icon"></div>The South Region</button>
+	<div id="folder-container-70" class="dir-container requires_js active" path="/taelgar1720/Gazetteer/The South Region">
 		<ul class="dir-list">
-			<li><a class="active" href="/taelgar1720/Gazetteer/The South Region/Azta Lekua.html"  >Azta Lekua</a></li>
-			<li><a class="" href="/taelgar1720/Gazetteer/The South Region/Bedez.html"  >Bedez</a></li>
-			<li><a class="" href="/taelgar1720/Gazetteer/The South Region/Orekatu.html"  >Orekatu</a></li>
+			<li><div class="file-icon"></div><a class="active current_page_dirtree" href="/taelgar1720/Gazetteer/The South Region/Azta Lekua.html"  >Azta Lekua</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The South Region/Bedez.html"  >Bedez</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The South Region/Orekatu.html"  >Orekatu</a></li>
 		</ul>
 	</div>
-	<button id="folder-42" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The West Coast Region\The West Coast Region.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>The West Coast Region</button>
-	<div id="folder-container-42" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region">
-		<button id="folder-43" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The West Coast Region\Chardonian Empire\Chardonian Empire.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Chardonian Empire</button>
-		<div id="folder-container-43" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire">
-			<button id="folder-44" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The West Coast Region\Chardonian Empire\Chardon\Chardon.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Chardon</button>
-			<div id="folder-container-44" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardon">
+	<button id="folder-71" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The West Coast Region\The West Coast Region.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>The West Coast Region</button>
+	<div id="folder-container-71" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region">
+		<button id="folder-72" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The West Coast Region\Chardonian Empire\Chardonian Empire.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Chardonian Empire</button>
+		<div id="folder-container-72" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire">
+			<button id="folder-73" class="dir-button folder_note  " href="/taelgar1720/Gazetteer\The West Coast Region\Chardonian Empire\Chardon\Chardon.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>Chardon</button>
+			<div id="folder-container-73" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardon">
 				<ul class="dir-list">
-					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardon/Great Library.html"  >Great Library</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardon/The Chapterhouse.html"  >The Chapterhouse</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardon/The Salty Squid.html"  >The Salty Squid</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardon/The Thirsty Scholar.html"  >The Thirsty Scholar</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardon/University of Chardon.html"  >University of Chardon</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardon/Great Library.html"  >Great Library</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardon/The Thirsty Scholar.html"  >The Thirsty Scholar</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardon/University of Chardon.html"  >University of Chardon</a></li>
 				</ul>
 			</div>
-			<button id="folder-45" class="dir-button" onclick="toggle_dir(this.id)">Chasa River Valley</button>
-			<div id="folder-container-45" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chasa River Valley">
+			<button id="folder-74" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Chasa River Valley</button>
+			<div id="folder-container-74" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chasa River Valley">
 				<ul class="dir-list">
-					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chasa River Valley/Arendum.html"  >Arendum</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chasa River Valley/Erlona.html"  >Erlona</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chasa River Valley/Kin-Aska.html"  >Kin-Aska</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chasa River Valley/Laughing Wolf Inn.html"  >Laughing Wolf Inn</a></li>
-					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chasa River Valley/Metium.html"  >Metium</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chasa River Valley/Arendum.html"  >Arendum</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chasa River Valley/Kin-Aska.html"  >Kin-Aska</a></li>
 				</ul>
 			</div>
-			<button id="folder-46" class="dir-button" onclick="toggle_dir(this.id)">Northern Frontier</button>
-			<div id="folder-container-46" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Northern Frontier">
+			<button id="folder-75" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Northern Frontier</button>
+			<div id="folder-container-75" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Northern Frontier">
 				<ul class="dir-list">
-					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Northern Frontier/Voltara.html"  >Voltara</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Northern Frontier/Voltara.html"  >Voltara</a></li>
 				</ul>
 			</div>
-			<button id="folder-47" class="dir-button" onclick="toggle_dir(this.id)">Organizations</button>
-			<div id="folder-container-47" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Organizations">
+			<button id="folder-76" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Organizations</button>
+			<div id="folder-container-76" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Organizations">
 				<ul class="dir-list">
-					<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Organizations/Society of the Open Scroll.html"  >Society of the Open Scroll</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Organizations/Society of the Open Scroll.html"  >Society of the Open Scroll</a></li>
 				</ul>
 			</div>
 			<ul class="dir-list">
-				<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Old Chardon Canal.html"  >Old Chardon Canal</a></li>
 			</ul>
 		</div>
-		<button id="folder-48" class="dir-button folder_note " href="/taelgar1720/Gazetteer\The West Coast Region\Mawar Confederacy\Mawar Confederacy.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>Mawar Confederacy</button>
-		<div id="folder-container-48" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Mawar Confederacy">
+		<button id="folder-77" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Mawar Confederacy</button>
+		<div id="folder-container-77" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Mawar Confederacy">
 			<ul class="dir-list">
-				<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Mawar Confederacy/Hamri.html"  >Hamri</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Mawar Confederacy/Leviathan Inn.html"  >Leviathan Inn</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Mawar Confederacy/Mawakel Peninsula.html"  >Mawakel Peninsula</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Mawar Confederacy/Mawakel Peninsula.html"  >Mawakel Peninsula</a></li>
 			</ul>
 		</div>
-		<button id="folder-49" class="dir-button" onclick="toggle_dir(this.id)">Rivers</button>
-		<div id="folder-container-49" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Rivers">
+		<button id="folder-78" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Rivers</button>
+		<div id="folder-container-78" class="dir-container requires_js " path="/taelgar1720/Gazetteer/The West Coast Region/Rivers">
 			<ul class="dir-list">
-				<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Rivers/Chasa.html"  >Chasa</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Rivers/Mirmir.html"  >Mirmir</a></li>
-				<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Rivers/Yeraad.html"  >Yeraad</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Rivers/Chasa.html"  >Chasa</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Rivers/Yeraad.html"  >Yeraad</a></li>
 			</ul>
 		</div>
 		<ul class="dir-list">
-			<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Illoria.html"  >Illoria</a></li>
-			<li><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Nevos Sea.html"  >Nevos Sea</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Illoria.html"  >Illoria</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Gazetteer/The West Coast Region/Nevos Sea.html"  >Nevos Sea</a></li>
 		</ul>
 	</div>
 	<ul class="dir-list">
 	</ul>
 </div>
-<button id="folder-50" class="dir-button" onclick="toggle_dir(this.id)">History</button>
-<div id="folder-container-50" class="dir-container requires_js " path="/taelgar1720/History">
-	<ul class="dir-list">
-		<li><a class="" href="/taelgar1720/History/A Chronicle of Sembaran History.html"  >A Chronicle of Sembaran History</a></li>
-		<li><a class="" href="/taelgar1720/History/The Chronicles of the Mawar.html"  >The Chronicles of the Mawar</a></li>
-	</ul>
-</div>
-<button id="folder-51" class="dir-button" onclick="toggle_dir(this.id)">Species</button>
-<div id="folder-container-51" class="dir-container requires_js " path="/taelgar1720/Species">
-	<ul class="dir-list">
-		<li><a class="" href="/taelgar1720/Species/Dwarves.html"  >Dwarves</a></li>
-		<li><a class="" href="/taelgar1720/Species/Elf.html"  >Elf</a></li>
-		<li><a class="" href="/taelgar1720/Species/Halflings.html"  >Halflings</a></li>
-		<li><a class="" href="/taelgar1720/Species/Hobgoblins.html"  >Hobgoblins</a></li>
-		<li><a class="" href="/taelgar1720/Species/Humans.html"  >Humans</a></li>
-		<li><a class="" href="/taelgar1720/Species/Lizardfolk.html"  >Lizardfolk</a></li>
-		<li><a class="" href="/taelgar1720/Species/Orcs.html"  >Orcs</a></li>
-		<li><a class="" href="/taelgar1720/Species/Stoneborn.html"  >Stoneborn</a></li>
-	</ul>
-</div>
-<button id="folder-52" class="dir-button" onclick="toggle_dir(this.id)">Time</button>
-<div id="folder-container-52" class="dir-container requires_js " path="/taelgar1720/Time">
-	<button id="folder-53" class="dir-button" onclick="toggle_dir(this.id)">Holidays and Festivals</button>
-	<div id="folder-container-53" class="dir-container requires_js " path="/taelgar1720/Time/Holidays and Festivals">
+<button id="folder-79" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>People</button>
+<div id="folder-container-79" class="dir-container requires_js " path="/taelgar1720/People">
+	<button id="folder-80" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Chardonians</button>
+	<div id="folder-container-80" class="dir-container requires_js " path="/taelgar1720/People/Chardonians">
 		<ul class="dir-list">
-			<li><a class="" href="/taelgar1720/Time/Holidays and Festivals/Aagirvala.html"  >Aagirvala</a></li>
-			<li><a class="" href="/taelgar1720/Time/Holidays and Festivals/Day of Renewal.html"  >Day of Renewal</a></li>
-			<li><a class="" href="/taelgar1720/Time/Holidays and Festivals/Feast of Bhishma.html"  >Feast of Bhishma</a></li>
-			<li><a class="" href="/taelgar1720/Time/Holidays and Festivals/Festival of Rebirth.html"  >Festival of Rebirth</a></li>
-			<li><a class="" href="/taelgar1720/Time/Holidays and Festivals/Festival of the Miracle of the Mist.html"  >Festival of the Miracle of the Mist</a></li>
-			<li><a class="" href="/taelgar1720/Time/Holidays and Festivals/Jaankar.html"  >Jaankar</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Chardonians/Agon.html"  >Agon</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Chardonians/Alban.html"  >Alban</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Chardonians/Antonia.html"  >Antonia</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Chardonians/Arcus.html"  >Arcus</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Chardonians/Casian.html"  >Casian</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Chardonians/Crispus.html"  >Crispus</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Chardonians/Fausto.html"  >Fausto</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Chardonians/Hektor.html"  >Hektor</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Chardonians/Kadmos.html"  >Kadmos</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Chardonians/Kaeso.html"  >Kaeso</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Chardonians/Marcella.html"  >Marcella</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Chardonians/Roscelia.html"  >Roscelia</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Chardonians/Servius.html"  >Servius</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Chardonians/Vola.html"  >Vola</a></li>
+		</ul>
+	</div>
+	<button id="folder-81" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dunmari</button>
+	<div id="folder-container-81" class="dir-container requires_js " path="/taelgar1720/People/Dunmari">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Akan.html"  >Akan</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Alesh.html"  >Alesh</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Amil.html"  >Amil</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Aram.html"  >Aram</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Ardan.html"  >Ardan</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Avaras.html"  >Avaras</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Badya.html"  >Badya</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Camana.html"  >Camana</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Candrosa.html"  >Candrosa</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Cintra.html"  >Cintra</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Govir.html"  >Govir</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Havdar.html"  >Havdar</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Ikram.html"  >Ikram</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Jasu.html"  >Jasu</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Jumi.html"  >Jumi</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Kaleha.html"  >Kaleha</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Karmana.html"  >Karmana</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Kassi.html"  >Kassi</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Kaya.html"  >Kaya</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Kirian.html"  >Kirian</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Lara.html"  >Lara</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Nayan Karnas.html"  >Nayan Karnas</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Pava.html"  >Pava</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Rishi.html"  >Rishi</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Saka.html"  >Saka</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Shandan.html"  >Shandan</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Shandar.html"  >Shandar</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dunmari/Sura.html"  >Sura</a></li>
+		</ul>
+	</div>
+	<button id="folder-82" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dwarves</button>
+	<div id="folder-container-82" class="dir-container requires_js " path="/taelgar1720/People/Dwarves">
+		<button id="folder-83" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Clans</button>
+		<div id="folder-container-83" class="dir-container requires_js " path="/taelgar1720/People/Dwarves/Clans">
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dwarves/Clans/Gemcrafters.html"  >Gemcrafters</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dwarves/Brot Starsearcher.html"  >Brot Starsearcher</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dwarves/Dag Hardstone.html"  >Dag Hardstone</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dwarves/Dain Goldhammer.html"  >Dain Goldhammer</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dwarves/Delig Hardstone.html"  >Delig Hardstone</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dwarves/Diesla Starsearcher.html"  >Diesla Starsearcher</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dwarves/Fallthra Hardstone.html"  >Fallthra Hardstone</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dwarves/Frankar.html"  >Frankar</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dwarves/Hagrim.html"  >Hagrim</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dwarves/Nora Silverspark.html"  >Nora Silverspark</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dwarves/Ulfgar Frostbeard.html"  >Ulfgar Frostbeard</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Dwarves/Vistra Fireforge.html"  >Vistra Fireforge</a></li>
+		</ul>
+	</div>
+	<button id="folder-84" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Extraplanar Powers</button>
+	<div id="folder-container-84" class="dir-container requires_js " path="/taelgar1720/People/Extraplanar Powers">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Extraplanar Powers/Archfey Ethlenn.html"  >Archfey Ethlenn</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Extraplanar Powers/Cha'mutte.html"  >Cha'mutte</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Extraplanar Powers/Cloudspinner.html"  >Cloudspinner</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Extraplanar Powers/Lightdancer.html"  >Lightdancer</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Extraplanar Powers/Motua.html"  >Motua</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Extraplanar Powers/Prince of Luck.html"  >Prince of Luck</a></li>
+		</ul>
+	</div>
+	<button id="folder-85" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Fey</button>
+	<div id="folder-container-85" class="dir-container requires_js " path="/taelgar1720/People/Fey">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Fey/Agata.html"  >Agata</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Fey/Typhina.html"  >Typhina</a></li>
+		</ul>
+	</div>
+	<button id="folder-86" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Giants</button>
+	<div id="folder-container-86" class="dir-container requires_js " path="/taelgar1720/People/Giants">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Giants/Hralgar.html"  >Hralgar</a></li>
+		</ul>
+	</div>
+	<button id="folder-87" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Groups</button>
+	<div id="folder-container-87" class="dir-container requires_js " path="/taelgar1720/People/Groups">
+		<button id="folder-88" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orc Hordes</button>
+		<div id="folder-container-88" class="dir-container requires_js " path="/taelgar1720/People/Groups/Orc Hordes">
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Groups/Orc Hordes/Grumella's Horde.html"  >Grumella's Horde</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Groups/Orc Hordes/People of the Rainbow.html"  >People of the Rainbow</a></li>
+			</ul>
+		</div>
+		<button id="folder-89" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Tollen Guilds</button>
+		<div id="folder-container-89" class="dir-container requires_js " path="/taelgar1720/People/Groups/Tollen Guilds">
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Groups/Tollen Guilds/Ancient and Honorable Guild of Philosophers.html"  >Ancient and Honorable Guild of Philosophers</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Groups/Tollen Guilds/Dyer's Guild.html"  >Dyer's Guild</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Groups/Blackened Claw.html"  >Blackened Claw</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Groups/Fraternity of the Empty Moon.html"  >Fraternity of the Empty Moon</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Groups/Havdar's Warband.html"  >Havdar's Warband</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Groups/The Cleansed.html"  >The Cleansed</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Groups/The Rangers.html"  >The Rangers</a></li>
+		</ul>
+	</div>
+	<button id="folder-90" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Halflings</button>
+	<div id="folder-container-90" class="dir-container requires_js " path="/taelgar1720/People/Halflings">
+		<button id="folder-91" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Families</button>
+		<div id="folder-container-91" class="dir-container requires_js " path="/taelgar1720/People/Halflings/Families">
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Halflings/Families/Charmhearts.html"  >Charmhearts</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Halflings/Ander Charmheart.html"  >Ander Charmheart</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Halflings/Bree Charmheart.html"  >Bree Charmheart</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Halflings/Cade Strongbones.html"  >Cade Strongbones</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Halflings/Callie Charmheart.html"  >Callie Charmheart</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Halflings/Dee Wildcloak.html"  >Dee Wildcloak</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Halflings/Garret Tealeaf.html"  >Garret Tealeaf</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Halflings/Tye Strongbones.html"  >Tye Strongbones</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Halflings/Wes Strongbones.html"  >Wes Strongbones</a></li>
+		</ul>
+	</div>
+	<button id="folder-92" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Historical Figures</button>
+	<div id="folder-container-92" class="dir-container requires_js " path="/taelgar1720/People/Historical Figures">
+		<button id="folder-93" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Drankorian Emperors</button>
+		<div id="folder-container-93" class="dir-container requires_js " path="/taelgar1720/People/Historical Figures/Drankorian Emperors">
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Drankorian Emperors/Emperor Apollyon.html"  >Emperor Apollyon</a></li>
+			</ul>
+		</div>
+		<button id="folder-94" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dunmari Rulers</button>
+		<div id="folder-container-94" class="dir-container requires_js " path="/taelgar1720/People/Historical Figures/Dunmari Rulers">
+			<button id="folder-95" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dynasties</button>
+			<div id="folder-container-95" class="dir-container requires_js " path="/taelgar1720/People/Historical Figures/Dunmari Rulers/Dynasties">
+				<ul class="dir-list">
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Dunmari Rulers/Dynasties/Aatmaji dynasty.html"  >Aatmaji dynasty</a></li>
+				</ul>
+			</div>
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Dunmari Rulers/Jita.html"  >Jita</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Dunmari Rulers/Kotana.html"  >Kotana</a></li>
+			</ul>
+		</div>
+		<button id="folder-96" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Sembaran Royalty</button>
+		<div id="folder-container-96" class="dir-container requires_js " path="/taelgar1720/People/Historical Figures/Sembaran Royalty">
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Anne.html"  >Anne</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Arryn I.html"  >Arryn I</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Arryn II.html"  >Arryn II</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Arryn III.html"  >Arryn III</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Bertram I.html"  >Bertram I</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Bertram II.html"  >Bertram II</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Blanche I.html"  >Blanche I</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Blanche II.html"  >Blanche II</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Cece I.html"  >Cece I</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Charlotte I.html"  >Charlotte I</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Charlotte II.html"  >Charlotte II</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Cynan.html"  >Cynan</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Derik I.html"  >Derik I</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Derik II.html"  >Derik II</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Derik III.html"  >Derik III</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Derik of Lils.html"  >Derik of Lils</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Elaine I.html"  >Elaine I</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Elaine II.html"  >Elaine II</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Eloise.html"  >Eloise</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Gyles of Teckberg.html"  >Gyles of Teckberg</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/House of Lils.html"  >House of Lils</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/House of Sewick.html"  >House of Sewick</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Hugh of Wisenfold.html"  >Hugh of Wisenfold</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Jane of Tollen.html"  >Jane of Tollen</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Morgaine.html"  >Morgaine</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Reginald.html"  >Reginald</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Robert I.html"  >Robert I</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Sarabet.html"  >Sarabet</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Wisym I.html"  >Wisym I</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Asuddha.html"  >Asuddha</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Balati.html"  >Balati</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Cedric Cyfenwid.html"  >Cedric Cyfenwid</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Eudomes.html"  >Eudomes</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Historical Figures/Mavdyr.html"  >Mavdyr</a></li>
+		</ul>
+	</div>
+	<button id="folder-97" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Lizardfolk</button>
+	<div id="folder-container-97" class="dir-container requires_js " path="/taelgar1720/People/Lizardfolk">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Lizardfolk/Elazar.html"  >Elazar</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Lizardfolk/Erdu.html"  >Erdu</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Lizardfolk/Gentza.html"  >Gentza</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Lizardfolk/Izoko.html"  >Izoko</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Lizardfolk/Unai.html"  >Unai</a></li>
+		</ul>
+	</div>
+	<button id="folder-98" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orcs</button>
+	<div id="folder-container-98" class="dir-container requires_js " path="/taelgar1720/People/Orcs">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Orcs/Grumella.html"  >Grumella</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Orcs/Uzgash.html"  >Uzgash</a></li>
+		</ul>
+	</div>
+	<button id="folder-99" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Other Humans</button>
+	<div id="folder-container-99" class="dir-container requires_js " path="/taelgar1720/People/Other Humans">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Other Humans/Arryn.html"  >Arryn</a></li>
+		</ul>
+	</div>
+	<button id="folder-100" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Other Nonhumans</button>
+	<div id="folder-container-100" class="dir-container requires_js " path="/taelgar1720/People/Other Nonhumans">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Other Nonhumans/Grash.html"  >Grash</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Other Nonhumans/Lengau.html"  >Lengau</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Other Nonhumans/Mezzar.html"  >Mezzar</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Other Nonhumans/Samerki.html"  >Samerki</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Other Nonhumans/Tharandros.html"  >Tharandros</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Other Nonhumans/Wakog.html"  >Wakog</a></li>
+		</ul>
+	</div>
+	<button id="folder-101" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>PCs</button>
+	<div id="folder-container-101" class="dir-container requires_js " path="/taelgar1720/People/PCs">
+		<button id="folder-102" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Cleenseau</button>
+		<div id="folder-container-102" class="dir-container requires_js " path="/taelgar1720/People/PCs/Cleenseau">
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/Cleenseau/Celyn.html"  >Celyn</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/Cleenseau/Heroes of Cleenseau.html"  >Heroes of Cleenseau</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/Cleenseau/Izgil Moonseeker.html"  >Izgil Moonseeker</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/Cleenseau/Robin of Abenfyrd.html"  >Robin of Abenfyrd</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/Cleenseau/Viepuck.html"  >Viepuck</a></li>
+			</ul>
+		</div>
+		<button id="folder-103" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Great War</button>
+		<div id="folder-container-103" class="dir-container requires_js " path="/taelgar1720/People/PCs/Great War">
+			<button id="folder-104" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Companions</button>
+			<div id="folder-container-104" class="dir-container requires_js " path="/taelgar1720/People/PCs/Great War/Companions">
+				<ul class="dir-list">
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/Great War/Companions/Dimitaur.html"  >Dimitaur</a></li>
+				</ul>
+			</div>
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/Great War/Beryl.html"  >Beryl</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/Great War/Kyr.html"  >Kyr</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/Great War/Rai.html"  >Rai</a></li>
+			</ul>
+		</div>
+		<button id="folder-105" class="dir-button folder_note  " href="/taelgar1720/People\PCs\The Dunmar Fellowship\The Dunmar Fellowship.html" onclick="open_folder_note(this)"><div class="file-icon"></div><div class="fn_pf">*</div>The Dunmar Fellowship</button>
+		<div id="folder-container-105" class="dir-container requires_js " path="/taelgar1720/People/PCs/The Dunmar Fellowship">
+			<button id="folder-106" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Companions</button>
+			<div id="folder-container-106" class="dir-container requires_js " path="/taelgar1720/People/PCs/The Dunmar Fellowship/Companions">
+				<ul class="dir-list">
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Companions/Baxter.html"  >Baxter</a></li>
+				</ul>
+			</div>
+			<button id="folder-107" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Guests</button>
+			<div id="folder-container-107" class="dir-container requires_js " path="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests">
+				<ul class="dir-list">
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Alimash.html"  >Alimash</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Aristaea.html"  >Aristaea</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Artem Novolozek.html"  >Artem Novolozek</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Caulaus.html"  >Caulaus</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Drikod.html"  >Drikod</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Iascaire.html"  >Iascaire</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Izzarak.html"  >Izzarak</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Merash.html"  >Merash</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Mikasa.html"  >Mikasa</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Raven.html"  >Raven</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Rothfis.html"  >Rothfis</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Rufus.html"  >Rufus</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Shoal.html"  >Shoal</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Spirala.html"  >Spirala</a></li>
+					<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Thror.html"  >Thror</a></li>
+				</ul>
+			</div>
+			<ul class="dir-list">
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Delwath.html"  >Delwath</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Kenzo.html"  >Kenzo</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Riswynn.html"  >Riswynn</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Seeker.html"  >Seeker</a></li>
+				<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Wellby.html"  >Wellby</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+		</ul>
+	</div>
+	<button id="folder-108" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Sembarans</button>
+	<div id="folder-container-108" class="dir-container requires_js " path="/taelgar1720/People/Sembarans">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Adam of Cleenseau.html"  >Adam of Cleenseau</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Ames Benthey.html"  >Ames Benthey</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Ancer Benthey.html"  >Ancer Benthey</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Anselm.html"  >Anselm</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Arthur Bybet.html"  >Arthur Bybet</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Conrad.html"  >Conrad</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Denis of Tavoise.html"  >Denis of Tavoise</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Eremon.html"  >Eremon</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Erick Murtha.html"  >Erick Murtha</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Eveyln Totteridge.html"  >Eveyln Totteridge</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/François the Bandit.html"  >François the Bandit</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Grandpa Remy.html"  >Grandpa Remy</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Ida Rosfeld.html"  >Ida Rosfeld</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Jerome.html"  >Jerome</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Jonathon Henwyn.html"  >Jonathon Henwyn</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Lucas.html"  >Lucas</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Marcel de Valarin.html"  >Marcel de Valarin</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Marion of Cleenseau.html"  >Marion of Cleenseau</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Narrisa de Abadelle.html"  >Narrisa de Abadelle</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Nicholas Wysson.html"  >Nicholas Wysson</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Nicholas the Beggar.html"  >Nicholas the Beggar</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Nicole of Tavoise.html"  >Nicole of Tavoise</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Odo Cordwaner.html"  >Odo Cordwaner</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Perrin Voclain.html"  >Perrin Voclain</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Peyre Vayler.html"  >Peyre Vayler</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Rinault Essford.html"  >Rinault Essford</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Rosalind Essford.html"  >Rosalind Essford</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Sabine de Brune.html"  >Sabine de Brune</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Sarabeth.html"  >Sarabeth</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Selma Wisthelwind.html"  >Selma Wisthelwind</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Susanne Garay.html"  >Susanne Garay</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Tal.html"  >Tal</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Warin the Woodsman.html"  >Warin the Woodsman</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Wymar Essford.html"  >Wymar Essford</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Sembarans/Ysabel.html"  >Ysabel</a></li>
+		</ul>
+	</div>
+	<button id="folder-109" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Tollenders</button>
+	<div id="folder-container-109" class="dir-container requires_js " path="/taelgar1720/People/Tollenders">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/People/Tollenders/Delios the Sage.html"  >Delios the Sage</a></li>
 		</ul>
 	</div>
 	<ul class="dir-list">
-		<li><a class="" href="/taelgar1720/Time/Calendar Eras.html"  >Calendar Eras</a></li>
+	</ul>
+</div>
+<button id="folder-110" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Species</button>
+<div id="folder-container-110" class="dir-container requires_js " path="/taelgar1720/Species">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="/taelgar1720/Species/Centaurs.html"  >Centaurs</a></li>
+		<li><div class="file-icon"></div><a class="" href="/taelgar1720/Species/Dwarves.html"  >Dwarves</a></li>
+		<li><div class="file-icon"></div><a class="" href="/taelgar1720/Species/Elf.html"  >Elf</a></li>
+		<li><div class="file-icon"></div><a class="" href="/taelgar1720/Species/Fae.html"  >Fae</a></li>
+		<li><div class="file-icon"></div><a class="" href="/taelgar1720/Species/Giants.html"  >Giants</a></li>
+		<li><div class="file-icon"></div><a class="" href="/taelgar1720/Species/Hags.html"  >Hags</a></li>
+		<li><div class="file-icon"></div><a class="" href="/taelgar1720/Species/Halflings.html"  >Halflings</a></li>
+		<li><div class="file-icon"></div><a class="" href="/taelgar1720/Species/Hobgoblins.html"  >Hobgoblins</a></li>
+		<li><div class="file-icon"></div><a class="" href="/taelgar1720/Species/Humans.html"  >Humans</a></li>
+		<li><div class="file-icon"></div><a class="" href="/taelgar1720/Species/Lizardfolk.html"  >Lizardfolk</a></li>
+		<li><div class="file-icon"></div><a class="" href="/taelgar1720/Species/Orcs.html"  >Orcs</a></li>
+		<li><div class="file-icon"></div><a class="" href="/taelgar1720/Species/Stoneborn.html"  >Stoneborn</a></li>
+	</ul>
+</div>
+<button id="folder-111" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Things</button>
+<div id="folder-container-111" class="dir-container requires_js " path="/taelgar1720/Things">
+	<button id="folder-112" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Mundane Items</button>
+	<div id="folder-container-112" class="dir-container requires_js " path="/taelgar1720/Things/Mundane Items">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Things/Mundane Items/Brot's Telescope (small).html"  >Brot's Telescope (small)</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="/taelgar1720/Things/Lantern of the Bright Hearth.html"  >Lantern of the Bright Hearth</a></li>
+	</ul>
+</div>
+<button id="folder-113" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Time</button>
+<div id="folder-container-113" class="dir-container requires_js " path="/taelgar1720/Time">
+	<button id="folder-114" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Holidays and Festivals</button>
+	<div id="folder-container-114" class="dir-container requires_js " path="/taelgar1720/Time/Holidays and Festivals">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Time/Holidays and Festivals/Aagirvala.html"  >Aagirvala</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Time/Holidays and Festivals/Day of Atonement.html"  >Day of Atonement</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Time/Holidays and Festivals/Feast of Bhishma.html"  >Feast of Bhishma</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Time/Holidays and Festivals/Festival of Rebirth.html"  >Festival of Rebirth</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Time/Holidays and Festivals/Festival of the Bridge.html"  >Festival of the Bridge</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Time/Holidays and Festivals/Festival of the Miracle of the Mist.html"  >Festival of the Miracle of the Mist</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Time/Holidays and Festivals/Jaankar.html"  >Jaankar</a></li>
+			<li><div class="file-icon"></div><a class="" href="/taelgar1720/Time/Holidays and Festivals/Viatela.html"  >Viatela</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+	</ul>
+</div>
+<button id="folder-115" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Worldbuilding</button>
+<div id="folder-container-115" class="dir-container requires_js " path="/taelgar1720/Worldbuilding">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="/taelgar1720/Worldbuilding/Eastern Green Sea.html"  >Eastern Green Sea</a></li>
+		<li><div class="file-icon"></div><a class="" href="/taelgar1720/Worldbuilding/Hkar.html"  >Hkar</a></li>
+		<li><div class="file-icon"></div><a class="" href="/taelgar1720/Worldbuilding/Western Dunmar.html"  >Western Dunmar</a></li>
+		<li><div class="file-icon"></div><a class="" href="/taelgar1720/Worldbuilding/whaling.html"  >whaling</a></li>
+	</ul>
+</div>
+<button id="folder-116" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>assets</button>
+<div id="folder-container-116" class="dir-container requires_js " path="/taelgar1720/assets">
+	<button id="folder-117" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>excalidraw</button>
+	<div id="folder-container-117" class="dir-container requires_js " path="/taelgar1720/assets/excalidraw">
+		<ul class="dir-list">
+			<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/excalidraw/voltara-outline.excalidraw.png"  class="external-link">voltara-outline.excalidraw.png</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/Elven-Ruins-Map.png"  class="external-link">Elven-Ruins-Map.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/Lord-Rinault-Essford.png"  class="external-link">Lord-Rinault-Essford.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/Najeer screenshot.png"  class="external-link">Najeer screenshot.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/Sarlana screenshot (1).png"  class="external-link">Sarlana screenshot (1).png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/Treph screenshot.png"  class="external-link">Treph screenshot.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/Vala screenshot.png"  class="external-link">Vala screenshot.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/WymarOfClenseau.jpeg"  class="external-link">WymarOfClenseau.jpeg</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/amberglow-plains.png"  class="external-link">amberglow-plains.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/amezza-painting.png"  class="external-link">amezza-painting.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/anselm-portrait.png"  class="external-link">anselm-portrait.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/arryn-the-wanderer-portrait.png"  class="external-link">arryn-the-wanderer-portrait.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/artem-portrait.png"  class="external-link">artem-portrait.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/arthur-bybet-portrait.png"  class="external-link">arthur-bybet-portrait.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/avaras-portrait.png"  class="external-link">avaras-portrait.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/baxter-portrait.jpg"  class="external-link">baxter-portrait.jpg</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/brot-portrait.png"  class="external-link">brot-portrait.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/candrosa-portrait.png"  class="external-link">candrosa-portrait.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/caulaus-aportino-portrait.png"  class="external-link">caulaus-aportino-portrait.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/celyn-portrait.png"  class="external-link">celyn-portrait.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/chardon-towers-1.png"  class="external-link">chardon-towers-1.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/cintra-portrait.png"  class="external-link">cintra-portrait.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/cleenseau-region-map.jpg"  class="external-link">cleenseau-region-map.jpg</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/cleenseau-town-map.jpg"  class="external-link">cleenseau-town-map.jpg</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/delwath-portrait.jpg"  class="external-link">delwath-portrait.jpg</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/drikod-portrait.jpg"  class="external-link">drikod-portrait.jpg</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/dwarven-hall-of-gems.png"  class="external-link">dwarven-hall-of-gems.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/dwarven-kingdoms-map.png"  class="external-link">dwarven-kingdoms-map.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/dwarven-unnamed-fortress.png"  class="external-link">dwarven-unnamed-fortress.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/elazar-portrait.png"  class="external-link">elazar-portrait.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/eremon.png"  class="external-link">eremon.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/five-siblings-family-tree.png"  class="external-link">five-siblings-family-tree.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/hagrim-portrait.png"  class="external-link">hagrim-portrait.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/heart-of-the-mountain.png"  class="external-link">heart-of-the-mountain.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/hutsu-painting.png"  class="external-link">hutsu-painting.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/izgil-moonseeker.png"  class="external-link">izgil-moonseeker.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/kadmos-portrait.png"  class="external-link">kadmos-portrait.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/karawa-map.png"  class="external-link">karawa-map.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/kenzo-full.jpg"  class="external-link">kenzo-full.jpg</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/lady-rosalind-essford.png"  class="external-link">lady-rosalind-essford.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/lantern-of-the-bright-hearth.png"  class="external-link">lantern-of-the-bright-hearth.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/lizardfolk-Izoko.png"  class="external-link">lizardfolk-Izoko.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/lizardfolk-erdu.png"  class="external-link">lizardfolk-erdu.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/lizardfolk-gentza.png"  class="external-link">lizardfolk-gentza.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/lizardfolk-unai.png"  class="external-link">lizardfolk-unai.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/map-chardon.png"  class="external-link">map-chardon.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/map-tollen-drawing.png"  class="external-link">map-tollen-drawing.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/marcella.png"  class="external-link">marcella.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/medju-1.png"  class="external-link">medju-1.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/morkalan-ash-plains.png"  class="external-link">morkalan-ash-plains.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/morkalan-muddy-river.png"  class="external-link">morkalan-muddy-river.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/motua.png"  class="external-link">motua.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/nicholas-wysson.png"  class="external-link">nicholas-wysson.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/odo-cordwaner.png"  class="external-link">odo-cordwaner.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/ohana-painting.png"  class="external-link">ohana-painting.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/pava.png"  class="external-link">pava.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/perrin-the-druid.png"  class="external-link">perrin-the-druid.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/riswynn.png"  class="external-link">riswynn.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/robin-of-abenfyrd.png"  class="external-link">robin-of-abenfyrd.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/robin-of-abenfyrd-no-armor.png"  class="external-link">robin-of-abenfyrd-no-armor.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/rufus.png"  class="external-link">rufus.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/sabine-de-brune-valit.png"  class="external-link">sabine-de-brune-valit.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/seeker.jpg"  class="external-link">seeker.jpg</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/selma-wisthelwind.png"  class="external-link">selma-wisthelwind.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/shoal.png"  class="external-link">shoal.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/tharandros.png"  class="external-link">tharandros.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/the-prince-of-luck.png"  class="external-link">the-prince-of-luck.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/urtaro-painting.png"  class="external-link">urtaro-painting.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/vistra-fireforge.png"  class="external-link">vistra-fireforge.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/vostok-map.jpg"  class="external-link">vostok-map.jpg</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/wahacha-coast.png"  class="external-link">wahacha-coast.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/warin-the-woodsman.png"  class="external-link">warin-the-woodsman.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/welby-full.jpg"  class="external-link">welby-full.jpg</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/wellby-ravens-hold-map.png"  class="external-link">wellby-ravens-hold-map.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/ysabel.png"  class="external-link">ysabel.png</a></li>
+		<li><div class="file-icon non-md-file"></div><a class="" href="/taelgar1720/assets/zarkandur-city-full.png"  class="external-link">zarkandur-city-full.png</a></li>
 	</ul>
 </div>
 <ul class="dir-list">
-	<li><a class="" href="/taelgar1720/index.html"  >index</a></li>
+	<li><div class="file-icon"></div><a class="" href="/taelgar1720/index.html"  >index</a></li>
 </ul>
 </div>
     </div>
@@ -684,7 +1337,7 @@
                 <div style="width:100%; text-align: right;display: block;margin: 0.5rem;">
                     <div style="flex:1;display: none;"></div>
                     <div class="breadcrumbs" style="flex:1 ;padding: 0.5rem; width: fit-content;display: inline;border-radius: 0.2rem;">
-                        <a href="/taelgar1720/" style="color: rgb(var(--normal-text-color));">Home</a> / <span style="color: #666;">Gazetteer</span> / <a href="/taelgar1720/Gazetteer/The South Region/The South Region.html" style="color: var(--normal-text-color);">The South Region</a> / <a href="/taelgar1720/Gazetteer/The South Region/Azta Lekua.html" >Azta Lekua</a>
+                        <a href="/taelgar1720/" style="color: rgb(var(--normal-text-color));">Home</a> / <span style="color: #666;">Gazetteer</span> / <span style="color: #666;">the south region</span> / <a href="/taelgar1720/Gazetteer/The South Region/Azta Lekua.html" >Azta Lekua</a>
                     </div>
                 </div>
 <div class="content"><h1 id="azta-lekua">Azta Lekua</h1>
@@ -694,17 +1347,15 @@
 </ul>
 </div>
 <p>A place in the lizardfolk jungles, just west of the border of <a href="/taelgar1720/Gazetteer/The%20South%20Region/Orekatu.html">Orekatu</a>, where the power of the outer planes are particularly strong and present. Also known as the Footprint of the Gods.    </p>
-<p>Protected by a spirit creature, <a href="/taelgar1720/People/Other%20Nonhumans/Lengau.html">Lengau</a>.</p></div>
+<p>Protected by a spirit creature, <a href="/taelgar1720/People/Other%20Nonhumans/Lengau.html">Lengau</a>.   </p></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
 <ul>
-	<li><a class="backlink" href="/taelgar1720/People/Lizardfolk/Elazar.html">elazar</a></li>
+	<li><a class="backlink" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Izzarak.html">izzarak</a></li>
 	<li><a class="backlink" href="/taelgar1720/People/Other Nonhumans/Lengau.html">lengau</a></li>
 	<li><a class="backlink" href="/taelgar1720/People/Extraplanar Powers/Motua.html">motua</a></li>
-	<li><a class="backlink" href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Izzarak.html">izzarak</a></li>
-	<li><a class="backlink" href="/taelgar1720/People/Fey/Eleuha.html">eleuha</a></li>
-	<li><a class="backlink" href="/taelgar1720/People/Lizardfolk/Enari.html">enari</a></li>
+	<li><a class="backlink" href="/taelgar1720/People/Lizardfolk/Elazar.html">elazar</a></li>
 </ul>
 </div>
 

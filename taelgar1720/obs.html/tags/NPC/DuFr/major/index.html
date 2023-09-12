@@ -13,11 +13,19 @@
                 <title>Taelgar 1720</title>
 
                 <!-- Includes -->
-                
-<script src="/taelgar1720/obs.html/static/obsidian_core.js"></script>
+                <script src="/taelgar1720/obs.html/static/obsidian_core.js"></script>
 <script src="/taelgar1720/obs.html/static/encoding.js"></script>
 <link rel="stylesheet" href="/taelgar1720/obs.html/static/master.css" />
-<script src="/taelgar1720/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
 <script>
   MathJax = {
     loader: {
@@ -43,6 +51,8 @@
 <script src="/taelgar1720/obs.html/static/pako.js"></script>
 <script src="/taelgar1720/obs.html/static/search.js"></script>
 <script src="/taelgar1720/obs.html/static/dirtree.js"></script>
+
+
 <link rel="stylesheet" href="/taelgar1720/obs.html/static/taglist.css" />
 
                 <!-- Onload tweaks -->
@@ -70,8 +80,8 @@
                         <div id="search-results"></div>
                     </div>
                     <div id="search-instructions">
-                        <div class="prompt-instruction">
-                                <b>esc</b> to dismiss
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
                         </div>
                     </div>
             </div>
@@ -189,7 +199,6 @@
     <label for="cars">Theme </label>
 
     <select name="theme" id="theme" onchange="set_theme(this.value)">
-      <option value="light">light</option>
       <option value="obs-light" selected="selected">obsidian-light</option>
       <option value="obs-dark">obsidian-dark</option>
     </select> 
@@ -198,31 +207,29 @@
                 <div class="flex_row">
                         
                         <div class="container">
-                                <h1 id="notes">Notes</h1>
+                                <h1 id="npc-dufr-major">NPC/DuFr/major</h1>
+<h2 id="notes">Notes</h2>
 <ul>
 <li><a href="/taelgar1720/People/Fey/Agata.html">Agata</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Drankorian Emperors/Emperor Apollyon.html">Emperor Apollyon</a></li>
 <li><a href="/taelgar1720/People/Other Nonhumans/Grash.html">Grash</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Ardan.html">Ardan</a></li>
-<li><a href="/taelgar1720/People/Chardonians/Kaeso.html">Kaeso</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a></li>
+<li><a href="/taelgar1720/People/Other Nonhumans/Tharandros.html">Tharandros</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Sura.html">Sura</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Servius.html">Servius</a></li>
 <li><a href="/taelgar1720/People/Chardonians/Fausto.html">Fausto</a></li>
 <li><a href="/taelgar1720/People/Chardonians/Kadmos.html">Kadmos</a></li>
 <li><a href="/taelgar1720/People/Chardonians/Marcella.html">Marcella</a></li>
 <li><a href="/taelgar1720/People/Chardonians/Antonia.html">Antonia</a></li>
-<li><a href="/taelgar1720/People/Other Nonhumans/Tharandros.html">Tharandros</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Sura.html">Sura</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Nayan Karnas.html">Nayan Karnas</a></li>
-<li><a href="/taelgar1720/People/Chardonians/Servius.html">Servius</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Cintra.html">Cintra</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a></li>
 <li><a href="/taelgar1720/People/Halflings/Garret Tealeaf.html">Garret Tealeaf</a></li>
 <li><a href="/taelgar1720/People/Giants/Hralgar.html">Hralgar</a></li>
+<li><a href="/taelgar1720/People/Other Nonhumans/Mezzar.html">Mezzar</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Cintra.html">Cintra</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Drankorian Emperors/Emperor Apollyon.html">Emperor Apollyon</a></li>
 <li><a href="/taelgar1720/People/Dunmari/Pava.html">Pava</a></li>
 <li><a href="/taelgar1720/People/Dunmari/Avaras.html">Avaras</a></li>
 <li><a href="/taelgar1720/People/Dunmari/Saka.html">Saka</a></li>
-<li><a href="/taelgar1720/People/Other Nonhumans/Mezzar.html">Mezzar</a></li>
 <li><a href="/taelgar1720/People/Dunmari/Govir.html">Govir</a></li>
-<li><a href="/taelgar1720/People/Deno'qai/Theba.html">Theba</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Nayan Karnas.html">Nayan Karnas</a></li>
 </ul>
 <blockquote>
 <p><a href="/taelgar1720/obs.html/tags/index.html">View all tags</a></p>

@@ -13,11 +13,19 @@
                 <title>Taelgar 1720</title>
 
                 <!-- Includes -->
-                
-<script src="/taelgar1720/obs.html/static/obsidian_core.js"></script>
+                <script src="/taelgar1720/obs.html/static/obsidian_core.js"></script>
 <script src="/taelgar1720/obs.html/static/encoding.js"></script>
 <link rel="stylesheet" href="/taelgar1720/obs.html/static/master.css" />
-<script src="/taelgar1720/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
 <script>
   MathJax = {
     loader: {
@@ -43,6 +51,8 @@
 <script src="/taelgar1720/obs.html/static/pako.js"></script>
 <script src="/taelgar1720/obs.html/static/search.js"></script>
 <script src="/taelgar1720/obs.html/static/dirtree.js"></script>
+
+
 <link rel="stylesheet" href="/taelgar1720/obs.html/static/taglist.css" />
 
                 <!-- Onload tweaks -->
@@ -70,8 +80,8 @@
                         <div id="search-results"></div>
                     </div>
                     <div id="search-instructions">
-                        <div class="prompt-instruction">
-                                <b>esc</b> to dismiss
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
                         </div>
                     </div>
             </div>
@@ -189,7 +199,6 @@
     <label for="cars">Theme </label>
 
     <select name="theme" id="theme" onchange="set_theme(this.value)">
-      <option value="light">light</option>
       <option value="obs-light" selected="selected">obsidian-light</option>
       <option value="obs-dark">obsidian-dark</option>
     </select> 
@@ -198,20 +207,19 @@
                 <div class="flex_row">
                         
                         <div class="container">
-                                <h1 id="notes">Notes</h1>
+                                <h1 id="organization-unsorted">organization/unsorted</h1>
+<h2 id="notes">Notes</h2>
 <ul>
-<li><a href="/taelgar1720/People/Historical Figures/Dunmari Rulers/Dynasties/Aatmaji dynasty.html">Aatmaji dynasty</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire/Organizations/Omnis Pura.html">Omnis Pura</a></li>
-<li><a href="/taelgar1720/People/Other Nonhumans/Hobgoblin Clans/Blackened Claw.html">Blackened Claw</a></li>
-<li><a href="/taelgar1720/People/Groups/The Cleansed.html">The Cleansed</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/House of Lils.html">House of Lils</a></li>
+<li><a href="/taelgar1720/People/Groups/Orc Hordes/People of the Rainbow.html">People of the Rainbow</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/House of Sewick.html">House of Sewick</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/House of Lils.html">House of Lils</a></li>
 <li><a href="/taelgar1720/People/Groups/The Rangers.html">The Rangers</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire/Organizations/Occulta Ludum.html">Occulta Ludum</a></li>
+<li><a href="/taelgar1720/People/Groups/Blackened Claw.html">Blackened Claw</a></li>
+<li><a href="/taelgar1720/People/Groups/The Cleansed.html">The Cleansed</a></li>
+<li><a href="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire/Organizations/Omnis Pura.html">Omnis Pura</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Dunmari Rulers/Dynasties/Aatmaji dynasty.html">Aatmaji dynasty</a></li>
+<li><a href="/taelgar1720/People/Groups/Orc Hordes/Grumella's Horde.html">Grumella's Horde</a></li>
 <li><a href="/taelgar1720/People/Groups/Fraternity of the Empty Moon.html">Fraternity of the Empty Moon</a></li>
-<li><a href="/taelgar1720/People/Orcs/Hordes/Dustthorn Horde.html">Dustthorn Horde</a></li>
-<li><a href="/taelgar1720/People/Orcs/Hordes/Grash's Horde.html">Grash's Horde</a></li>
-<li><a href="/taelgar1720/People/Orcs/Hordes/Uzgash's Horde.html">Uzgash's Horde</a></li>
 </ul>
 <blockquote>
 <p><a href="/taelgar1720/obs.html/tags/index.html">View all tags</a></p>

@@ -13,11 +13,19 @@
                 <title>Taelgar 1720</title>
 
                 <!-- Includes -->
-                
-<script src="/taelgar1720/obs.html/static/obsidian_core.js"></script>
+                <script src="/taelgar1720/obs.html/static/obsidian_core.js"></script>
 <script src="/taelgar1720/obs.html/static/encoding.js"></script>
 <link rel="stylesheet" href="/taelgar1720/obs.html/static/master.css" />
-<script src="/taelgar1720/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
 <script>
   MathJax = {
     loader: {
@@ -43,6 +51,8 @@
 <script src="/taelgar1720/obs.html/static/pako.js"></script>
 <script src="/taelgar1720/obs.html/static/search.js"></script>
 <script src="/taelgar1720/obs.html/static/dirtree.js"></script>
+
+
 <link rel="stylesheet" href="/taelgar1720/obs.html/static/taglist.css" />
 
                 <!-- Onload tweaks -->
@@ -70,8 +80,8 @@
                         <div id="search-results"></div>
                     </div>
                     <div id="search-instructions">
-                        <div class="prompt-instruction">
-                                <b>esc</b> to dismiss
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
                         </div>
                     </div>
             </div>
@@ -189,7 +199,6 @@
     <label for="cars">Theme </label>
 
     <select name="theme" id="theme" onchange="set_theme(this.value)">
-      <option value="light">light</option>
       <option value="obs-light" selected="selected">obsidian-light</option>
       <option value="obs-dark">obsidian-dark</option>
     </select> 
@@ -198,47 +207,54 @@
                 <div class="flex_row">
                         
                         <div class="container">
-                                <h1 id="notes">Notes</h1>
+                                <h1 id="stub">stub</h1>
+<h2 id="notes">Notes</h2>
 <ul>
 <li><a href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Dunmar.html">Dunmar</a></li>
-<li><a href="/taelgar1720/Worldbuilding/Fae.html">Fae</a></li>
-<li><a href="/taelgar1720/Worldbuilding/Centaurs.html">Centaurs</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Eastern Dunmar.html">Eastern Dunmar</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/The Green Sea.html">The Green Sea</a></li>
-<li><a href="/taelgar1720/Worldbuilding/Hkar.html">Hkar</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Volta.html">River Volta</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Dunmari Rulers/Dynasties/Aatmaji dynasty.html">Aatmaji dynasty</a></li>
-<li><a href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardonian Empire.html">Chardonian Empire</a></li>
-<li><a href="/taelgar1720/Species/Orcs.html">Orcs</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Central Highlands Region/~CentralMountains~.html">~CentralMountains~</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Kaleha.html">Kaleha</a></li>
+<li><a href="/taelgar1720/Species/Fae.html">Fae</a></li>
 <li><a href="/taelgar1720/Species/Humans.html">Humans</a></li>
-<li><a href="/taelgar1720/Cosmology/Religions/The Five Siblings/Dunmari Mystery Cults/Dunmari Mystery Cults.html">Dunmari Mystery Cults</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a></li>
-<li><a href="/taelgar1720/People/PCs/Great War/Companions/Dimitaur.html">Dimitaur</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire/Organizations/Omnis Pura.html">Omnis Pura</a></li>
-<li><a href="/taelgar1720/People/PCs/The Dunmar Fellowship/Riswynn.html">Riswynn</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nardith/Nardith.html">Nardith</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/Ausson's Crossing.html">Ausson's Crossing</a></li>
-<li><a href="/taelgar1720/Worldbuilding/Western Dunmar.html">Western Dunmar</a></li>
+<li><a href="/taelgar1720/Species/Centaurs.html">Centaurs</a></li>
+<li><a href="/taelgar1720/People/Groups/Orc Hordes/People of the Rainbow.html">People of the Rainbow</a></li>
 <li><a href="/taelgar1720/Species/Elf.html">Elf</a></li>
-<li><a href="/taelgar1720/Species/Hobgoblins.html">Hobgoblins</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Cintra.html">Cintra</a></li>
-<li><a href="/taelgar1720/People/Other Nonhumans/Hobgoblin Clans/Blackened Claw.html">Blackened Claw</a></li>
-<li><a href="/taelgar1720/People/PCs/The Dunmar Fellowship/Companions/Baxter.html">Baxter</a></li>
-<li><a href="/taelgar1720/People/PCs/The Dunmar Fellowship/Drikod.html">Drikod</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Ursk.html">Ursk</a></li>
-<li><a href="/taelgar1720/Cosmology/Multiverse/Echo Realms/Mirror Realm.html">Mirror Realm</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Saka.html">Saka</a></li>
-<li><a href="/taelgar1720/Worldbuilding/Fahnukan.html">Fahnukan</a></li>
-<li><a href="/taelgar1720/Worldbuilding/Nidzahar.html">Nidzahar</a></li>
-<li><a href="/taelgar1720/Worldbuilding/Am'khazar.html">Am'khazar</a></li>
-<li><a href="/taelgar1720/Worldbuilding/Ardith.html">Ardith</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Embry.html">Embry</a></li>
+<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/The Green Sea.html">The Green Sea</a></li>
+<li><a href="/taelgar1720/Gazetteer/The Central Highlands Region/~CentralMountains~.html">~CentralMountains~</a></li>
+<li><a href="/taelgar1720/Worldbuilding/Hkar.html">Hkar</a></li>
+<li><a href="/taelgar1720/Gazetteer/The Central Highlands Region/Dwarven Kingdoms/Ardith.html">Ardith</a></li>
+<li><a href="/taelgar1720/Gazetteer/The Central Lowlands Region/Nardith/Nardith.html">Nardith</a></li>
+<li><a href="/taelgar1720/Gazetteer/The West Coast Region/Chardonian Empire/Chardonian Empire.html">Chardonian Empire</a></li>
+<li><a href="/taelgar1720/Cosmology/Religions/The Five Siblings/Dunmari Mystery Cults/Dunmari Mystery Cults.html">Dunmari Mystery Cults</a></li>
+<li><a href="/taelgar1720/Gazetteer/The Central Lowlands Region/Dunmar/Eastern Dunmar/Eastern Dunmar.html">Eastern Dunmar</a></li>
+<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Cymea.html">Cymea</a></li>
+<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Volta.html">River Volta</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aine Hills.html">Aine Hills</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Northlands/Duchy of Telham.html">Duchy of Telham</a></li>
+<li><a href="/taelgar1720/Worldbuilding/Eastern Green Sea.html">Eastern Green Sea</a></li>
+<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Embry.html">Embry</a></li>
+<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Semb.html">River Semb</a></li>
 <li><a href="/taelgar1720/People/Extraplanar Powers/Archfey Ethlenn.html">Archfey Ethlenn</a></li>
-<li><a href="/taelgar1720/Worldbuilding/Isingue.html">Isingue</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Kaleha.html">Kaleha</a></li>
+<li><a href="/taelgar1720/Worldbuilding/Western Dunmar.html">Western Dunmar</a></li>
+<li><a href="/taelgar1720/People/Groups/Blackened Claw.html">Blackened Claw</a></li>
+<li><a href="/taelgar1720/People/PCs/The Dunmar Fellowship/Riswynn.html">Riswynn</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Candrosa.html">Candrosa</a></li>
+<li><a href="/taelgar1720/People/PCs/The Dunmar Fellowship/Companions/Baxter.html">Baxter</a></li>
+<li><a href="/taelgar1720/Cosmology/Multiverse/Echo Realms/Shadowfell/Shadowfell.html">Shadowfell</a></li>
+<li><a href="/taelgar1720/Species/Hobgoblins.html">Hobgoblins</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Cintra.html">Cintra</a></li>
+<li><a href="/taelgar1720/People/PCs/The Dunmar Fellowship/Guests/Drikod.html">Drikod</a></li>
+<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Ursk.html">Ursk</a></li>
+<li><a href="/taelgar1720/Cosmology/Multiverse/Echo Realms/Mirror Realm.html">Mirror Realm</a></li>
+<li><a href="/taelgar1720/People/PCs/Great War/Companions/Dimitaur.html">Dimitaur</a></li>
+<li><a href="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire/Organizations/Omnis Pura.html">Omnis Pura</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Saka.html">Saka</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Dunmari Rulers/Dynasties/Aatmaji dynasty.html">Aatmaji dynasty</a></li>
+<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Aurbez and the Ardonne/Ausson's Crossing.html">Ausson's Crossing</a></li>
+<li><a href="/taelgar1720/Gazetteer/The Central Highlands Region/Dwarven Kingdoms/Am'khazar.html">Am'khazar</a></li>
+<li><a href="/taelgar1720/Gazetteer/The Central Highlands Region/Dwarven Kingdoms/Nidzahar.html">Nidzahar</a></li>
+<li><a href="/taelgar1720/Gazetteer/The Central Highlands Region/Dwarven Kingdoms/Fahnukan.html">Fahnukan</a></li>
+<li><a href="/taelgar1720/Cosmology/Multiverse/Echo Realms/Feywild/Splendor's Gleam.html">Splendor's Gleam</a></li>
+<li><a href="/taelgar1720/People/Groups/Orc Hordes/Grumella's Horde.html">Grumella's Horde</a></li>
+<li><a href="/taelgar1720/Cosmology/Multiverse/Echo Realms/Feywild/Wildrun.html">Wildrun</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Highland Kingdoms/Zovcka.html">Zovcka</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Roads/Great South Road.html">Great South Road</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Enst.html">River Enst</a></li>
@@ -248,58 +264,13 @@
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Tyrwingha/Aben River.html">Aben River</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Roads/South Watch Road.html">South Watch Road</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/Lake Kamchak.html">Lake Kamchak</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Semb.html">River Semb</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Wistel.html">River Wistel</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Wisford.html">Wisford</a></li>
-<li><a href="/taelgar1720/Cosmology/Gods/Mos Numena/The Warlord.html">The Warlord</a></li>
-<li><a href="/taelgar1720/Cosmology/Gods/Mos Numena/The Night Queen.html">The Night Queen</a></li>
+<li><a href="/taelgar1720/People/Sembarans/Marcel de Valarin.html">Marcel de Valarin</a></li>
 <li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Highland Kingdoms/Ardlas.html">Ardlas</a></li>
-<li><a href="/taelgar1720/Cosmology/Gods/Mos Numena/The Father.html">The Father</a></li>
-<li><a href="/taelgar1720/Cosmology/Gods/Mos Numena/The Mother.html">The Mother</a></li>
-<li><a href="/taelgar1720/Cosmology/Multiverse/Energy Realms/Ethereal Plane.html">Ethereal Plane</a></li>
-<li><a href="/taelgar1720/Cosmology/Multiverse/Spiritual Realms/Astral Plane.html">Astral Plane</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Govir.html">Govir</a></li>
 <li><a href="/taelgar1720/Events/Unsorted/Summer Gnoll Raids of 1748.html">Summer Gnoll Raids of 1748</a></li>
-<li><a href="/taelgar1720/Worldbuilding/Pandar.html">Pandar</a></li>
-<li><a href="/taelgar1720/Worldbuilding/Eastern Green Sea.html">Eastern Green Sea</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Central Lowlands Region/Drankorian Empire/Organizations/Occulta Ludum.html">Occulta Ludum</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Eastern Green Sea/Arryn’s Tower.html">Arryn’s Tower</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Cymea.html">Cymea</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Skaegenland.html">Skaegenland</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Braebein.html">Braebein</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Ozabal.html">Ozabal</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Western Gulf.html">Western Gulf</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Highland Kingdoms/Breva.html">Breva</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Highland Kingdoms/Lavnoch.html">Lavnoch</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Roads/Dunmar Road.html">Dunmar Road</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Borderlands/Barony of Vaubonne.html">Barony of Vaubonne</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Duchy of Arnbury.html">Duchy of Arnbury</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Duchy of Cheimen.html">Duchy of Cheimen</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Duchy of Seham.html">Duchy of Seham</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Duchy of Sembara.html">Duchy of Sembara</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Heartlands/Duchy of Wisford.html">Duchy of Wisford</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Teft.html">River Teft</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Northlands/Telham.html">Telham</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches/Barony of Ainwick.html">Barony of Ainwick</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches/Barony of Dunfry.html">Barony of Dunfry</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches/Marches of Enford.html">Marches of Enford</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Greater Sembara/Sembara/The Western Marches/Marches of ~CentralMountains~.html">Marches of ~CentralMountains~</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/Lake Derwent.html">Lake Derwent</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/Lake Pekul.html">Lake Pekul</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/Rive Kem.html">Rive Kem</a></li>
-<li><a href="/taelgar1720/Gazetteer/The Green Sea Region/Western Green Sea/Rivers/River Niva.html">River Niva</a></li>
-<li><a href="/taelgar1720/Worldbuilding/Mawakel Penisula.html">Mawakel Penisula</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Illyan.html">Illyan</a></li>
-<li><a href="/taelgar1720/People/Orcs/Hordes/Dustthorn Horde.html">Dustthorn Horde</a></li>
-<li><a href="/taelgar1720/People/Orcs/Hordes/Grash's Horde.html">Grash's Horde</a></li>
-<li><a href="/taelgar1720/People/Orcs/Hordes/Uzgash's Horde.html">Uzgash's Horde</a></li>
-<li><a href="/taelgar1720/People/PCs/Ausson's Crossing/Izar.html">Izar</a></li>
-<li><a href="/taelgar1720/People/PCs/Ausson's Crossing/Roe DoTorka.html">Roe DoTorka</a></li>
-<li><a href="/taelgar1720/People/PCs/Ausson's Crossing/Soraine.html">Soraine</a></li>
-<li><a href="/taelgar1720/People/PCs/Great War/Aerin.html">Aerin</a></li>
-<li><a href="/taelgar1720/People/PCs/Great War/Companions/Willow Wind.html">Willow Wind</a></li>
-<li><a href="/taelgar1720/People/PCs/The Dunmar Fellowship/Companions/Ladder.html">Ladder</a></li>
-<li><a href="/taelgar1720/People/PCs/The Dunmar Fellowship/Companions/Taster.html">Taster</a></li>
+<li><a href="/taelgar1720/People/Groups/Havdar's Warband.html">Havdar's Warband</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Govir.html">Govir</a></li>
 </ul>
 <blockquote>
 <p><a href="/taelgar1720/obs.html/tags/index.html">View all tags</a></p>

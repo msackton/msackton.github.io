@@ -13,11 +13,19 @@
                 <title>Taelgar 1720</title>
 
                 <!-- Includes -->
-                
-<script src="/taelgar1720/obs.html/static/obsidian_core.js"></script>
+                <script src="/taelgar1720/obs.html/static/obsidian_core.js"></script>
 <script src="/taelgar1720/obs.html/static/encoding.js"></script>
 <link rel="stylesheet" href="/taelgar1720/obs.html/static/master.css" />
-<script src="/taelgar1720/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
 <script>
   MathJax = {
     loader: {
@@ -43,6 +51,8 @@
 <script src="/taelgar1720/obs.html/static/pako.js"></script>
 <script src="/taelgar1720/obs.html/static/search.js"></script>
 <script src="/taelgar1720/obs.html/static/dirtree.js"></script>
+
+
 <link rel="stylesheet" href="/taelgar1720/obs.html/static/taglist.css" />
 
                 <!-- Onload tweaks -->
@@ -70,8 +80,8 @@
                         <div id="search-results"></div>
                     </div>
                     <div id="search-instructions">
-                        <div class="prompt-instruction">
-                                <b>esc</b> to dismiss
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
                         </div>
                     </div>
             </div>
@@ -189,7 +199,6 @@
     <label for="cars">Theme </label>
 
     <select name="theme" id="theme" onchange="set_theme(this.value)">
-      <option value="light">light</option>
       <option value="obs-light" selected="selected">obsidian-light</option>
       <option value="obs-dark">obsidian-dark</option>
     </select> 
@@ -198,71 +207,46 @@
                 <div class="flex_row">
                         
                         <div class="container">
-                                <h1 id="notes">Notes</h1>
+                                <h1 id="npc-dufr-minor">NPC/DuFr/minor</h1>
+<h2 id="notes">Notes</h2>
 <ul>
 <li><a href="/taelgar1720/People/Extraplanar Powers/Cloudspinner.html">Cloudspinner</a></li>
-<li><a href="/taelgar1720/People/Fey/Typhina.html">Typhina</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Ikram.html">Ikram</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Kassi.html">Kassi</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Kaleha.html">Kaleha</a></li>
+<li><a href="/taelgar1720/People/Orcs/Uzgash.html">Uzgash</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Ulfgar Frostbeard.html">Ulfgar Frostbeard</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Kaeso.html">Kaeso</a></li>
 <li><a href="/taelgar1720/People/Chardonians/Roscelia.html">Roscelia</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Kassi.html">Kassi</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Jasu.html">Jasu</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Ikram.html">Ikram</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Kaleha.html">Kaleha</a></li>
+<li><a href="/taelgar1720/People/Dunmari/Ardan.html">Ardan</a></li>
+<li><a href="/taelgar1720/People/Halflings/Callie Charmheart.html">Callie Charmheart</a></li>
+<li><a href="/taelgar1720/People/Halflings/Ander Charmheart.html">Ander Charmheart</a></li>
+<li><a href="/taelgar1720/People/Halflings/Bree Charmheart.html">Bree Charmheart</a></li>
+<li><a href="/taelgar1720/People/Halflings/Dee Wildcloak.html">Dee Wildcloak</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Dain Goldhammer.html">Dain Goldhammer</a></li>
+<li><a href="/taelgar1720/People/Chardonians/Alban.html">Alban</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Balati.html">Balati</a></li>
+<li><a href="/taelgar1720/People/Extraplanar Powers/Prince of Luck.html">Prince of Luck</a></li>
+<li><a href="/taelgar1720/People/Other Nonhumans/Lengau.html">Lengau</a></li>
+<li><a href="/taelgar1720/People/Extraplanar Powers/Motua.html">Motua</a></li>
+<li><a href="/taelgar1720/People/Other Humans/Arryn.html">Arryn</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Hagrim.html">Hagrim</a></li>
+<li><a href="/taelgar1720/People/Dwarves/Nora Silverspark.html">Nora Silverspark</a></li>
 <li><a href="/taelgar1720/People/Dunmari/Lara.html">Lara</a></li>
 <li><a href="/taelgar1720/People/Chardonians/Agon.html">Agon</a></li>
 <li><a href="/taelgar1720/People/Dunmari/Karmana.html">Karmana</a></li>
 <li><a href="/taelgar1720/People/Dunmari/Rishi.html">Rishi</a></li>
 <li><a href="/taelgar1720/People/Lizardfolk/Elazar.html">Elazar</a></li>
-<li><a href="/taelgar1720/People/Other Nonhumans/Lengau.html">Lengau</a></li>
-<li><a href="/taelgar1720/People/Extraplanar Powers/Motua.html">Motua</a></li>
-<li><a href="/taelgar1720/People/Dwarves/Ulfgar Frostbeard.html">Ulfgar Frostbeard</a></li>
 <li><a href="/taelgar1720/People/Dwarves/Frankar.html">Frankar</a></li>
 <li><a href="/taelgar1720/People/Dwarves/Vistra Fireforge.html">Vistra Fireforge</a></li>
 <li><a href="/taelgar1720/People/Dwarves/Fallthra Hardstone.html">Fallthra Hardstone</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Jasu.html">Jasu</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Balati.html">Balati</a></li>
-<li><a href="/taelgar1720/People/Halflings/Callie Charmheart.html">Callie Charmheart</a></li>
-<li><a href="/taelgar1720/People/Halflings/Ander Charmheart.html">Ander Charmheart</a></li>
-<li><a href="/taelgar1720/People/Extraplanar Powers/Prince of Luck.html">Prince of Luck</a></li>
-<li><a href="/taelgar1720/People/Other Humans/Arryn.html">Arryn</a></li>
-<li><a href="/taelgar1720/People/Halflings/Bree Charmheart.html">Bree Charmheart</a></li>
-<li><a href="/taelgar1720/People/Halflings/Dee Wildcloak.html">Dee Wildcloak</a></li>
-<li><a href="/taelgar1720/People/Dwarves/Dain Goldhammer.html">Dain Goldhammer</a></li>
-<li><a href="/taelgar1720/People/Chardonians/Alban.html">Alban</a></li>
-<li><a href="/taelgar1720/People/Dwarves/Hagrim.html">Hagrim</a></li>
-<li><a href="/taelgar1720/People/Dwarves/Nora Silverspark.html">Nora Silverspark</a></li>
 <li><a href="/taelgar1720/People/Dunmari/Kirian.html">Kirian</a></li>
 <li><a href="/taelgar1720/People/Chardonians/Crispus.html">Crispus</a></li>
-<li><a href="/taelgar1720/People/Chardonians/Drusa.html">Drusa</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Illyan.html">Illyan</a></li>
-<li><a href="/taelgar1720/People/Chardonians/Galen.html">Galen</a></li>
-<li><a href="/taelgar1720/People/Chardonians/Gnaeus.html">Gnaeus</a></li>
-<li><a href="/taelgar1720/People/Chardonians/Lyra.html">Lyra</a></li>
-<li><a href="/taelgar1720/People/Deno'qai/Ariel.html">Ariel</a></li>
-<li><a href="/taelgar1720/People/Deno'qai/Enon.html">Enon</a></li>
-<li><a href="/taelgar1720/People/Deno'qai/Itar.html">Itar</a></li>
-<li><a href="/taelgar1720/People/Deno'qai/Obel.html">Obel</a></li>
-<li><a href="/taelgar1720/People/Deno'qai/Safri.html">Safri</a></li>
-<li><a href="/taelgar1720/People/Deno'qai/Zaro.html">Zaro</a></li>
 <li><a href="/taelgar1720/People/Dunmari/Akan.html">Akan</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Amar.html">Amar</a></li>
 <li><a href="/taelgar1720/People/Dunmari/Aram.html">Aram</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Basu.html">Basu</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Hada.html">Hada</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Kisa.html">Kisa</a></li>
-<li><a href="/taelgar1720/People/Dunmari/Suma.html">Suma</a></li>
-<li><a href="/taelgar1720/People/Dwarves/Delig Firebrand.html">Delig Firebrand</a></li>
-<li><a href="/taelgar1720/People/Other Nonhumans/Inakara.html">Inakara</a></li>
-<li><a href="/taelgar1720/People/Elves/Belegor.html">Belegor</a></li>
-<li><a href="/taelgar1720/People/Fey/Illaran.html">Illaran</a></li>
-<li><a href="/taelgar1720/People/Fey/Lady Eventide.html">Lady Eventide</a></li>
-<li><a href="/taelgar1720/People/Fey/Somi-nai.html">Somi-nai</a></li>
-<li><a href="/taelgar1720/People/Lizardfolk/Enari.html">Enari</a></li>
-<li><a href="/taelgar1720/People/Halflings/Dani Silversong.html">Dani Silversong</a></li>
-<li><a href="/taelgar1720/People/Halflings/Ewen Silversong.html">Ewen Silversong</a></li>
-<li><a href="/taelgar1720/People/Kenku/Nahto.html">Nahto</a></li>
-<li><a href="/taelgar1720/People/Kenku/Skoda.html">Skoda</a></li>
-<li><a href="/taelgar1720/People/Orcs/Uzgash.html">Uzgash</a></li>
-<li><a href="/taelgar1720/People/Other Humans/Radomir.html">Radomir</a></li>
 <li><a href="/taelgar1720/People/Other Nonhumans/Samerki.html">Samerki</a></li>
+<li><a href="/taelgar1720/People/Tollenders/Delios the Sage.html">Delios the Sage</a></li>
 </ul>
 <blockquote>
 <p><a href="/taelgar1720/obs.html/tags/index.html">View all tags</a></p>

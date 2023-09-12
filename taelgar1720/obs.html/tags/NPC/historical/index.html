@@ -13,11 +13,19 @@
                 <title>Taelgar 1720</title>
 
                 <!-- Includes -->
-                
-<script src="/taelgar1720/obs.html/static/obsidian_core.js"></script>
+                <script src="/taelgar1720/obs.html/static/obsidian_core.js"></script>
 <script src="/taelgar1720/obs.html/static/encoding.js"></script>
 <link rel="stylesheet" href="/taelgar1720/obs.html/static/master.css" />
-<script src="/taelgar1720/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
 <script>
   MathJax = {
     loader: {
@@ -43,6 +51,8 @@
 <script src="/taelgar1720/obs.html/static/pako.js"></script>
 <script src="/taelgar1720/obs.html/static/search.js"></script>
 <script src="/taelgar1720/obs.html/static/dirtree.js"></script>
+
+
 <link rel="stylesheet" href="/taelgar1720/obs.html/static/taglist.css" />
 
                 <!-- Onload tweaks -->
@@ -70,8 +80,8 @@
                         <div id="search-results"></div>
                     </div>
                     <div id="search-instructions">
-                        <div class="prompt-instruction">
-                                <b>esc</b> to dismiss
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
                         </div>
                     </div>
             </div>
@@ -189,7 +199,6 @@
     <label for="cars">Theme </label>
 
     <select name="theme" id="theme" onchange="set_theme(this.value)">
-      <option value="light">light</option>
       <option value="obs-light" selected="selected">obsidian-light</option>
       <option value="obs-dark">obsidian-dark</option>
     </select> 
@@ -198,23 +207,16 @@
                 <div class="flex_row">
                         
                         <div class="container">
-                                <h1 id="notes">Notes</h1>
+                                <h1 id="npc-historical">NPC/historical</h1>
+<h2 id="notes">Notes</h2>
 <ul>
 <li><a href="/taelgar1720/People/Extraplanar Powers/Cha'mutte.html">Cha'mutte</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Drankorian Emperors/Emperor Apollyon.html">Emperor Apollyon</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Dunmari Rulers/Kotana.html">Kotana</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Dunmari Rulers/Jita.html">Jita</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Mavdyr.html">Mavdyr</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Asuddha.html">Asuddha</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Balati.html">Balati</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Eudomes.html">Eudomes</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Robert I.html">Robert I</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Cece I.html">Cece I</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Elaine II.html">Elaine II</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Elaine I.html">Elaine I</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Anne.html">Anne</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Reginald.html">Reginald</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Derik III.html">Derik III</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Morgaine.html">Morgaine</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Charlotte I.html">Charlotte I</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Derik II.html">Derik II</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Eloise.html">Eloise</a></li>
@@ -223,26 +225,25 @@
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Sarabet.html">Sarabet</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Bertram I.html">Bertram I</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Jane of Tollen.html">Jane of Tollen</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Bertram II.html">Bertram II</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Blanche I.html">Blanche I</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Gyles of Teckberg.html">Gyles of Teckberg</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Cynan.html">Cynan</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Derik I.html">Derik I</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Arryn I.html">Arryn I</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Blanche II.html">Blanche II</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Arryn II.html">Arryn II</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Charlotte II.html">Charlotte II</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Cece I.html">Cece I</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Robert I.html">Robert I</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Elaine II.html">Elaine II</a></li>
 <li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Derik of Lils.html">Derik of Lils</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Morgaine.html">Morgaine</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Emperor Avatus.html">Emperor Avatus</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Commander Ila.html">Commander Ila</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Daruk.html">Daruk</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Drankorian Emperors/Emperor Helea.html">Emperor Helea</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Drankorian Emperors/Emperor Vestian.html">Emperor Vestian</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Dunmari Rulers/Dasa.html">Dasa</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Dunmari Rulers/Samraat Nayan Yarad.html">Samraat Nayan Yarad</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Annabeth.html">Annabeth</a></li>
-<li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Gyles of Lils.html">Gyles of Lils</a></li>
-<li><a href="/taelgar1720/People/Other Humans/Khathayi.html">Khathayi</a></li>
-<li><a href="/taelgar1720/People/Other Nonhumans/Yerkir-khor.html">Yerkir-khor</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Sembaran Royalty/Derik I.html">Derik I</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Mavdyr.html">Mavdyr</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Eudomes.html">Eudomes</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Balati.html">Balati</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Dunmari Rulers/Jita.html">Jita</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Drankorian Emperors/Emperor Apollyon.html">Emperor Apollyon</a></li>
+<li><a href="/taelgar1720/People/Historical Figures/Asuddha.html">Asuddha</a></li>
 </ul>
 <blockquote>
 <p><a href="/taelgar1720/obs.html/tags/index.html">View all tags</a></p>
